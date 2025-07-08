@@ -1,7 +1,11 @@
+#ifdef route
+#   pragma message("macro route defined !!!")
+#endif
+
+#include "route.hpp"
 // ======================= channel.cpp =======================
 #include "channel.hpp"
-
-#include "route.hpp"               // 路由匹配
+#include "muduo/protoc/codec.h"             
 #include "../common/logger.hpp"    // 日志
 #include "../common/message.hpp"   // message_ptr
 
@@ -48,13 +52,13 @@ void channel::consume(const std::string& qname)
     // 1. 取出消息
     message_ptr mp = __host->basic_consume(qname);
     if (!mp) {
-        LOG(ERROR) << "consume task: no message in queue [" << qname << "]" << std::endl;
+        LOG(ERROR) << "consume task: no message in queue [" << qname << "]"  ;
         return;
     }
     // 2. 选消费者
     consumer::ptr cp = __cmp->choose(qname);
     if (!cp) {
-        LOG(ERROR) << "consume task: no consumer for queue [" << qname << "]" << std::endl;
+        LOG(ERROR) << "consume task: no consumer for queue [" << qname << "]" ;
         return;
     }
     // 3. 调用回调投递消息
@@ -160,7 +164,7 @@ void channel::basic_publish(const basicPublishRequestPtr& req)
     }
 
     for (const auto& [qname, bind_ptr] : bindings) {
-        if (router::route(ep->type(), routing_key, bind_ptr->binding_key)) {
+        if (router::match_route(ep->type, routing_key, bind_ptr->binding_key)) {
             // 3. 入队
             __host->basic_publish(qname, properties, req->body());
             // 4. 异步派发

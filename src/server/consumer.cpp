@@ -24,7 +24,7 @@ consumer::ptr queue_consumer::create(const std::string& ctag,
     std::unique_lock<std::mutex> lock(__mtx);
     for (const auto& c : __consumers) {
         if (c->tag == ctag) {
-            LOG(WARNING) << "consumer duplicate tag, create failed" << std::endl;
+            LOG(WARNING) << "consumer duplicate tag, create failed";
             return {};
         }
     }
@@ -42,7 +42,7 @@ void queue_consumer::remove(const std::string& ctag)
             return;
         }
     }
-    LOG(WARNING) << "consumer tag [" << ctag << "] not found, remove failed" << std::endl;
+    LOG(WARNING) << "consumer tag [" << ctag << "] not found, remove failed";
 }
 
 consumer::ptr queue_consumer::rr_choose()
@@ -101,7 +101,7 @@ consumer::ptr consumer_manager::create(const std::string& ctag,
         std::unique_lock<std::mutex> lock(__mtx);
         auto it = __queue_consumers.find(queue_name);
         if (it == __queue_consumers.end()) {
-            LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found" << std::endl;
+            LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found";
             return {};
         }
         qc = it->second;
@@ -116,7 +116,7 @@ void consumer_manager::remove(const std::string& ctag, const std::string& queue_
         std::unique_lock<std::mutex> lock(__mtx);
         auto it = __queue_consumers.find(queue_name);
         if (it == __queue_consumers.end()) {
-            LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found" << std::endl;
+            LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found";
             return;
         }
         qc = it->second;
@@ -129,7 +129,7 @@ consumer::ptr consumer_manager::choose(const std::string& queue_name)
     std::unique_lock<std::mutex> lock(__mtx);
     auto it = __queue_consumers.find(queue_name);
     if (it == __queue_consumers.end()) {
-        LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found" << std::endl;
+        LOG(ERROR) << "queue_consumer for [" << queue_name << "] not found";
         return {};
     }
     return it->second->rr_choose();

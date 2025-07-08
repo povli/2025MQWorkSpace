@@ -1,6 +1,9 @@
 #include <gtest/gtest.h>
-#include "server/virtual_host.hpp"
-#include "server/consumer.hpp"
+#include "../server/virtual_host.hpp"
+#include "../server/consumer.hpp"
+#include "../server/connection.hpp"       // connection_manager
+#include "../common/thread_pool.hpp"      // thread_pool
+#include <muduo/protoc/codec.h>  
 
 using namespace hare_mq;
 
@@ -32,14 +35,19 @@ TEST(MessageQueueTest, PointToPointSendReceive) {
 }
 
 TEST(MessageQueueTest, OpenCloseChannel) {
-    consumer_manager cm;
-    virtual_host vh("TestHost", "./data", "./data/meta.db");
+    auto vhPtr = std::make_shared<virtual_host>("TestHost",
+                                                "./data",
+                                                "./data/meta.db");
+    auto cmPtr = std::make_shared<consumer_manager>();
+
     connection_manager connMgr;
-    // Simulate a new connection
-    muduo::net::TcpConnectionPtr dummyConn;
-    ProtobufCodecPtr dummyCodec;
-    thread_pool::ptr pool = std::make_shared<thread_pool>(1);
-    connMgr.new_connection(std::make_shared<virtual_host>(vh), std::make_shared<consumer_manager>(cm), dummyCodec, dummyConn, pool);
-    // We cannot fully simulate without a real TcpConnection, but ensure no crash
-    SUCCEED();
+
+    /* 占位参数：测试阶段可以传空指针或最小线程池 */
+    muduo::net::TcpConnectionPtr dummyConn;   // = nullptr
+    ProtobufCodecPtr             dummyCodec;  // = nullptr
+    auto                         pool = std::make_shared<thread_pool>(1);
+
+    connMgr.new_connection(vhPtr, cmPtr, dummyCodec, dummyConn, pool);
+
+    SUCCEED();        // 只验证不崩溃
 }

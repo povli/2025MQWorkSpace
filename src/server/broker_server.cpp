@@ -100,15 +100,16 @@ void BrokerServer::printServerInfo()
               << "Time  : " << time_str
               << "User  : " << user << "\n"
               << "PID   : " << pid  << "\n"
-              << "---------------------------------------------------------" << std::endl;
+              << "---------------------------------------------------------\n";
 }
 
 void BrokerServer::printConnectionInfo(const muduo::net::TcpConnectionPtr& conn)
 {
-    LOG(INFO) << "\nNew Connection:\n"
-              << "Name : " << conn->name() << "\n"
-              << "Local: " << conn->localAddress().toIpPort() << "\n"
-              << "Peer : " << conn->peerAddress().toIpPort()  << std::endl;
+    LOG_INFO << "\nNew Connection:"
+            << "\nName  : "  << conn->name()
+            << "\nLocal : "  << conn->localAddress().toIpPort()
+            << "\nPeer  : "  << conn->peerAddress().toIpPort()
+            << '\n';   // ← 换行用 '\n'
 }
 
 // -----------------------------------------------------------------------------
@@ -141,7 +142,7 @@ void BrokerServer::onUnknownMessage(const muduo::net::TcpConnectionPtr& conn, co
 #define GET_CONN_CTX()                                                                           \
     auto conn_ctx = __connection_manager->select_connection(conn);                               \
     if (!conn_ctx) {                                                                             \
-        LOG(WARNING) << "unknown connection";                                                   \
+        LOG_WARN << "unknown connection";                                                  \
         conn->shutdown();                                                                        \
         return;                                                                                  \
     }
@@ -154,7 +155,7 @@ void BrokerServer::onUnknownMessage(const muduo::net::TcpConnectionPtr& conn, co
     }
 
 #define LOG_REQ(type)                                                                            \
-    LOG(REQUEST) << "<from " << conn->peerAddress().toIpPort() << "> Request: " #type;
+    LOG_INFO << "<from " << conn->peerAddress().toIpPort() << "> Request: " #type;
 
 void BrokerServer::on_openChannel(const muduo::net::TcpConnectionPtr& conn, const openChannelRequestPtr& msg, muduo::Timestamp ts)
 {

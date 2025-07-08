@@ -11,6 +11,7 @@
 #include "consumer.hpp"
 #include "virtual_host.hpp"
 #include "../common/thread_pool.hpp"
+#include "muduo/protoc/codec.h"
 
 // --- 前向声明以减少编译依赖 --------------------------------------
 namespace muduo {
@@ -20,13 +21,14 @@ using TcpConnectionPtr = std::shared_ptr<TcpConnection>;
 } // namespace net
 } // namespace muduo
 
-class ProtobufCodec;                          // Muduo::codec 前向声明
+
 
 namespace hare_mq {
 
 // -----------------------------------------------------------------
 // 便捷别名（各类请求的 shared_ptr）
 // -----------------------------------------------------------------
+using ProtobufCodec            = ::ProtobufCodec;
 using ProtobufCodecPtr         = std::shared_ptr<ProtobufCodec>;
 using openChannelRequestPtr    = std::shared_ptr<openChannelRequest>;
 using closeChannelRequestPtr   = std::shared_ptr<closeChannelRequest>;

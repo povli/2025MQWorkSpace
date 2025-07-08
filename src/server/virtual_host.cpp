@@ -135,7 +135,7 @@ bool virtual_host::basic_publish(const std::string& queue_name, BasicProperties*
 {
     auto it = __queue_messages.find(queue_name);
     if (it == __queue_messages.end()) {
-        LOG(ERROR) << "publish failed: queue [" << queue_name << "] not exist" << std::endl;
+        LOG(ERROR) << "publish failed: queue [" << queue_name << "] not exist";
         return false;
     }
 
@@ -149,7 +149,7 @@ message_ptr virtual_host::basic_consume(const std::string& queue_name)
 {
     auto it = __queue_messages.find(queue_name);
     if (it == __queue_messages.end()) {
-        LOG(ERROR) << "consume failed: queue [" << queue_name << "] not exist" << std::endl;
+        LOG(ERROR) << "consume failed: queue [" << queue_name << "] not exist";
         return {};
     }
     return it->second->front();
@@ -159,7 +159,7 @@ void virtual_host::basic_ack(const std::string& queue_name, const std::string& m
 {
     auto it = __queue_messages.find(queue_name);
     if (it == __queue_messages.end()) {
-        LOG(ERROR) << "ack failed: queue [" << queue_name << "] not exist" << std::endl;
+        LOG(ERROR) << "ack failed: queue [" << queue_name << "] not exist";
         return;
     }
     it->second->remove(msg_id);

@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <thread>
+#include <sstream> 
+#include "muduo/net/EventLoopThread.h"   
+#include <memory>           // shared_ptr
 #include "muduo/net/EventLoop.h"
 #include "muduo/net/TcpClient.h"
 #include "muduo/net/TcpConnection.h"
@@ -11,14 +14,22 @@
 
 using namespace hare_mq;
 using muduo::net::TcpConnectionPtr;
+using ProtobufCodecPtr = std::shared_ptr<ProtobufCodec>;
 
-muduo::net::EventLoop g_loop;
+muduo::net::EventLoopThread g_loopThread;        // ★ 由它生成 EventLoop
+muduo::net::EventLoop*      g_loop = nullptr;    // 运行时取得指针
+TcpConnectionPtr g_conn;          // ★ 线程安全保存连接
+ProtobufCodecPtr g_codec;  
 ProtobufDispatcher g_dispatcher(std::bind([](const TcpConnectionPtr&, const MessagePtr&, muduo::Timestamp){} , 
                                          std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
-ProtobufCodecPtr g_codec;
 
+void onConnection(const TcpConnectionPtr& conn)
+{
+    if (conn->connected()) g_conn = conn;
+    else                   g_conn.reset();
+}
 void onMessage(const TcpConnectionPtr& conn, muduo::net::Buffer* buf, muduo::Timestamp ts) {
-    g_codec->onMessage(conn, buf, ts);
+    if (g_codec) g_codec->onMessage(conn, buf, ts);
 }
 
 // Handlers for responses from server
@@ -39,24 +50,30 @@ void onQueryResponse(const TcpConnectionPtr&, const std::shared_ptr<basicQueryRe
 }
 
 int main(int argc, char* argv[]) {
-    std::string host = "127.0.0.1";
-    int port = 5555;
-    if (argc >= 2) host = argv[1];
-    if (argc >= 3) port = std::atoi(argv[2]);
+    /* ① 启动专用 EventLoop 线程 */
+    g_loop = g_loopThread.startLoop();      // ★ 保证 loop() 在同线程
 
+    /* ② 解析地址 */
+    std::string host = (argc >= 2) ? argv[1] : "127.0.0.1";
+    int         port = (argc >= 3) ? std::atoi(argv[2]) : 5555;
     muduo::net::InetAddress serverAddr(host, port);
-    muduo::net::TcpClient client(&g_loop, serverAddr, "MQClient");
+
+    /* ③ 创建 TcpClient 用 g_loop */
+    muduo::net::TcpClient client(g_loop, serverAddr, "MQClient");
+    client.setConnectionCallback(onConnection);
+
+
     g_dispatcher.registerMessageCallback<basicCommonResponse>(onCommonResponse);
     g_dispatcher.registerMessageCallback<basicConsumeResponse>(onConsumeResponse);
     g_dispatcher.registerMessageCallback<basicQueryResponse>(onQueryResponse);
-    ProtobufCodec codec(std::bind(&ProtobufDispatcher::onProtobufMessage, &g_dispatcher,
-                                  std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
-    g_codec = std::make_shared<ProtobufCodec>(codec);
+
+    g_codec = std::make_shared<ProtobufCodec>(
+        std::bind(&ProtobufDispatcher::onProtobufMessage, &g_dispatcher,
+                  std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));
+
     client.setMessageCallback(onMessage);
     client.connect();
 
-    // Run the client loop in a separate thread
-    std::thread loopThread([&]() { g_loop.loop(); });
 
     std::cout << "Connected to message queue server at " << host << ":" << port << std::endl;
     std::cout << "Commands:\n"
@@ -71,13 +88,8 @@ int main(int argc, char* argv[]) {
               << "cancel <cid> <consumer_tag> <queue>\n"
               << "exit\n";
 
+    while (!g_conn) std::this_thread::sleep_for(std::chrono::milliseconds(50));
     std::string command;
-    TcpConnectionPtr conn;
-    // Wait for connection establishment
-    while (!conn) {
-        client.connection()->getLoop()->runAfter(0.1, [&](){}); // just yield CPU briefly
-        conn = client.connection();
-    }
 
     // Command loop
     while (true) {
@@ -93,14 +105,14 @@ int main(int argc, char* argv[]) {
             openChannelRequest req;
             req.set_rid("cli-open-" + cid);
             req.set_cid(cid);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "close") {
             std::string cid;
             iss >> cid;
             closeChannelRequest req;
             req.set_rid("cli-close-" + cid);
             req.set_cid(cid);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "exchange_declare") {
             std::string ename, etype;
             iss >> ename >> etype;
@@ -114,7 +126,7 @@ int main(int argc, char* argv[]) {
             req.set_exchange_type(exType);
             req.set_durable(false);
             req.set_auto_delete(false);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "queue_declare") {
             std::string qname;
             iss >> qname;
@@ -125,7 +137,7 @@ int main(int argc, char* argv[]) {
             req.set_exclusive(false);
             req.set_durable(false);
             req.set_auto_delete(false);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "bind") {
             std::string exch, qname, key;
             iss >> exch >> qname >> key;
@@ -135,7 +147,7 @@ int main(int argc, char* argv[]) {
             req.set_exchange_name(exch);
             req.set_queue_name(qname);
             req.set_binding_key(key);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "publish") {
             std::string exch, rkey, msg;
             iss >> exch >> rkey;
@@ -152,14 +164,14 @@ int main(int argc, char* argv[]) {
                 props->set_routing_key(rkey);
                 props->set_delivery_mode(DeliveryMode::UNDURABLE);
             }
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "pull") {
             std::string cid;
             iss >> cid;
             basicQueryRequest req;
             req.set_rid("cli-query-" + cid);
             req.set_cid(cid);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "consume") {
             std::string cid, qname, tag;
             iss >> cid >> qname >> tag;
@@ -169,7 +181,7 @@ int main(int argc, char* argv[]) {
             req.set_queue_name(qname);
             req.set_consumer_tag(tag);
             req.set_auto_ack(true);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "cancel") {
             std::string cid, tag, qname;
             iss >> cid >> tag >> qname;
@@ -178,7 +190,7 @@ int main(int argc, char* argv[]) {
             req.set_cid(cid);
             req.set_consumer_tag(tag);
             req.set_queue_name(qname);
-            g_codec->send(conn, req);
+            g_codec->send(g_conn, req);
         } else if (cmd == "exit") {
             break;
         } else {
@@ -188,7 +200,6 @@ int main(int argc, char* argv[]) {
 
     // Cleanup
     client.disconnect();
-    g_loop.quit();
-    loopThread.join();
+    g_loop->runInLoop([&](){ g_loop->quit(); });   // 让工作线程安全退出
     return 0;
 }

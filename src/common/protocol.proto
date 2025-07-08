@@ -1,6 +1,8 @@
 syntax = "proto3";
 package hare_mq;
 
+import "msg.proto";
+
 // Exchange types (for routing)
 enum ExchangeType {
     DIRECT = 0;

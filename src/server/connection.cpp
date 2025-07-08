@@ -2,6 +2,7 @@
 #include "connection.hpp"
 #include "../common/logger.hpp"
 
+
 namespace hare_mq {
 
 // ---------------------------------------------------------------------------

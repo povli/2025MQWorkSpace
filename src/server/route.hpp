@@ -1,5 +1,12 @@
 // ======================= route.hpp =======================
 #pragma once
+#ifdef route
+#  undef route          // 彻底摆脱宏污染
+#endif
+
+#ifdef match_route
+#  undef match_route
+#endif
 
 #include <string>
 #include "../common/protocol.pb.h"   // ExchangeType
@@ -7,7 +14,7 @@
 namespace hare_mq::router {
 
 // 判断 routing_key 是否匹配 binding_key（根据交换机类型）
-inline bool route(ExchangeType type,
+inline bool match_route(ExchangeType type,
                   const std::string& routing_key,
                   const std::string& binding_key)
 {
