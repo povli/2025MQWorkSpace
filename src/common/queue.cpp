@@ -1,7 +1,7 @@
 // ======================= queue.cpp =======================
 #include "queue.hpp"
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------- msg_queue ----------
 msg_queue::msg_queue(const std::string& qname, bool qdurable, bool qexclusive,

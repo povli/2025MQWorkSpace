@@ -12,7 +12,7 @@
 #include <functional>
 #include <utility>
 
-namespace hare_mq {
+namespace hz_mq {
 
 // -----------------------------------------------------------------------------
 // 构造 / 析构

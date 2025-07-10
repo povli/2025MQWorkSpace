@@ -10,7 +10,7 @@
 #include <atomic>
 #include <memory>
 
-namespace hare_mq {
+namespace hz_mq {
 
 class thread_pool {
 public:

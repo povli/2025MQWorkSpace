@@ -8,7 +8,7 @@
 
 #include "../common/protocol.pb.h"   // ExchangeType 枚举（由 Protobuf 生成）
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------- 交换机元数据 ----------
 struct exchange {

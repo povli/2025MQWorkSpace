@@ -1,0 +1,290 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - /usr/local/include/google/protobuf/generated_message_util.h</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../index.html">top level</a> - <a href="index.html">usr/local/include/google/protobuf</a> - generated_message_util.h<span style="font-size: 80%;"> (source / <a href="generated_message_util.h.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">5</td>
+            <td class="headerCovTableEntryLo">20.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2025-07-09 16:58:24</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr><td><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : // Protocol Buffers - Google's data interchange format</a>
+<a name="2"><span class="lineNum">       2 </span>            : // Copyright 2008 Google Inc.  All rights reserved.</a>
+<a name="3"><span class="lineNum">       3 </span>            : // https://developers.google.com/protocol-buffers/</a>
+<a name="4"><span class="lineNum">       4 </span>            : //</a>
+<a name="5"><span class="lineNum">       5 </span>            : // Redistribution and use in source and binary forms, with or without</a>
+<a name="6"><span class="lineNum">       6 </span>            : // modification, are permitted provided that the following conditions are</a>
+<a name="7"><span class="lineNum">       7 </span>            : // met:</a>
+<a name="8"><span class="lineNum">       8 </span>            : //</a>
+<a name="9"><span class="lineNum">       9 </span>            : //     * Redistributions of source code must retain the above copyright</a>
+<a name="10"><span class="lineNum">      10 </span>            : // notice, this list of conditions and the following disclaimer.</a>
+<a name="11"><span class="lineNum">      11 </span>            : //     * Redistributions in binary form must reproduce the above</a>
+<a name="12"><span class="lineNum">      12 </span>            : // copyright notice, this list of conditions and the following disclaimer</a>
+<a name="13"><span class="lineNum">      13 </span>            : // in the documentation and/or other materials provided with the</a>
+<a name="14"><span class="lineNum">      14 </span>            : // distribution.</a>
+<a name="15"><span class="lineNum">      15 </span>            : //     * Neither the name of Google Inc. nor the names of its</a>
+<a name="16"><span class="lineNum">      16 </span>            : // contributors may be used to endorse or promote products derived from</a>
+<a name="17"><span class="lineNum">      17 </span>            : // this software without specific prior written permission.</a>
+<a name="18"><span class="lineNum">      18 </span>            : //</a>
+<a name="19"><span class="lineNum">      19 </span>            : // THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS</a>
+<a name="20"><span class="lineNum">      20 </span>            : // &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT</a>
+<a name="21"><span class="lineNum">      21 </span>            : // LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR</a>
+<a name="22"><span class="lineNum">      22 </span>            : // A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT</a>
+<a name="23"><span class="lineNum">      23 </span>            : // OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,</a>
+<a name="24"><span class="lineNum">      24 </span>            : // SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT</a>
+<a name="25"><span class="lineNum">      25 </span>            : // LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,</a>
+<a name="26"><span class="lineNum">      26 </span>            : // DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY</a>
+<a name="27"><span class="lineNum">      27 </span>            : // THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT</a>
+<a name="28"><span class="lineNum">      28 </span>            : // (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE</a>
+<a name="29"><span class="lineNum">      29 </span>            : // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</a>
+<a name="30"><span class="lineNum">      30 </span>            : </a>
+<a name="31"><span class="lineNum">      31 </span>            : // Author: kenton@google.com (Kenton Varda)</a>
+<a name="32"><span class="lineNum">      32 </span>            : //  Based on original Protocol Buffers design by</a>
+<a name="33"><span class="lineNum">      33 </span>            : //  Sanjay Ghemawat, Jeff Dean, and others.</a>
+<a name="34"><span class="lineNum">      34 </span>            : //</a>
+<a name="35"><span class="lineNum">      35 </span>            : // This file contains miscellaneous helper code used by generated code --</a>
+<a name="36"><span class="lineNum">      36 </span>            : // including lite types -- but which should not be used directly by users.</a>
+<a name="37"><span class="lineNum">      37 </span>            : </a>
+<a name="38"><span class="lineNum">      38 </span>            : #ifndef GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__</a>
+<a name="39"><span class="lineNum">      39 </span>            : #define GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__</a>
+<a name="40"><span class="lineNum">      40 </span>            : </a>
+<a name="41"><span class="lineNum">      41 </span>            : #include &lt;assert.h&gt;</a>
+<a name="42"><span class="lineNum">      42 </span>            : </a>
+<a name="43"><span class="lineNum">      43 </span>            : #include &lt;atomic&gt;</a>
+<a name="44"><span class="lineNum">      44 </span>            : #include &lt;climits&gt;</a>
+<a name="45"><span class="lineNum">      45 </span>            : #include &lt;string&gt;</a>
+<a name="46"><span class="lineNum">      46 </span>            : #include &lt;vector&gt;</a>
+<a name="47"><span class="lineNum">      47 </span>            : </a>
+<a name="48"><span class="lineNum">      48 </span>            : #include &lt;google/protobuf/stubs/common.h&gt;</a>
+<a name="49"><span class="lineNum">      49 </span>            : #include &lt;google/protobuf/stubs/once.h&gt;  // Add direct dep on port for pb.cc</a>
+<a name="50"><span class="lineNum">      50 </span>            : #include &lt;google/protobuf/port.h&gt;</a>
+<a name="51"><span class="lineNum">      51 </span>            : #include &lt;google/protobuf/stubs/strutil.h&gt;</a>
+<a name="52"><span class="lineNum">      52 </span>            : #include &lt;google/protobuf/any.h&gt;</a>
+<a name="53"><span class="lineNum">      53 </span>            : #include &lt;google/protobuf/has_bits.h&gt;</a>
+<a name="54"><span class="lineNum">      54 </span>            : #include &lt;google/protobuf/implicit_weak_message.h&gt;</a>
+<a name="55"><span class="lineNum">      55 </span>            : #include &lt;google/protobuf/message_lite.h&gt;</a>
+<a name="56"><span class="lineNum">      56 </span>            : #include &lt;google/protobuf/repeated_field.h&gt;</a>
+<a name="57"><span class="lineNum">      57 </span>            : #include &lt;google/protobuf/wire_format_lite.h&gt;</a>
+<a name="58"><span class="lineNum">      58 </span>            : #include &lt;google/protobuf/stubs/casts.h&gt;</a>
+<a name="59"><span class="lineNum">      59 </span>            : </a>
+<a name="60"><span class="lineNum">      60 </span>            : // Must be included last.</a>
+<a name="61"><span class="lineNum">      61 </span>            : #include &lt;google/protobuf/port_def.inc&gt;</a>
+<a name="62"><span class="lineNum">      62 </span>            : </a>
+<a name="63"><span class="lineNum">      63 </span>            : #ifdef SWIG</a>
+<a name="64"><span class="lineNum">      64 </span>            : #error &quot;You cannot SWIG proto headers&quot;</a>
+<a name="65"><span class="lineNum">      65 </span>            : #endif</a>
+<a name="66"><span class="lineNum">      66 </span>            : </a>
+<a name="67"><span class="lineNum">      67 </span>            : namespace google {</a>
+<a name="68"><span class="lineNum">      68 </span>            : namespace protobuf {</a>
+<a name="69"><span class="lineNum">      69 </span>            : </a>
+<a name="70"><span class="lineNum">      70 </span>            : class Arena;</a>
+<a name="71"><span class="lineNum">      71 </span>            : class Message;</a>
+<a name="72"><span class="lineNum">      72 </span>            : </a>
+<a name="73"><span class="lineNum">      73 </span>            : namespace io {</a>
+<a name="74"><span class="lineNum">      74 </span>            : class CodedInputStream;</a>
+<a name="75"><span class="lineNum">      75 </span>            : }</a>
+<a name="76"><span class="lineNum">      76 </span>            : </a>
+<a name="77"><span class="lineNum">      77 </span>            : namespace internal {</a>
+<a name="78"><span class="lineNum">      78 </span>            : </a>
+<a name="79"><span class="lineNum">      79 </span>            : template &lt;typename To, typename From&gt;</a>
+<a name="80"><span class="lineNum">      80 </span><span class="lineNoCov">          0 : inline To DownCast(From* f) {</span></a>
+<a name="81"><span class="lineNum">      81 </span><span class="lineNoCov">          0 :   return PROTOBUF_NAMESPACE_ID::internal::down_cast&lt;To&gt;(f);</span></a>
+<a name="82"><span class="lineNum">      82 </span>            : }</a>
+<a name="83"><span class="lineNum">      83 </span>            : template &lt;typename To, typename From&gt;</a>
+<a name="84"><span class="lineNum">      84 </span>            : inline To DownCast(From&amp; f) {</a>
+<a name="85"><span class="lineNum">      85 </span>            :   return PROTOBUF_NAMESPACE_ID::internal::down_cast&lt;To&gt;(f);</a>
+<a name="86"><span class="lineNum">      86 </span>            : }</a>
+<a name="87"><span class="lineNum">      87 </span>            : </a>
+<a name="88"><span class="lineNum">      88 </span>            : </a>
+<a name="89"><span class="lineNum">      89 </span>            : // This fastpath inlines a single branch instead of having to make the</a>
+<a name="90"><span class="lineNum">      90 </span>            : // InitProtobufDefaults function call.</a>
+<a name="91"><span class="lineNum">      91 </span>            : // It also generates less inlined code than a function-scope static initializer.</a>
+<a name="92"><span class="lineNum">      92 </span>            : PROTOBUF_EXPORT extern std::atomic&lt;bool&gt; init_protobuf_defaults_state;</a>
+<a name="93"><span class="lineNum">      93 </span>            : PROTOBUF_EXPORT void InitProtobufDefaultsSlow();</a>
+<a name="94"><span class="lineNum">      94 </span>            : PROTOBUF_EXPORT inline void InitProtobufDefaults() {</a>
+<a name="95"><span class="lineNum">      95 </span>            :   if (PROTOBUF_PREDICT_FALSE(</a>
+<a name="96"><span class="lineNum">      96 </span>            :           !init_protobuf_defaults_state.load(std::memory_order_acquire))) {</a>
+<a name="97"><span class="lineNum">      97 </span>            :     InitProtobufDefaultsSlow();</a>
+<a name="98"><span class="lineNum">      98 </span>            :   }</a>
+<a name="99"><span class="lineNum">      99 </span>            : }</a>
+<a name="100"><span class="lineNum">     100 </span>            : </a>
+<a name="101"><span class="lineNum">     101 </span>            : // This used by proto1</a>
+<a name="102"><span class="lineNum">     102 </span>            : PROTOBUF_EXPORT inline const std::string&amp; GetEmptyString() {</a>
+<a name="103"><span class="lineNum">     103 </span>            :   InitProtobufDefaults();</a>
+<a name="104"><span class="lineNum">     104 </span>            :   return GetEmptyStringAlreadyInited();</a>
+<a name="105"><span class="lineNum">     105 </span>            : }</a>
+<a name="106"><span class="lineNum">     106 </span>            : </a>
+<a name="107"><span class="lineNum">     107 </span>            : </a>
+<a name="108"><span class="lineNum">     108 </span>            : // True if IsInitialized() is true for all elements of t.  Type is expected</a>
+<a name="109"><span class="lineNum">     109 </span>            : // to be a RepeatedPtrField&lt;some message type&gt;.  It's useful to have this</a>
+<a name="110"><span class="lineNum">     110 </span>            : // helper here to keep the protobuf compiler from ever having to emit loops in</a>
+<a name="111"><span class="lineNum">     111 </span>            : // IsInitialized() methods.  We want the C++ compiler to inline this or not</a>
+<a name="112"><span class="lineNum">     112 </span>            : // as it sees fit.</a>
+<a name="113"><span class="lineNum">     113 </span>            : template &lt;typename Msg&gt;</a>
+<a name="114"><span class="lineNum">     114 </span>            : bool AllAreInitialized(const RepeatedPtrField&lt;Msg&gt;&amp; t) {</a>
+<a name="115"><span class="lineNum">     115 </span>            :   for (int i = t.size(); --i &gt;= 0;) {</a>
+<a name="116"><span class="lineNum">     116 </span>            :     if (!t.Get(i).IsInitialized()) return false;</a>
+<a name="117"><span class="lineNum">     117 </span>            :   }</a>
+<a name="118"><span class="lineNum">     118 </span>            :   return true;</a>
+<a name="119"><span class="lineNum">     119 </span>            : }</a>
+<a name="120"><span class="lineNum">     120 </span>            : </a>
+<a name="121"><span class="lineNum">     121 </span>            : // &quot;Weak&quot; variant of AllAreInitialized, used to implement implicit weak fields.</a>
+<a name="122"><span class="lineNum">     122 </span>            : // This version operates on MessageLite to avoid introducing a dependency on the</a>
+<a name="123"><span class="lineNum">     123 </span>            : // concrete message type.</a>
+<a name="124"><span class="lineNum">     124 </span>            : template &lt;class T&gt;</a>
+<a name="125"><span class="lineNum">     125 </span>            : bool AllAreInitializedWeak(const RepeatedPtrField&lt;T&gt;&amp; t) {</a>
+<a name="126"><span class="lineNum">     126 </span>            :   for (int i = t.size(); --i &gt;= 0;) {</a>
+<a name="127"><span class="lineNum">     127 </span>            :     if (!reinterpret_cast&lt;const RepeatedPtrFieldBase&amp;&gt;(t)</a>
+<a name="128"><span class="lineNum">     128 </span>            :              .Get&lt;ImplicitWeakTypeHandler&lt;T&gt; &gt;(i)</a>
+<a name="129"><span class="lineNum">     129 </span>            :              .IsInitialized()) {</a>
+<a name="130"><span class="lineNum">     130 </span>            :       return false;</a>
+<a name="131"><span class="lineNum">     131 </span>            :     }</a>
+<a name="132"><span class="lineNum">     132 </span>            :   }</a>
+<a name="133"><span class="lineNum">     133 </span>            :   return true;</a>
+<a name="134"><span class="lineNum">     134 </span>            : }</a>
+<a name="135"><span class="lineNum">     135 </span>            : </a>
+<a name="136"><span class="lineNum">     136 </span>            : inline bool IsPresent(const void* base, uint32_t hasbit) {</a>
+<a name="137"><span class="lineNum">     137 </span>            :   const uint32_t* has_bits_array = static_cast&lt;const uint32_t*&gt;(base);</a>
+<a name="138"><span class="lineNum">     138 </span>            :   return (has_bits_array[hasbit / 32] &amp; (1u &lt;&lt; (hasbit &amp; 31))) != 0;</a>
+<a name="139"><span class="lineNum">     139 </span>            : }</a>
+<a name="140"><span class="lineNum">     140 </span>            : </a>
+<a name="141"><span class="lineNum">     141 </span>            : inline bool IsOneofPresent(const void* base, uint32_t offset, uint32_t tag) {</a>
+<a name="142"><span class="lineNum">     142 </span>            :   const uint32_t* oneof = reinterpret_cast&lt;const uint32_t*&gt;(</a>
+<a name="143"><span class="lineNum">     143 </span>            :       static_cast&lt;const uint8_t*&gt;(base) + offset);</a>
+<a name="144"><span class="lineNum">     144 </span>            :   return *oneof == tag &gt;&gt; 3;</a>
+<a name="145"><span class="lineNum">     145 </span>            : }</a>
+<a name="146"><span class="lineNum">     146 </span>            : </a>
+<a name="147"><span class="lineNum">     147 </span>            : typedef void (*SpecialSerializer)(const uint8_t* base, uint32_t offset,</a>
+<a name="148"><span class="lineNum">     148 </span>            :                                   uint32_t tag, uint32_t has_offset,</a>
+<a name="149"><span class="lineNum">     149 </span>            :                                   io::CodedOutputStream* output);</a>
+<a name="150"><span class="lineNum">     150 </span>            : </a>
+<a name="151"><span class="lineNum">     151 </span>            : PROTOBUF_EXPORT void ExtensionSerializer(const MessageLite* extendee,</a>
+<a name="152"><span class="lineNum">     152 </span>            :                                          const uint8_t* ptr, uint32_t offset,</a>
+<a name="153"><span class="lineNum">     153 </span>            :                                          uint32_t tag, uint32_t has_offset,</a>
+<a name="154"><span class="lineNum">     154 </span>            :                                          io::CodedOutputStream* output);</a>
+<a name="155"><span class="lineNum">     155 </span>            : PROTOBUF_EXPORT void UnknownFieldSerializerLite(const uint8_t* base,</a>
+<a name="156"><span class="lineNum">     156 </span>            :                                                 uint32_t offset, uint32_t tag,</a>
+<a name="157"><span class="lineNum">     157 </span>            :                                                 uint32_t has_offset,</a>
+<a name="158"><span class="lineNum">     158 </span>            :                                                 io::CodedOutputStream* output);</a>
+<a name="159"><span class="lineNum">     159 </span>            : </a>
+<a name="160"><span class="lineNum">     160 </span>            : PROTOBUF_EXPORT MessageLite* DuplicateIfNonNullInternal(MessageLite* message);</a>
+<a name="161"><span class="lineNum">     161 </span>            : PROTOBUF_EXPORT MessageLite* GetOwnedMessageInternal(Arena* message_arena,</a>
+<a name="162"><span class="lineNum">     162 </span>            :                                                      MessageLite* submessage,</a>
+<a name="163"><span class="lineNum">     163 </span>            :                                                      Arena* submessage_arena);</a>
+<a name="164"><span class="lineNum">     164 </span>            : PROTOBUF_EXPORT void GenericSwap(MessageLite* m1, MessageLite* m2);</a>
+<a name="165"><span class="lineNum">     165 </span>            : // We specialize GenericSwap for non-lite messages to benefit from reflection.</a>
+<a name="166"><span class="lineNum">     166 </span>            : PROTOBUF_EXPORT void GenericSwap(Message* m1, Message* m2);</a>
+<a name="167"><span class="lineNum">     167 </span>            : </a>
+<a name="168"><span class="lineNum">     168 </span>            : template &lt;typename T&gt;</a>
+<a name="169"><span class="lineNum">     169 </span>            : T* DuplicateIfNonNull(T* message) {</a>
+<a name="170"><span class="lineNum">     170 </span>            :   // The casts must be reinterpret_cast&lt;&gt; because T might be a forward-declared</a>
+<a name="171"><span class="lineNum">     171 </span>            :   // type that the compiler doesn't know is related to MessageLite.</a>
+<a name="172"><span class="lineNum">     172 </span>            :   return reinterpret_cast&lt;T*&gt;(</a>
+<a name="173"><span class="lineNum">     173 </span>            :       DuplicateIfNonNullInternal(reinterpret_cast&lt;MessageLite*&gt;(message)));</a>
+<a name="174"><span class="lineNum">     174 </span>            : }</a>
+<a name="175"><span class="lineNum">     175 </span>            : </a>
+<a name="176"><span class="lineNum">     176 </span>            : template &lt;typename T&gt;</a>
+<a name="177"><span class="lineNum">     177 </span>            : T* GetOwnedMessage(Arena* message_arena, T* submessage,</a>
+<a name="178"><span class="lineNum">     178 </span>            :                    Arena* submessage_arena) {</a>
+<a name="179"><span class="lineNum">     179 </span>            :   // The casts must be reinterpret_cast&lt;&gt; because T might be a forward-declared</a>
+<a name="180"><span class="lineNum">     180 </span>            :   // type that the compiler doesn't know is related to MessageLite.</a>
+<a name="181"><span class="lineNum">     181 </span>            :   return reinterpret_cast&lt;T*&gt;(GetOwnedMessageInternal(</a>
+<a name="182"><span class="lineNum">     182 </span>            :       message_arena, reinterpret_cast&lt;MessageLite*&gt;(submessage),</a>
+<a name="183"><span class="lineNum">     183 </span>            :       submessage_arena));</a>
+<a name="184"><span class="lineNum">     184 </span>            : }</a>
+<a name="185"><span class="lineNum">     185 </span>            : </a>
+<a name="186"><span class="lineNum">     186 </span>            : // Hide atomic from the public header and allow easy change to regular int</a>
+<a name="187"><span class="lineNum">     187 </span>            : // on platforms where the atomic might have a perf impact.</a>
+<a name="188"><span class="lineNum">     188 </span><span class="lineCov">       6081 : class PROTOBUF_EXPORT CachedSize {</span></a>
+<a name="189"><span class="lineNum">     189 </span>            :  public:</a>
+<a name="190"><span class="lineNum">     190 </span><span class="lineNoCov">          0 :   int Get() const { return size_.load(std::memory_order_relaxed); }</span></a>
+<a name="191"><span class="lineNum">     191 </span><span class="lineNoCov">          0 :   void Set(int size) { size_.store(size, std::memory_order_relaxed); }</span></a>
+<a name="192"><span class="lineNum">     192 </span>            : </a>
+<a name="193"><span class="lineNum">     193 </span>            :  private:</a>
+<a name="194"><span class="lineNum">     194 </span>            :   std::atomic&lt;int&gt; size_{0};</a>
+<a name="195"><span class="lineNum">     195 </span>            : };</a>
+<a name="196"><span class="lineNum">     196 </span>            : </a>
+<a name="197"><span class="lineNum">     197 </span>            : PROTOBUF_EXPORT void DestroyMessage(const void* message);</a>
+<a name="198"><span class="lineNum">     198 </span>            : PROTOBUF_EXPORT void DestroyString(const void* s);</a>
+<a name="199"><span class="lineNum">     199 </span>            : // Destroy (not delete) the message</a>
+<a name="200"><span class="lineNum">     200 </span>            : inline void OnShutdownDestroyMessage(const void* ptr) {</a>
+<a name="201"><span class="lineNum">     201 </span>            :   OnShutdownRun(DestroyMessage, ptr);</a>
+<a name="202"><span class="lineNum">     202 </span>            : }</a>
+<a name="203"><span class="lineNum">     203 </span>            : // Destroy the string (call std::string destructor)</a>
+<a name="204"><span class="lineNum">     204 </span>            : inline void OnShutdownDestroyString(const std::string* ptr) {</a>
+<a name="205"><span class="lineNum">     205 </span>            :   OnShutdownRun(DestroyString, ptr);</a>
+<a name="206"><span class="lineNum">     206 </span>            : }</a>
+<a name="207"><span class="lineNum">     207 </span>            : </a>
+<a name="208"><span class="lineNum">     208 </span>            : }  // namespace internal</a>
+<a name="209"><span class="lineNum">     209 </span>            : }  // namespace protobuf</a>
+<a name="210"><span class="lineNum">     210 </span>            : }  // namespace google</a>
+<a name="211"><span class="lineNum">     211 </span>            : </a>
+<a name="212"><span class="lineNum">     212 </span>            : #include &lt;google/protobuf/port_undef.inc&gt;</a>
+<a name="213"><span class="lineNum">     213 </span>            : </a>
+<a name="214"><span class="lineNum">     214 </span>            : #endif  // GOOGLE_PROTOBUF_GENERATED_MESSAGE_UTIL_H__</a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

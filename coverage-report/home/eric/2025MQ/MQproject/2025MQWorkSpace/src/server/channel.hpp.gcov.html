@@ -1,0 +1,196 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>LCOV - coverage.info - /home/eric/2025MQ/MQproject/2025MQWorkSpace/src/server/channel.hpp</title>
+  <link rel="stylesheet" type="text/css" href="../../../../../../../gcov.css">
+</head>
+
+<body>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="title">LCOV - code coverage report</td></tr>
+    <tr><td class="ruler"><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+
+    <tr>
+      <td width="100%">
+        <table cellpadding=1 border=0 width="100%">
+          <tr>
+            <td width="10%" class="headerItem">Current view:</td>
+            <td width="35%" class="headerValue"><a href="../../../../../../../index.html">top level</a> - <a href="index.html">home/eric/2025MQ/MQproject/2025MQWorkSpace/src/server</a> - channel.hpp<span style="font-size: 80%;"> (source / <a href="channel.hpp.func-sort-c.html">functions</a>)</span></td>
+            <td width="5%"></td>
+            <td width="15%"></td>
+            <td width="10%" class="headerCovTableHead">Hit</td>
+            <td width="10%" class="headerCovTableHead">Total</td>
+            <td width="15%" class="headerCovTableHead">Coverage</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Test:</td>
+            <td class="headerValue">coverage.info</td>
+            <td></td>
+            <td class="headerItem">Lines:</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntry">1</td>
+            <td class="headerCovTableEntryHi">100.0 %</td>
+          </tr>
+          <tr>
+            <td class="headerItem">Date:</td>
+            <td class="headerValue">2025-07-09 05:00:39</td>
+            <td></td>
+            <td class="headerItem">Functions:</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntry">0</td>
+            <td class="headerCovTableEntryHi">-</td>
+          </tr>
+          <tr><td><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="ruler"><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+  </table>
+
+  <table cellpadding=0 cellspacing=0 border=0>
+    <tr>
+      <td><br></td>
+    </tr>
+    <tr>
+      <td>
+<pre class="sourceHeading">          Line data    Source code</pre>
+<pre class="source">
+<a name="1"><span class="lineNum">       1 </span>            : // ======================= channel.hpp =======================</a>
+<a name="2"><span class="lineNum">       2 </span>            : #pragma once</a>
+<a name="3"><span class="lineNum">       3 </span>            : </a>
+<a name="4"><span class="lineNum">       4 </span>            : #include &lt;memory&gt;</a>
+<a name="5"><span class="lineNum">       5 </span>            : #include &lt;string&gt;</a>
+<a name="6"><span class="lineNum">       6 </span>            : #include &lt;unordered_map&gt;</a>
+<a name="7"><span class="lineNum">       7 </span>            : </a>
+<a name="8"><span class="lineNum">       8 </span>            : #include &quot;../common/msg.pb.h&quot;     // 请求/响应 Protobuf</a>
+<a name="9"><span class="lineNum">       9 </span>            : #include &quot;../common/protocol.pb.h&quot;</a>
+<a name="10"><span class="lineNum">      10 </span>            : </a>
+<a name="11"><span class="lineNum">      11 </span>            : #include &quot;consumer.hpp&quot;</a>
+<a name="12"><span class="lineNum">      12 </span>            : #include &quot;virtual_host.hpp&quot;</a>
+<a name="13"><span class="lineNum">      13 </span>            : #include &quot;../common/thread_pool.hpp&quot;</a>
+<a name="14"><span class="lineNum">      14 </span>            : #include &quot;muduo/protoc/codec.h&quot;</a>
+<a name="15"><span class="lineNum">      15 </span>            : </a>
+<a name="16"><span class="lineNum">      16 </span>            : // --- 前向声明以减少编译依赖 --------------------------------------</a>
+<a name="17"><span class="lineNum">      17 </span>            : namespace muduo {</a>
+<a name="18"><span class="lineNum">      18 </span>            : namespace net {</a>
+<a name="19"><span class="lineNum">      19 </span>            : class TcpConnection;                         // 前向声明 Muduo TCP 连接</a>
+<a name="20"><span class="lineNum">      20 </span>            : using TcpConnectionPtr = std::shared_ptr&lt;TcpConnection&gt;;</a>
+<a name="21"><span class="lineNum">      21 </span>            : } // namespace net</a>
+<a name="22"><span class="lineNum">      22 </span>            : } // namespace muduo</a>
+<a name="23"><span class="lineNum">      23 </span>            : </a>
+<a name="24"><span class="lineNum">      24 </span>            : </a>
+<a name="25"><span class="lineNum">      25 </span>            : </a>
+<a name="26"><span class="lineNum">      26 </span>            : namespace hare_mq {</a>
+<a name="27"><span class="lineNum">      27 </span>            : </a>
+<a name="28"><span class="lineNum">      28 </span>            : // -----------------------------------------------------------------</a>
+<a name="29"><span class="lineNum">      29 </span>            : // 便捷别名（各类请求的 shared_ptr）</a>
+<a name="30"><span class="lineNum">      30 </span>            : // -----------------------------------------------------------------</a>
+<a name="31"><span class="lineNum">      31 </span>            : using ProtobufCodec            = ::ProtobufCodec;</a>
+<a name="32"><span class="lineNum">      32 </span>            : using ProtobufCodecPtr         = std::shared_ptr&lt;ProtobufCodec&gt;;</a>
+<a name="33"><span class="lineNum">      33 </span>            : using openChannelRequestPtr    = std::shared_ptr&lt;openChannelRequest&gt;;</a>
+<a name="34"><span class="lineNum">      34 </span>            : using closeChannelRequestPtr   = std::shared_ptr&lt;closeChannelRequest&gt;;</a>
+<a name="35"><span class="lineNum">      35 </span>            : using declareExchangeRequestPtr= std::shared_ptr&lt;declareExchangeRequest&gt;;</a>
+<a name="36"><span class="lineNum">      36 </span>            : using deleteExchangeRequestPtr = std::shared_ptr&lt;deleteExchangeRequest&gt;;</a>
+<a name="37"><span class="lineNum">      37 </span>            : using declareQueueRequestPtr   = std::shared_ptr&lt;declareQueueRequest&gt;;</a>
+<a name="38"><span class="lineNum">      38 </span>            : using deleteQueueRequestPtr    = std::shared_ptr&lt;deleteQueueRequest&gt;;</a>
+<a name="39"><span class="lineNum">      39 </span>            : using bindRequestPtr           = std::shared_ptr&lt;bindRequest&gt;;</a>
+<a name="40"><span class="lineNum">      40 </span>            : using unbindRequestPtr         = std::shared_ptr&lt;unbindRequest&gt;;</a>
+<a name="41"><span class="lineNum">      41 </span>            : using basicPublishRequestPtr   = std::shared_ptr&lt;basicPublishRequest&gt;;</a>
+<a name="42"><span class="lineNum">      42 </span>            : using basicAckRequestPtr       = std::shared_ptr&lt;basicAckRequest&gt;;</a>
+<a name="43"><span class="lineNum">      43 </span>            : using basicConsumeRequestPtr   = std::shared_ptr&lt;basicConsumeRequest&gt;;</a>
+<a name="44"><span class="lineNum">      44 </span>            : using basicCancelRequestPtr    = std::shared_ptr&lt;basicCancelRequest&gt;;</a>
+<a name="45"><span class="lineNum">      45 </span>            : using basicQueryRequestPtr     = std::shared_ptr&lt;basicQueryRequest&gt;;</a>
+<a name="46"><span class="lineNum">      46 </span>            : using basicCommonResponsePtr   = std::shared_ptr&lt;basicCommonResponse&gt;;</a>
+<a name="47"><span class="lineNum">      47 </span>            : </a>
+<a name="48"><span class="lineNum">      48 </span>            : // =================================================================</a>
+<a name="49"><span class="lineNum">      49 </span>            : // channel : 表示一条逻辑通道（AMQP 风格）</a>
+<a name="50"><span class="lineNum">      50 </span>            : // =================================================================</a>
+<a name="51"><span class="lineNum">      51 </span>            : class channel {</a>
+<a name="52"><span class="lineNum">      52 </span>            : public:</a>
+<a name="53"><span class="lineNum">      53 </span>            :     using ptr = std::shared_ptr&lt;channel&gt;;</a>
+<a name="54"><span class="lineNum">      54 </span>            : </a>
+<a name="55"><span class="lineNum">      55 </span>            :     channel(const std::string&amp; cid,</a>
+<a name="56"><span class="lineNum">      56 </span>            :             const virtual_host::ptr&amp; host,</a>
+<a name="57"><span class="lineNum">      57 </span>            :             const consumer_manager::ptr&amp; cmp,</a>
+<a name="58"><span class="lineNum">      58 </span>            :             const ProtobufCodecPtr&amp; codec,</a>
+<a name="59"><span class="lineNum">      59 </span>            :             const muduo::net::TcpConnectionPtr conn,</a>
+<a name="60"><span class="lineNum">      60 </span>            :             const thread_pool::ptr&amp; pool);</a>
+<a name="61"><span class="lineNum">      61 </span>            :     ~channel();</a>
+<a name="62"><span class="lineNum">      62 </span>            : </a>
+<a name="63"><span class="lineNum">      63 </span>            :     // ------------------- Exchange -------------------</a>
+<a name="64"><span class="lineNum">      64 </span>            :     void declare_exchange(const declareExchangeRequestPtr&amp; req);</a>
+<a name="65"><span class="lineNum">      65 </span>            :     void delete_exchange(const deleteExchangeRequestPtr&amp; req);</a>
+<a name="66"><span class="lineNum">      66 </span>            : </a>
+<a name="67"><span class="lineNum">      67 </span>            :     // ------------------- Queue ----------------------</a>
+<a name="68"><span class="lineNum">      68 </span>            :     void declare_queue(const declareQueueRequestPtr&amp; req);</a>
+<a name="69"><span class="lineNum">      69 </span>            :     void delete_queue(const deleteQueueRequestPtr&amp; req);</a>
+<a name="70"><span class="lineNum">      70 </span>            : </a>
+<a name="71"><span class="lineNum">      71 </span>            :     // ------------------- Binding --------------------</a>
+<a name="72"><span class="lineNum">      72 </span>            :     void bind(const bindRequestPtr&amp; req);</a>
+<a name="73"><span class="lineNum">      73 </span>            :     void unbind(const unbindRequestPtr&amp; req);</a>
+<a name="74"><span class="lineNum">      74 </span>            : </a>
+<a name="75"><span class="lineNum">      75 </span>            :     // ------------------- Message --------------------</a>
+<a name="76"><span class="lineNum">      76 </span>            :     void basic_publish(const basicPublishRequestPtr&amp; req);</a>
+<a name="77"><span class="lineNum">      77 </span>            :     void basic_ack(const basicAckRequestPtr&amp; req);</a>
+<a name="78"><span class="lineNum">      78 </span>            :     void basic_consume(const basicConsumeRequestPtr&amp; req);</a>
+<a name="79"><span class="lineNum">      79 </span>            :     void basic_cancel(const basicCancelRequestPtr&amp; req);</a>
+<a name="80"><span class="lineNum">      80 </span>            :     void basic_query(const basicQueryRequestPtr&amp; req);</a>
+<a name="81"><span class="lineNum">      81 </span>            : </a>
+<a name="82"><span class="lineNum">      82 </span>            : private:</a>
+<a name="83"><span class="lineNum">      83 </span>            :     // helpers ------------------------------------------------------</a>
+<a name="84"><span class="lineNum">      84 </span>            :     void basic_response(bool ok, const std::string&amp; rid, const std::string&amp; cid);</a>
+<a name="85"><span class="lineNum">      85 </span>            :     void consume(const std::string&amp; qname); // 在线程池中执行</a>
+<a name="86"><span class="lineNum">      86 </span>            :     void consume_cb(const std::string&amp; tag, const BasicProperties* bp, const std::string&amp; body);</a>
+<a name="87"><span class="lineNum">      87 </span>            : </a>
+<a name="88"><span class="lineNum">      88 </span>            :     // data ---------------------------------------------------------</a>
+<a name="89"><span class="lineNum">      89 </span>            :     std::string                    __cid;</a>
+<a name="90"><span class="lineNum">      90 </span>            :     consumer::ptr                  __consumer;   // 若该通道作消费者</a>
+<a name="91"><span class="lineNum">      91 </span>            :     muduo::net::TcpConnectionPtr   __conn;</a>
+<a name="92"><span class="lineNum">      92 </span>            :     ProtobufCodecPtr               __codec;</a>
+<a name="93"><span class="lineNum">      93 </span>            :     consumer_manager::ptr          __cmp;</a>
+<a name="94"><span class="lineNum">      94 </span>            :     virtual_host::ptr              __host;</a>
+<a name="95"><span class="lineNum">      95 </span>            :     thread_pool::ptr               __pool;</a>
+<a name="96"><span class="lineNum">      96 </span>            : };</a>
+<a name="97"><span class="lineNum">      97 </span>            : </a>
+<a name="98"><span class="lineNum">      98 </span>            : // =================================================================</a>
+<a name="99"><span class="lineNum">      99 </span>            : // channel_manager : 负责同一 TCP 连接内的多条 channel</a>
+<a name="100"><span class="lineNum">     100 </span>            : // =================================================================</a>
+<a name="101"><span class="lineNum">     101 </span><span class="lineCov">          1 : class channel_manager {</span></a>
+<a name="102"><span class="lineNum">     102 </span>            : public:</a>
+<a name="103"><span class="lineNum">     103 </span>            :     using ptr = std::shared_ptr&lt;channel_manager&gt;;</a>
+<a name="104"><span class="lineNum">     104 </span>            : </a>
+<a name="105"><span class="lineNum">     105 </span>            :     bool open_channel(const std::string&amp; cid,</a>
+<a name="106"><span class="lineNum">     106 </span>            :                       const virtual_host::ptr&amp; host,</a>
+<a name="107"><span class="lineNum">     107 </span>            :                       const consumer_manager::ptr&amp; cmp,</a>
+<a name="108"><span class="lineNum">     108 </span>            :                       const ProtobufCodecPtr&amp; codec,</a>
+<a name="109"><span class="lineNum">     109 </span>            :                       const muduo::net::TcpConnectionPtr conn,</a>
+<a name="110"><span class="lineNum">     110 </span>            :                       const thread_pool::ptr&amp; pool);</a>
+<a name="111"><span class="lineNum">     111 </span>            : </a>
+<a name="112"><span class="lineNum">     112 </span>            :     void close_channel(const std::string&amp; cid);</a>
+<a name="113"><span class="lineNum">     113 </span>            :     channel::ptr select_channel(const std::string&amp; cid);</a>
+<a name="114"><span class="lineNum">     114 </span>            : </a>
+<a name="115"><span class="lineNum">     115 </span>            : private:</a>
+<a name="116"><span class="lineNum">     116 </span>            :     std::unordered_map&lt;std::string, channel::ptr&gt; __channels;</a>
+<a name="117"><span class="lineNum">     117 </span>            :     std::mutex                                    __mtx;</a>
+<a name="118"><span class="lineNum">     118 </span>            : };</a>
+<a name="119"><span class="lineNum">     119 </span>            : </a>
+<a name="120"><span class="lineNum">     120 </span>            : } </a>
+</pre>
+      </td>
+    </tr>
+  </table>
+  <br>
+
+  <table width="100%" border=0 cellspacing=0 cellpadding=0>
+    <tr><td class="ruler"><img src="../../../../../../../glass.png" width=3 height=3 alt=""></td></tr>
+    <tr><td class="versionInfo">Generated by: <a href="http://ltp.sourceforge.net/coverage/lcov.php" target="_parent">LCOV version 1.14</a></td></tr>
+  </table>
+  <br>
+
+</body>
+</html>

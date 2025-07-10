@@ -5,7 +5,7 @@
 #include "../common/thread_pool.hpp"      // thread_pool
 #include <muduo/protoc/codec.h>  
 
-using namespace hare_mq;
+using namespace hz_mq;
 
 TEST(MessageQueueTest, PointToPointSendReceive) {
     // Initialize virtual host

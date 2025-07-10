@@ -1,4 +1,4 @@
-// queue_message.hpp  —— 仅内存版，兼容 hare_mq::Message 接口
+
 #pragma once
 #include <deque>
 #include <memory>
@@ -7,13 +7,13 @@
 #include "../common/msg.pb.h"      // BasicProperties
 #include "../common/message.hpp"   // 若已有真正定义则直接用它
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------------------------------------------------------------------------
 // 兼容用的小壳：在真正 message.hpp 不可用时启用
 // （如果你后来补上了完整实现，把下面 #ifndef-#endif 整段删掉即可）
 // ---------------------------------------------------------------------------
-#ifndef HARE_MQ_MESSAGE_HPP                // 假设真文件里有这个宏
+#ifndef HZ_MQ_MESSAGE_HPP                // 假设真文件里有这个宏
 
 #endif
 // ---------------------------------------------------------------------------
@@ -62,4 +62,4 @@ private:
     std::deque<message_ptr> msgs_;
 };
 
-}   // namespace hare_mq
+}   

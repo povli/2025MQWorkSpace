@@ -1,3 +1,10 @@
+COVER ?= 0          # make COVER=1 开启
+ifdef COVER
+    COV_FLAGS := --coverage -O0          # -O0 最稳
+else
+    COV_FLAGS :=
+endif
+
 # === 1. 自定义可调路径 ===
 # 你的 muduo 安装路径（包含 include、lib 子目录）
 MUDUO_PREFIX := src/tools/muduo/_install
@@ -5,10 +12,10 @@ EXAMPLE_INC := src/tools/muduo/examples
 TOOLS_ROOT  := src/tools                 # << 新增
 SRC_INC     := src/tools/muduo/muduo 
 
-
+ # 或留空，在命令行 make COVER= 关闭
 # ================= 公共变量 =================
 CXX        := g++
-CXXFLAGS   := -std=c++20 -O2 -g                                 \
+CXXFLAGS   := $(COV_FLAGS) -std=c++20 -O2 -g                                 \
               -Iinclude -Isrc/common -Isrc/server -Isrc/client  \
               -I$(MUDUO_PREFIX)/include                         \
 			  -I$(EXAMPLE_INC) \
@@ -17,7 +24,8 @@ CXXFLAGS   := -std=c++20 -O2 -g                                 \
               -pthread
 
 # Muduo / Protobuf / 其它依赖库
-LD_LIBS    := -L$(MUDUO_PREFIX)/lib \
+LD_LIBS    := $(COV_FLAGS) \
+			 -L$(MUDUO_PREFIX)/lib \
               -lmuduo_net -lmuduo_base \
               -lprotobuf -lpthread -lz
 
@@ -36,12 +44,16 @@ COMMON_OBJS = \
     src/common/protocol.pb.o 
              
 
-CODEC_SRC = src/tools/muduo/examples/protobuf/codec/codec.cc
-
+CODEC_SRC  := src/tools/muduo/examples/protobuf/codec/codec.cc
+CODEC_OBJ  := codec.o      
 
 SERVER_OBJS := $(SERVER_SRC:.cpp=.o)
 CLIENT_OBJS := $(CLIENT_SRC:.cpp=.o)
+TEST_SRC   := $(wildcard test/*.cpp)
+TEST_OBJS  := $(TEST_SRC:.cpp=.o)
 
+SERVER_CORE_SRC  := $(filter-out src/server/main.cpp, $(wildcard src/server/*.cpp))
+SERVER_CORE_OBJS := $(SERVER_CORE_SRC:.cpp=.o) $(CODEC_OBJ)
 # Protobuf 源文件
 PROTO_FILES := src/common/msg.proto src/common/protocol.proto
 PROTO_CC    := $(PROTO_FILES:.proto=.pb.cc)
@@ -61,11 +73,14 @@ mq_client: $(CLIENT_OBJS) $(COMMON_OBJS) $(PROTO_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LD_LIBS)
 
 # -------- mq_test --------------
-mq_test:   $(TEST_SRC:.cpp=.o) $(SERVER_OBJS) $(COMMON_OBJS) $(PROTO_OBJ)
+mq_test: $(TEST_OBJS) $(SERVER_CORE_OBJS) $(COMMON_OBJS) $(PROTO_OBJ) $(CODEC_OBJ)
 	$(CXX) $(CXXFLAGS) -o $@ $^ $(LD_LIBS) -lgtest -lgtest_main
 # ---------- 通用规则 ----------
 # 3. 先把 .cpp 编译成 .o
 %.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+$(CODEC_OBJ): $(CODEC_SRC)
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 

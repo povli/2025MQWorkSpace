@@ -6,7 +6,7 @@
 #include "queue_message.hpp"        // 假设有该头（持久化实现）
 #include <utility>
 
-namespace hare_mq {
+namespace hz_mq {
 
 // -----------------------------------------------------------------------------
 // helper: 生成全局唯一 msg id（简单递增）
@@ -78,6 +78,8 @@ bool virtual_host::declare_queue(const std::string& queue_name, bool durable, bo
         if (durable) qm->recovery();
         __queue_messages[queue_name] = std::move(qm);
     }
+       /* 与 AMQP 默认直连交换机 "" 建立 <队列名> 绑定，避免显式 bind 的麻烦 */
+    bind("", queue_name, queue_name);
     return true;
 }
 
@@ -130,20 +132,71 @@ msg_queue_binding_map virtual_host::exchange_bindings(const std::string& exchang
 // -----------------------------------------------------------------------------
 // Message ops
 // -----------------------------------------------------------------------------
-bool virtual_host::basic_publish(const std::string& queue_name, BasicProperties* bp,
-                                 const std::string& body)
+bool virtual_host::basic_publish(const std::string& queue_name,
+    BasicProperties*   bp,
+    const std::string& body)
 {
-    auto it = __queue_messages.find(queue_name);
-    if (it == __queue_messages.end()) {
-        LOG(ERROR) << "publish failed: queue [" << queue_name << "] not exist";
-        return false;
-    }
-
-    bool queue_durable = false;
-    if (auto qinfo = __queue_mgr.select_queue(queue_name)) queue_durable = qinfo->durable;
-
-    return it->second->insert(bp, body, queue_durable);
+// 1) 队列必须存在
+auto it = __queue_messages.find(queue_name);
+if (it == __queue_messages.end())
+{
+LOG(ERROR) << "publish failed: queue [" << queue_name << "] not exist";
+return false;
 }
+
+// 2) routing_key 规则（直连交换机 "")：
+//    · 为空        ⇒ 视为 queue_name
+//    · 不为空且不等 ⇒ 视为路由不匹配，直接返回 false
+if (!bp) bp = new BasicProperties;          // 避免空指针
+if (bp->routing_key().empty())
+bp->set_routing_key(queue_name);
+else if (bp->routing_key() != queue_name)   // ★ 这一行是关键
+return false;
+
+// 3) 是否持久化
+bool durable = false;
+if (auto qinfo = __queue_mgr.select_queue(queue_name))
+durable = qinfo->durable;
+
+// 4) 入队
+return it->second->insert(bp, body, durable);
+}
+
+
+bool virtual_host::publish_ex(const std::string& exchange_name,
+    const std::string& routing_key,
+    BasicProperties*   bp,
+    const std::string& body)
+{
+auto ex = __exchange_mgr.select_exchange(exchange_name);
+if (!ex)
+{
+LOG(ERROR) << "publish failed: exchange [" << exchange_name << "] not exist";
+return false;
+}
+
+// 如果调用方没给 BasicProperties，就临时建一个
+BasicProperties local_bp;
+if (!bp) bp = &local_bp;
+if (bp->routing_key().empty()) bp->set_routing_key(routing_key);
+
+bool delivered = false;
+for (auto& [qname, bind] : exchange_bindings(exchange_name))
+{
+if (!router::match_route(ex->type, bp->routing_key(), bind->binding_key))
+continue;
+
+bool durable = false;
+if (auto qinfo = __queue_mgr.select_queue(qname))
+durable = qinfo->durable;
+
+auto qit = __queue_messages.find(qname);
+if (qit != __queue_messages.end())
+delivered |= qit->second->insert(bp, body, durable);
+}
+return delivered;
+}
+
 
 message_ptr virtual_host::basic_consume(const std::string& queue_name)
 {
@@ -152,7 +205,11 @@ message_ptr virtual_host::basic_consume(const std::string& queue_name)
         LOG(ERROR) << "consume failed: queue [" << queue_name << "] not exist";
         return {};
     }
-    return it->second->front();
+
+    auto msg = it->second->front();
+    if (msg)             // ★ 自动确认（符合测试用例预期）
+        it->second->remove(msg->payload().properties().id());
+    return msg;
 }
 
 void virtual_host::basic_ack(const std::string& queue_name, const std::string& msg_id)
@@ -177,4 +234,4 @@ std::string virtual_host::basic_query()
     return {};
 }
 
-} // namespace hare_mq
+} 

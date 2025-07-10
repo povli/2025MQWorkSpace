@@ -25,7 +25,7 @@ class Timestamp;          // muduo::Timestamp
 class ProtobufDispatcher;
 class ProtobufCodec;
 
-namespace hare_mq {
+namespace hz_mq {
 
 // 其余模块前向声明，减少耦合 ---------------------------------------
 class virtual_host;
@@ -103,4 +103,4 @@ private:
     thread_pool::ptr                         __thread_pool;
 };
 
-} // namespace hare_mq
+} 

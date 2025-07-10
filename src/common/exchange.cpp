@@ -1,7 +1,7 @@
 // ======================= exchange.cpp =======================
 #include "exchange.hpp"
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------- exchange ----------
 exchange::exchange(const std::string& ename, ExchangeType etype, bool edurable,

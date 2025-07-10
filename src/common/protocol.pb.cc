@@ -20,7 +20,7 @@ PROTOBUF_PRAGMA_INIT_SEG
 namespace _pb = ::PROTOBUF_NAMESPACE_ID;
 namespace _pbi = _pb::internal;
 
-namespace hare_mq {
+namespace hz_mq {
 PROTOBUF_CONSTEXPR openChannelRequest::openChannelRequest(
     ::_pbi::ConstantInitialized)
   : rid_(&::_pbi::fixed_address_empty_string, ::_pbi::ConstantInitialized{})
@@ -283,285 +283,285 @@ struct basicQueryResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PROTOBUF_ATTRIBUTE_INIT_PRIORITY1 basicQueryResponseDefaultTypeInternal _basicQueryResponse_default_instance_;
-}  // namespace hare_mq
+}  // namespace hz_mq
 static ::_pb::Metadata file_level_metadata_protocol_2eproto[18];
 static const ::_pb::EnumDescriptor* file_level_enum_descriptors_protocol_2eproto[1];
 static constexpr ::_pb::ServiceDescriptor const** file_level_service_descriptors_protocol_2eproto = nullptr;
 
 const uint32_t TableStruct_protocol_2eproto::offsets[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::openChannelRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::openChannelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::openChannelRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::openChannelRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::openChannelRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::openChannelRequest, cid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::closeChannelRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::closeChannelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::closeChannelRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::closeChannelRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::closeChannelRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::closeChannelRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, exchange_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, exchange_type_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, durable_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, auto_delete_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareExchangeRequest, args_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, exchange_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, exchange_type_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, durable_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, auto_delete_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareExchangeRequest, args_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteExchangeRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteExchangeRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteExchangeRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteExchangeRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteExchangeRequest, exchange_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteExchangeRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteExchangeRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteExchangeRequest, exchange_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse, _has_bits_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse, value_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse, key_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse, value_),
   0,
   1,
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, queue_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, exclusive_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, durable_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, auto_delete_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::declareQueueRequest, args_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, exclusive_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, durable_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, auto_delete_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::declareQueueRequest, args_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteQueueRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteQueueRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteQueueRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteQueueRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::deleteQueueRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteQueueRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteQueueRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::deleteQueueRequest, queue_name_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, exchange_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, queue_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::bindRequest, binding_key_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, exchange_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::bindRequest, binding_key_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::unbindRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::unbindRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::unbindRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::unbindRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::unbindRequest, exchange_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::unbindRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::unbindRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::unbindRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::unbindRequest, exchange_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::unbindRequest, queue_name_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, exchange_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, body_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicPublishRequest, properties_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, exchange_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, body_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicPublishRequest, properties_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicAckRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicAckRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicAckRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicAckRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicAckRequest, queue_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicAckRequest, message_id_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicAckRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicAckRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicAckRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicAckRequest, message_id_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, consumer_tag_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, queue_name_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeRequest, auto_ack_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, consumer_tag_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeRequest, auto_ack_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCancelRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCancelRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCancelRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCancelRequest, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCancelRequest, consumer_tag_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCancelRequest, queue_name_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCancelRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCancelRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCancelRequest, consumer_tag_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCancelRequest, queue_name_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryRequest, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryRequest, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryRequest, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryRequest, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryRequest, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryRequest, cid_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCommonResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCommonResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCommonResponse, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCommonResponse, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicCommonResponse, ok_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCommonResponse, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCommonResponse, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicCommonResponse, ok_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeResponse, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeResponse, consumer_tag_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeResponse, body_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicConsumeResponse, properties_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeResponse, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeResponse, consumer_tag_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeResponse, body_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicConsumeResponse, properties_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryResponse, _internal_metadata_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryResponse, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
   ~0u,  // no _weak_field_map_
   ~0u,  // no _inlined_string_donated_
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryResponse, rid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryResponse, cid_),
-  PROTOBUF_FIELD_OFFSET(::hare_mq::basicQueryResponse, body_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryResponse, rid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryResponse, cid_),
+  PROTOBUF_FIELD_OFFSET(::hz_mq::basicQueryResponse, body_),
 };
 static const ::_pbi::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
-  { 0, -1, -1, sizeof(::hare_mq::openChannelRequest)},
-  { 8, -1, -1, sizeof(::hare_mq::closeChannelRequest)},
-  { 16, 24, -1, sizeof(::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse)},
-  { 26, -1, -1, sizeof(::hare_mq::declareExchangeRequest)},
-  { 39, -1, -1, sizeof(::hare_mq::deleteExchangeRequest)},
-  { 48, 56, -1, sizeof(::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse)},
-  { 58, -1, -1, sizeof(::hare_mq::declareQueueRequest)},
-  { 71, -1, -1, sizeof(::hare_mq::deleteQueueRequest)},
-  { 80, -1, -1, sizeof(::hare_mq::bindRequest)},
-  { 91, -1, -1, sizeof(::hare_mq::unbindRequest)},
-  { 101, -1, -1, sizeof(::hare_mq::basicPublishRequest)},
-  { 112, -1, -1, sizeof(::hare_mq::basicAckRequest)},
-  { 122, -1, -1, sizeof(::hare_mq::basicConsumeRequest)},
-  { 133, -1, -1, sizeof(::hare_mq::basicCancelRequest)},
-  { 143, -1, -1, sizeof(::hare_mq::basicQueryRequest)},
-  { 151, -1, -1, sizeof(::hare_mq::basicCommonResponse)},
-  { 160, -1, -1, sizeof(::hare_mq::basicConsumeResponse)},
-  { 170, -1, -1, sizeof(::hare_mq::basicQueryResponse)},
+  { 0, -1, -1, sizeof(::hz_mq::openChannelRequest)},
+  { 8, -1, -1, sizeof(::hz_mq::closeChannelRequest)},
+  { 16, 24, -1, sizeof(::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse)},
+  { 26, -1, -1, sizeof(::hz_mq::declareExchangeRequest)},
+  { 39, -1, -1, sizeof(::hz_mq::deleteExchangeRequest)},
+  { 48, 56, -1, sizeof(::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse)},
+  { 58, -1, -1, sizeof(::hz_mq::declareQueueRequest)},
+  { 71, -1, -1, sizeof(::hz_mq::deleteQueueRequest)},
+  { 80, -1, -1, sizeof(::hz_mq::bindRequest)},
+  { 91, -1, -1, sizeof(::hz_mq::unbindRequest)},
+  { 101, -1, -1, sizeof(::hz_mq::basicPublishRequest)},
+  { 112, -1, -1, sizeof(::hz_mq::basicAckRequest)},
+  { 122, -1, -1, sizeof(::hz_mq::basicConsumeRequest)},
+  { 133, -1, -1, sizeof(::hz_mq::basicCancelRequest)},
+  { 143, -1, -1, sizeof(::hz_mq::basicQueryRequest)},
+  { 151, -1, -1, sizeof(::hz_mq::basicCommonResponse)},
+  { 160, -1, -1, sizeof(::hz_mq::basicConsumeResponse)},
+  { 170, -1, -1, sizeof(::hz_mq::basicQueryResponse)},
 };
 
 static const ::_pb::Message* const file_default_instances[] = {
-  &::hare_mq::_openChannelRequest_default_instance_._instance,
-  &::hare_mq::_closeChannelRequest_default_instance_._instance,
-  &::hare_mq::_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_._instance,
-  &::hare_mq::_declareExchangeRequest_default_instance_._instance,
-  &::hare_mq::_deleteExchangeRequest_default_instance_._instance,
-  &::hare_mq::_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_._instance,
-  &::hare_mq::_declareQueueRequest_default_instance_._instance,
-  &::hare_mq::_deleteQueueRequest_default_instance_._instance,
-  &::hare_mq::_bindRequest_default_instance_._instance,
-  &::hare_mq::_unbindRequest_default_instance_._instance,
-  &::hare_mq::_basicPublishRequest_default_instance_._instance,
-  &::hare_mq::_basicAckRequest_default_instance_._instance,
-  &::hare_mq::_basicConsumeRequest_default_instance_._instance,
-  &::hare_mq::_basicCancelRequest_default_instance_._instance,
-  &::hare_mq::_basicQueryRequest_default_instance_._instance,
-  &::hare_mq::_basicCommonResponse_default_instance_._instance,
-  &::hare_mq::_basicConsumeResponse_default_instance_._instance,
-  &::hare_mq::_basicQueryResponse_default_instance_._instance,
+  &::hz_mq::_openChannelRequest_default_instance_._instance,
+  &::hz_mq::_closeChannelRequest_default_instance_._instance,
+  &::hz_mq::_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_._instance,
+  &::hz_mq::_declareExchangeRequest_default_instance_._instance,
+  &::hz_mq::_deleteExchangeRequest_default_instance_._instance,
+  &::hz_mq::_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_._instance,
+  &::hz_mq::_declareQueueRequest_default_instance_._instance,
+  &::hz_mq::_deleteQueueRequest_default_instance_._instance,
+  &::hz_mq::_bindRequest_default_instance_._instance,
+  &::hz_mq::_unbindRequest_default_instance_._instance,
+  &::hz_mq::_basicPublishRequest_default_instance_._instance,
+  &::hz_mq::_basicAckRequest_default_instance_._instance,
+  &::hz_mq::_basicConsumeRequest_default_instance_._instance,
+  &::hz_mq::_basicCancelRequest_default_instance_._instance,
+  &::hz_mq::_basicQueryRequest_default_instance_._instance,
+  &::hz_mq::_basicCommonResponse_default_instance_._instance,
+  &::hz_mq::_basicConsumeResponse_default_instance_._instance,
+  &::hz_mq::_basicQueryResponse_default_instance_._instance,
 };
 
 const char descriptor_table_protodef_protocol_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016protocol.proto\022\007hare_mq\032\tmsg.proto\".\n\022"
-  "openChannelRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002"
-  " \001(\t\"/\n\023closeChannelRequest\022\013\n\003rid\030\001 \001(\t"
-  "\022\013\n\003cid\030\002 \001(\t\"\203\002\n\026declareExchangeRequest"
-  "\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\rexchange_n"
-  "ame\030\003 \001(\t\022,\n\rexchange_type\030\004 \001(\0162\025.hare_"
-  "mq.ExchangeType\022\017\n\007durable\030\005 \001(\010\022\023\n\013auto"
-  "_delete\030\006 \001(\010\0227\n\004args\030\007 \003(\0132).hare_mq.de"
-  "clareExchangeRequest.ArgsEntry\032+\n\tArgsEn"
-  "try\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\025d"
-  "eleteExchangeRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid"
-  "\030\002 \001(\t\022\025\n\rexchange_name\030\003 \001(\t\"\337\001\n\023declar"
-  "eQueueRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022"
-  "\022\n\nqueue_name\030\003 \001(\t\022\021\n\texclusive\030\004 \001(\010\022\017"
-  "\n\007durable\030\005 \001(\010\022\023\n\013auto_delete\030\006 \001(\010\0224\n\004"
-  "args\030\007 \003(\0132&.hare_mq.declareQueueRequest"
-  ".ArgsEntry\032+\n\tArgsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005"
-  "value\030\002 \001(\t:\0028\001\"B\n\022deleteQueueRequest\022\013\n"
-  "\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\022\n\nqueue_name\030\003 "
-  "\001(\t\"g\n\013bindRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002"
-  " \001(\t\022\025\n\rexchange_name\030\003 \001(\t\022\022\n\nqueue_nam"
-  "e\030\004 \001(\t\022\023\n\013binding_key\030\005 \001(\t\"T\n\runbindRe"
-  "quest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\rexcha"
-  "nge_name\030\003 \001(\t\022\022\n\nqueue_name\030\004 \001(\t\"\202\001\n\023b"
-  "asicPublishRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002"
-  " \001(\t\022\025\n\rexchange_name\030\003 \001(\t\022\014\n\004body\030\004 \001("
-  "\t\022,\n\nproperties\030\005 \001(\0132\030.hare_mq.BasicPro"
-  "perties\"S\n\017basicAckRequest\022\013\n\003rid\030\001 \001(\t\022"
-  "\013\n\003cid\030\002 \001(\t\022\022\n\nqueue_name\030\003 \001(\t\022\022\n\nmess"
-  "age_id\030\004 \001(\t\"k\n\023basicConsumeRequest\022\013\n\003r"
-  "id\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\024\n\014consumer_tag\030\003 "
-  "\001(\t\022\022\n\nqueue_name\030\004 \001(\t\022\020\n\010auto_ack\030\005 \001("
-  "\010\"X\n\022basicCancelRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003"
-  "cid\030\002 \001(\t\022\024\n\014consumer_tag\030\003 \001(\t\022\022\n\nqueue"
-  "_name\030\004 \001(\t\"-\n\021basicQueryRequest\022\013\n\003rid\030"
-  "\001 \001(\t\022\013\n\003cid\030\002 \001(\t\";\n\023basicCommonRespons"
-  "e\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\n\n\002ok\030\003 \001(\010\""
-  "u\n\024basicConsumeResponse\022\013\n\003cid\030\001 \001(\t\022\024\n\014"
-  "consumer_tag\030\002 \001(\t\022\014\n\004body\030\003 \001(\t\022,\n\nprop"
-  "erties\030\004 \001(\0132\030.hare_mq.BasicProperties\"<"
-  "\n\022basicQueryResponse\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid"
-  "\030\002 \001(\t\022\014\n\004body\030\003 \001(\t*1\n\014ExchangeType\022\n\n\006"
-  "DIRECT\020\000\022\n\n\006FANOUT\020\001\022\t\n\005TOPIC\020\002b\006proto3"
+  "\n\016protocol.proto\022\005hz_mq\032\tmsg.proto\".\n\022op"
+  "enChannelRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001"
+  "(\t\"/\n\023closeChannelRequest\022\013\n\003rid\030\001 \001(\t\022\013"
+  "\n\003cid\030\002 \001(\t\"\377\001\n\026declareExchangeRequest\022\013"
+  "\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\rexchange_nam"
+  "e\030\003 \001(\t\022*\n\rexchange_type\030\004 \001(\0162\023.hz_mq.E"
+  "xchangeType\022\017\n\007durable\030\005 \001(\010\022\023\n\013auto_del"
+  "ete\030\006 \001(\010\0225\n\004args\030\007 \003(\0132\'.hz_mq.declareE"
+  "xchangeRequest.ArgsEntry\032+\n\tArgsEntry\022\013\n"
+  "\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"H\n\025deleteE"
+  "xchangeRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t"
+  "\022\025\n\rexchange_name\030\003 \001(\t\"\335\001\n\023declareQueue"
+  "Request\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\022\n\nque"
+  "ue_name\030\003 \001(\t\022\021\n\texclusive\030\004 \001(\010\022\017\n\007dura"
+  "ble\030\005 \001(\010\022\023\n\013auto_delete\030\006 \001(\010\0222\n\004args\030\007"
+  " \003(\0132$.hz_mq.declareQueueRequest.ArgsEnt"
+  "ry\032+\n\tArgsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 "
+  "\001(\t:\0028\001\"B\n\022deleteQueueRequest\022\013\n\003rid\030\001 \001"
+  "(\t\022\013\n\003cid\030\002 \001(\t\022\022\n\nqueue_name\030\003 \001(\t\"g\n\013b"
+  "indRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\r"
+  "exchange_name\030\003 \001(\t\022\022\n\nqueue_name\030\004 \001(\t\022"
+  "\023\n\013binding_key\030\005 \001(\t\"T\n\runbindRequest\022\013\n"
+  "\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\rexchange_name"
+  "\030\003 \001(\t\022\022\n\nqueue_name\030\004 \001(\t\"\200\001\n\023basicPubl"
+  "ishRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\025\n\r"
+  "exchange_name\030\003 \001(\t\022\014\n\004body\030\004 \001(\t\022*\n\npro"
+  "perties\030\005 \001(\0132\026.hz_mq.BasicProperties\"S\n"
+  "\017basicAckRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001"
+  "(\t\022\022\n\nqueue_name\030\003 \001(\t\022\022\n\nmessage_id\030\004 \001"
+  "(\t\"k\n\023basicConsumeRequest\022\013\n\003rid\030\001 \001(\t\022\013"
+  "\n\003cid\030\002 \001(\t\022\024\n\014consumer_tag\030\003 \001(\t\022\022\n\nque"
+  "ue_name\030\004 \001(\t\022\020\n\010auto_ack\030\005 \001(\010\"X\n\022basic"
+  "CancelRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022"
+  "\024\n\014consumer_tag\030\003 \001(\t\022\022\n\nqueue_name\030\004 \001("
+  "\t\"-\n\021basicQueryRequest\022\013\n\003rid\030\001 \001(\t\022\013\n\003c"
+  "id\030\002 \001(\t\";\n\023basicCommonResponse\022\013\n\003rid\030\001"
+  " \001(\t\022\013\n\003cid\030\002 \001(\t\022\n\n\002ok\030\003 \001(\010\"s\n\024basicCo"
+  "nsumeResponse\022\013\n\003cid\030\001 \001(\t\022\024\n\014consumer_t"
+  "ag\030\002 \001(\t\022\014\n\004body\030\003 \001(\t\022*\n\nproperties\030\004 \001"
+  "(\0132\026.hz_mq.BasicProperties\"<\n\022basicQuery"
+  "Response\022\013\n\003rid\030\001 \001(\t\022\013\n\003cid\030\002 \001(\t\022\014\n\004bo"
+  "dy\030\003 \001(\t*1\n\014ExchangeType\022\n\n\006DIRECT\020\000\022\n\n\006"
+  "FANOUT\020\001\022\t\n\005TOPIC\020\002b\006proto3"
   ;
 static const ::_pbi::DescriptorTable* const descriptor_table_protocol_2eproto_deps[1] = {
   &::descriptor_table_msg_2eproto,
 };
 static ::_pbi::once_flag descriptor_table_protocol_2eproto_once;
 const ::_pbi::DescriptorTable descriptor_table_protocol_2eproto = {
-    false, false, 1719, descriptor_table_protodef_protocol_2eproto,
+    false, false, 1707, descriptor_table_protodef_protocol_2eproto,
     "protocol.proto",
     &descriptor_table_protocol_2eproto_once, descriptor_table_protocol_2eproto_deps, 1, 18,
     schemas, file_default_instances, TableStruct_protocol_2eproto::offsets,
@@ -574,7 +574,7 @@ PROTOBUF_ATTRIBUTE_WEAK const ::_pbi::DescriptorTable* descriptor_table_protocol
 
 // Force running AddDescriptors() at dynamic initialization time.
 PROTOBUF_ATTRIBUTE_INIT_PRIORITY2 static ::_pbi::AddDescriptorsRunner dynamic_init_dummy_protocol_2eproto(&descriptor_table_protocol_2eproto);
-namespace hare_mq {
+namespace hz_mq {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ExchangeType_descriptor() {
   ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_protocol_2eproto);
   return file_level_enum_descriptors_protocol_2eproto[0];
@@ -601,7 +601,7 @@ openChannelRequest::openChannelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.openChannelRequest)
 }
 openChannelRequest::openChannelRequest(const openChannelRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -622,7 +622,7 @@ openChannelRequest::openChannelRequest(const openChannelRequest& from)
     cid_.Set(from._internal_cid(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.openChannelRequest)
 }
 
 inline void openChannelRequest::SharedCtor() {
@@ -637,7 +637,7 @@ cid_.InitDefault();
 }
 
 openChannelRequest::~openChannelRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.openChannelRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -656,7 +656,7 @@ void openChannelRequest::SetCachedSize(int size) const {
 }
 
 void openChannelRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.openChannelRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.openChannelRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -678,7 +678,7 @@ const char* openChannelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.openChannelRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.openChannelRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -688,7 +688,7 @@ const char* openChannelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.openChannelRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.openChannelRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -717,7 +717,7 @@ failure:
 
 uint8_t* openChannelRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.openChannelRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -726,7 +726,7 @@ uint8_t* openChannelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.openChannelRequest.rid");
+      "hz_mq.openChannelRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -736,7 +736,7 @@ uint8_t* openChannelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.openChannelRequest.cid");
+      "hz_mq.openChannelRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -745,12 +745,12 @@ uint8_t* openChannelRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.openChannelRequest)
   return target;
 }
 
 size_t openChannelRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.openChannelRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.openChannelRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -788,7 +788,7 @@ void openChannelRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void openChannelRequest::MergeFrom(const openChannelRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.openChannelRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.openChannelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -803,7 +803,7 @@ void openChannelRequest::MergeFrom(const openChannelRequest& from) {
 }
 
 void openChannelRequest::CopyFrom(const openChannelRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.openChannelRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.openChannelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -844,7 +844,7 @@ closeChannelRequest::closeChannelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.closeChannelRequest)
 }
 closeChannelRequest::closeChannelRequest(const closeChannelRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -865,7 +865,7 @@ closeChannelRequest::closeChannelRequest(const closeChannelRequest& from)
     cid_.Set(from._internal_cid(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.closeChannelRequest)
 }
 
 inline void closeChannelRequest::SharedCtor() {
@@ -880,7 +880,7 @@ cid_.InitDefault();
 }
 
 closeChannelRequest::~closeChannelRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.closeChannelRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -899,7 +899,7 @@ void closeChannelRequest::SetCachedSize(int size) const {
 }
 
 void closeChannelRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.closeChannelRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.closeChannelRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -921,7 +921,7 @@ const char* closeChannelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.closeChannelRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.closeChannelRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -931,7 +931,7 @@ const char* closeChannelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.closeChannelRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.closeChannelRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -960,7 +960,7 @@ failure:
 
 uint8_t* closeChannelRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.closeChannelRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -969,7 +969,7 @@ uint8_t* closeChannelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.closeChannelRequest.rid");
+      "hz_mq.closeChannelRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -979,7 +979,7 @@ uint8_t* closeChannelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.closeChannelRequest.cid");
+      "hz_mq.closeChannelRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -988,12 +988,12 @@ uint8_t* closeChannelRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.closeChannelRequest)
   return target;
 }
 
 size_t closeChannelRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.closeChannelRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.closeChannelRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1031,7 +1031,7 @@ void closeChannelRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void closeChannelRequest::MergeFrom(const closeChannelRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.closeChannelRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.closeChannelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1046,7 +1046,7 @@ void closeChannelRequest::MergeFrom(const closeChannelRequest& from) {
 }
 
 void closeChannelRequest::CopyFrom(const closeChannelRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.closeChannelRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.closeChannelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1105,7 +1105,7 @@ declareExchangeRequest::declareExchangeRequest(::PROTOBUF_NAMESPACE_ID::Arena* a
   if (arena != nullptr && !is_message_owned) {
     arena->OwnCustomDestructor(this, &declareExchangeRequest::ArenaDtor);
   }
-  // @@protoc_insertion_point(arena_constructor:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.declareExchangeRequest)
 }
 declareExchangeRequest::declareExchangeRequest(const declareExchangeRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1138,7 +1138,7 @@ declareExchangeRequest::declareExchangeRequest(const declareExchangeRequest& fro
   ::memcpy(&exchange_type_, &from.exchange_type_,
     static_cast<size_t>(reinterpret_cast<char*>(&auto_delete_) -
     reinterpret_cast<char*>(&exchange_type_)) + sizeof(auto_delete_));
-  // @@protoc_insertion_point(copy_constructor:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.declareExchangeRequest)
 }
 
 inline void declareExchangeRequest::SharedCtor() {
@@ -1161,7 +1161,7 @@ exchange_name_.InitDefault();
 }
 
 declareExchangeRequest::~declareExchangeRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.declareExchangeRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     ArenaDtor(this);
@@ -1187,7 +1187,7 @@ void declareExchangeRequest::SetCachedSize(int size) const {
 }
 
 void declareExchangeRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.declareExchangeRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.declareExchangeRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1214,7 +1214,7 @@ const char* declareExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareExchangeRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareExchangeRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -1224,7 +1224,7 @@ const char* declareExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareExchangeRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareExchangeRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -1234,16 +1234,16 @@ const char* declareExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Pars
           auto str = _internal_mutable_exchange_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareExchangeRequest.exchange_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareExchangeRequest.exchange_name"));
         } else
           goto handle_unusual;
         continue;
-      // .hare_mq.ExchangeType exchange_type = 4;
+      // .hz_mq.ExchangeType exchange_type = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 32)) {
           uint64_t val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
-          _internal_set_exchange_type(static_cast<::hare_mq::ExchangeType>(val));
+          _internal_set_exchange_type(static_cast<::hz_mq::ExchangeType>(val));
         } else
           goto handle_unusual;
         continue;
@@ -1301,7 +1301,7 @@ failure:
 
 uint8_t* declareExchangeRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.declareExchangeRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1310,7 +1310,7 @@ uint8_t* declareExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareExchangeRequest.rid");
+      "hz_mq.declareExchangeRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -1320,7 +1320,7 @@ uint8_t* declareExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareExchangeRequest.cid");
+      "hz_mq.declareExchangeRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -1330,12 +1330,12 @@ uint8_t* declareExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_exchange_name().data(), static_cast<int>(this->_internal_exchange_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareExchangeRequest.exchange_name");
+      "hz_mq.declareExchangeRequest.exchange_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_exchange_name(), target);
   }
 
-  // .hare_mq.ExchangeType exchange_type = 4;
+  // .hz_mq.ExchangeType exchange_type = 4;
   if (this->_internal_exchange_type() != 0) {
     target = stream->EnsureSpace(target);
     target = ::_pbi::WireFormatLite::WriteEnumToArray(
@@ -1364,11 +1364,11 @@ uint8_t* declareExchangeRequest::_InternalSerialize(
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
         entry.first.data(), static_cast<int>(entry.first.length()),
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-        "hare_mq.declareExchangeRequest.ArgsEntry.key");
+        "hz_mq.declareExchangeRequest.ArgsEntry.key");
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
         entry.second.data(), static_cast<int>(entry.second.length()),
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-        "hare_mq.declareExchangeRequest.ArgsEntry.value");
+        "hz_mq.declareExchangeRequest.ArgsEntry.value");
     };
 
     if (stream->IsSerializationDeterministic() && map_field.size() > 1) {
@@ -1388,12 +1388,12 @@ uint8_t* declareExchangeRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.declareExchangeRequest)
   return target;
 }
 
 size_t declareExchangeRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.declareExchangeRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.declareExchangeRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1430,7 +1430,7 @@ size_t declareExchangeRequest::ByteSizeLong() const {
         this->_internal_exchange_name());
   }
 
-  // .hare_mq.ExchangeType exchange_type = 4;
+  // .hz_mq.ExchangeType exchange_type = 4;
   if (this->_internal_exchange_type() != 0) {
     total_size += 1 +
       ::_pbi::WireFormatLite::EnumSize(this->_internal_exchange_type());
@@ -1463,7 +1463,7 @@ void declareExchangeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void declareExchangeRequest::MergeFrom(const declareExchangeRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.declareExchangeRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.declareExchangeRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1491,7 +1491,7 @@ void declareExchangeRequest::MergeFrom(const declareExchangeRequest& from) {
 }
 
 void declareExchangeRequest::CopyFrom(const declareExchangeRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.declareExchangeRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.declareExchangeRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1543,7 +1543,7 @@ deleteExchangeRequest::deleteExchangeRequest(::PROTOBUF_NAMESPACE_ID::Arena* are
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.deleteExchangeRequest)
 }
 deleteExchangeRequest::deleteExchangeRequest(const deleteExchangeRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1572,7 +1572,7 @@ deleteExchangeRequest::deleteExchangeRequest(const deleteExchangeRequest& from)
     exchange_name_.Set(from._internal_exchange_name(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.deleteExchangeRequest)
 }
 
 inline void deleteExchangeRequest::SharedCtor() {
@@ -1591,7 +1591,7 @@ exchange_name_.InitDefault();
 }
 
 deleteExchangeRequest::~deleteExchangeRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.deleteExchangeRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -1611,7 +1611,7 @@ void deleteExchangeRequest::SetCachedSize(int size) const {
 }
 
 void deleteExchangeRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.deleteExchangeRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.deleteExchangeRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1634,7 +1634,7 @@ const char* deleteExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteExchangeRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteExchangeRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -1644,7 +1644,7 @@ const char* deleteExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteExchangeRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteExchangeRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -1654,7 +1654,7 @@ const char* deleteExchangeRequest::_InternalParse(const char* ptr, ::_pbi::Parse
           auto str = _internal_mutable_exchange_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteExchangeRequest.exchange_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteExchangeRequest.exchange_name"));
         } else
           goto handle_unusual;
         continue;
@@ -1683,7 +1683,7 @@ failure:
 
 uint8_t* deleteExchangeRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.deleteExchangeRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -1692,7 +1692,7 @@ uint8_t* deleteExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteExchangeRequest.rid");
+      "hz_mq.deleteExchangeRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -1702,7 +1702,7 @@ uint8_t* deleteExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteExchangeRequest.cid");
+      "hz_mq.deleteExchangeRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -1712,7 +1712,7 @@ uint8_t* deleteExchangeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_exchange_name().data(), static_cast<int>(this->_internal_exchange_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteExchangeRequest.exchange_name");
+      "hz_mq.deleteExchangeRequest.exchange_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_exchange_name(), target);
   }
@@ -1721,12 +1721,12 @@ uint8_t* deleteExchangeRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.deleteExchangeRequest)
   return target;
 }
 
 size_t deleteExchangeRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.deleteExchangeRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.deleteExchangeRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -1771,7 +1771,7 @@ void deleteExchangeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void deleteExchangeRequest::MergeFrom(const deleteExchangeRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.deleteExchangeRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.deleteExchangeRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -1789,7 +1789,7 @@ void deleteExchangeRequest::MergeFrom(const deleteExchangeRequest& from) {
 }
 
 void deleteExchangeRequest::CopyFrom(const deleteExchangeRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.deleteExchangeRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.deleteExchangeRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -1852,7 +1852,7 @@ declareQueueRequest::declareQueueRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
   if (arena != nullptr && !is_message_owned) {
     arena->OwnCustomDestructor(this, &declareQueueRequest::ArenaDtor);
   }
-  // @@protoc_insertion_point(arena_constructor:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.declareQueueRequest)
 }
 declareQueueRequest::declareQueueRequest(const declareQueueRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -1885,7 +1885,7 @@ declareQueueRequest::declareQueueRequest(const declareQueueRequest& from)
   ::memcpy(&exclusive_, &from.exclusive_,
     static_cast<size_t>(reinterpret_cast<char*>(&auto_delete_) -
     reinterpret_cast<char*>(&exclusive_)) + sizeof(auto_delete_));
-  // @@protoc_insertion_point(copy_constructor:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.declareQueueRequest)
 }
 
 inline void declareQueueRequest::SharedCtor() {
@@ -1908,7 +1908,7 @@ queue_name_.InitDefault();
 }
 
 declareQueueRequest::~declareQueueRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.declareQueueRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     ArenaDtor(this);
@@ -1934,7 +1934,7 @@ void declareQueueRequest::SetCachedSize(int size) const {
 }
 
 void declareQueueRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.declareQueueRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.declareQueueRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -1961,7 +1961,7 @@ const char* declareQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareQueueRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareQueueRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -1971,7 +1971,7 @@ const char* declareQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareQueueRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareQueueRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -1981,7 +1981,7 @@ const char* declareQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.declareQueueRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.declareQueueRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -2047,7 +2047,7 @@ failure:
 
 uint8_t* declareQueueRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.declareQueueRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2056,7 +2056,7 @@ uint8_t* declareQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareQueueRequest.rid");
+      "hz_mq.declareQueueRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -2066,7 +2066,7 @@ uint8_t* declareQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareQueueRequest.cid");
+      "hz_mq.declareQueueRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -2076,7 +2076,7 @@ uint8_t* declareQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.declareQueueRequest.queue_name");
+      "hz_mq.declareQueueRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_queue_name(), target);
   }
@@ -2109,11 +2109,11 @@ uint8_t* declareQueueRequest::_InternalSerialize(
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
         entry.first.data(), static_cast<int>(entry.first.length()),
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-        "hare_mq.declareQueueRequest.ArgsEntry.key");
+        "hz_mq.declareQueueRequest.ArgsEntry.key");
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
         entry.second.data(), static_cast<int>(entry.second.length()),
         ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-        "hare_mq.declareQueueRequest.ArgsEntry.value");
+        "hz_mq.declareQueueRequest.ArgsEntry.value");
     };
 
     if (stream->IsSerializationDeterministic() && map_field.size() > 1) {
@@ -2133,12 +2133,12 @@ uint8_t* declareQueueRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.declareQueueRequest)
   return target;
 }
 
 size_t declareQueueRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.declareQueueRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.declareQueueRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2207,7 +2207,7 @@ void declareQueueRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void declareQueueRequest::MergeFrom(const declareQueueRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.declareQueueRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.declareQueueRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2235,7 +2235,7 @@ void declareQueueRequest::MergeFrom(const declareQueueRequest& from) {
 }
 
 void declareQueueRequest::CopyFrom(const declareQueueRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.declareQueueRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.declareQueueRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2287,7 +2287,7 @@ deleteQueueRequest::deleteQueueRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.deleteQueueRequest)
 }
 deleteQueueRequest::deleteQueueRequest(const deleteQueueRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2316,7 +2316,7 @@ deleteQueueRequest::deleteQueueRequest(const deleteQueueRequest& from)
     queue_name_.Set(from._internal_queue_name(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.deleteQueueRequest)
 }
 
 inline void deleteQueueRequest::SharedCtor() {
@@ -2335,7 +2335,7 @@ queue_name_.InitDefault();
 }
 
 deleteQueueRequest::~deleteQueueRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.deleteQueueRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2355,7 +2355,7 @@ void deleteQueueRequest::SetCachedSize(int size) const {
 }
 
 void deleteQueueRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.deleteQueueRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.deleteQueueRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2378,7 +2378,7 @@ const char* deleteQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteQueueRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteQueueRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -2388,7 +2388,7 @@ const char* deleteQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteQueueRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteQueueRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -2398,7 +2398,7 @@ const char* deleteQueueRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.deleteQueueRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.deleteQueueRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -2427,7 +2427,7 @@ failure:
 
 uint8_t* deleteQueueRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.deleteQueueRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2436,7 +2436,7 @@ uint8_t* deleteQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteQueueRequest.rid");
+      "hz_mq.deleteQueueRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -2446,7 +2446,7 @@ uint8_t* deleteQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteQueueRequest.cid");
+      "hz_mq.deleteQueueRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -2456,7 +2456,7 @@ uint8_t* deleteQueueRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.deleteQueueRequest.queue_name");
+      "hz_mq.deleteQueueRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_queue_name(), target);
   }
@@ -2465,12 +2465,12 @@ uint8_t* deleteQueueRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.deleteQueueRequest)
   return target;
 }
 
 size_t deleteQueueRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.deleteQueueRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.deleteQueueRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2515,7 +2515,7 @@ void deleteQueueRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void deleteQueueRequest::MergeFrom(const deleteQueueRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.deleteQueueRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.deleteQueueRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2533,7 +2533,7 @@ void deleteQueueRequest::MergeFrom(const deleteQueueRequest& from) {
 }
 
 void deleteQueueRequest::CopyFrom(const deleteQueueRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.deleteQueueRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.deleteQueueRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2578,7 +2578,7 @@ bindRequest::bindRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.bindRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.bindRequest)
 }
 bindRequest::bindRequest(const bindRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -2623,7 +2623,7 @@ bindRequest::bindRequest(const bindRequest& from)
     binding_key_.Set(from._internal_binding_key(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.bindRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.bindRequest)
 }
 
 inline void bindRequest::SharedCtor() {
@@ -2650,7 +2650,7 @@ binding_key_.InitDefault();
 }
 
 bindRequest::~bindRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.bindRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.bindRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -2672,7 +2672,7 @@ void bindRequest::SetCachedSize(int size) const {
 }
 
 void bindRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.bindRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.bindRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -2697,7 +2697,7 @@ const char* bindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.bindRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.bindRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -2707,7 +2707,7 @@ const char* bindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.bindRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.bindRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -2717,7 +2717,7 @@ const char* bindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_exchange_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.bindRequest.exchange_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.bindRequest.exchange_name"));
         } else
           goto handle_unusual;
         continue;
@@ -2727,7 +2727,7 @@ const char* bindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.bindRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.bindRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -2737,7 +2737,7 @@ const char* bindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext* c
           auto str = _internal_mutable_binding_key();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.bindRequest.binding_key"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.bindRequest.binding_key"));
         } else
           goto handle_unusual;
         continue;
@@ -2766,7 +2766,7 @@ failure:
 
 uint8_t* bindRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.bindRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.bindRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -2775,7 +2775,7 @@ uint8_t* bindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.bindRequest.rid");
+      "hz_mq.bindRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -2785,7 +2785,7 @@ uint8_t* bindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.bindRequest.cid");
+      "hz_mq.bindRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -2795,7 +2795,7 @@ uint8_t* bindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_exchange_name().data(), static_cast<int>(this->_internal_exchange_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.bindRequest.exchange_name");
+      "hz_mq.bindRequest.exchange_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_exchange_name(), target);
   }
@@ -2805,7 +2805,7 @@ uint8_t* bindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.bindRequest.queue_name");
+      "hz_mq.bindRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_queue_name(), target);
   }
@@ -2815,7 +2815,7 @@ uint8_t* bindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_binding_key().data(), static_cast<int>(this->_internal_binding_key().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.bindRequest.binding_key");
+      "hz_mq.bindRequest.binding_key");
     target = stream->WriteStringMaybeAliased(
         5, this->_internal_binding_key(), target);
   }
@@ -2824,12 +2824,12 @@ uint8_t* bindRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.bindRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.bindRequest)
   return target;
 }
 
 size_t bindRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.bindRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.bindRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -2888,7 +2888,7 @@ void bindRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void bindRequest::MergeFrom(const bindRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.bindRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.bindRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -2912,7 +2912,7 @@ void bindRequest::MergeFrom(const bindRequest& from) {
 }
 
 void bindRequest::CopyFrom(const bindRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.bindRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.bindRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -2965,7 +2965,7 @@ unbindRequest::unbindRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.unbindRequest)
 }
 unbindRequest::unbindRequest(const unbindRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3002,7 +3002,7 @@ unbindRequest::unbindRequest(const unbindRequest& from)
     queue_name_.Set(from._internal_queue_name(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.unbindRequest)
 }
 
 inline void unbindRequest::SharedCtor() {
@@ -3025,7 +3025,7 @@ queue_name_.InitDefault();
 }
 
 unbindRequest::~unbindRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.unbindRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3046,7 +3046,7 @@ void unbindRequest::SetCachedSize(int size) const {
 }
 
 void unbindRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.unbindRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.unbindRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3070,7 +3070,7 @@ const char* unbindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.unbindRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.unbindRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -3080,7 +3080,7 @@ const char* unbindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.unbindRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.unbindRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -3090,7 +3090,7 @@ const char* unbindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
           auto str = _internal_mutable_exchange_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.unbindRequest.exchange_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.unbindRequest.exchange_name"));
         } else
           goto handle_unusual;
         continue;
@@ -3100,7 +3100,7 @@ const char* unbindRequest::_InternalParse(const char* ptr, ::_pbi::ParseContext*
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.unbindRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.unbindRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -3129,7 +3129,7 @@ failure:
 
 uint8_t* unbindRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.unbindRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3138,7 +3138,7 @@ uint8_t* unbindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.unbindRequest.rid");
+      "hz_mq.unbindRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -3148,7 +3148,7 @@ uint8_t* unbindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.unbindRequest.cid");
+      "hz_mq.unbindRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -3158,7 +3158,7 @@ uint8_t* unbindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_exchange_name().data(), static_cast<int>(this->_internal_exchange_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.unbindRequest.exchange_name");
+      "hz_mq.unbindRequest.exchange_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_exchange_name(), target);
   }
@@ -3168,7 +3168,7 @@ uint8_t* unbindRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.unbindRequest.queue_name");
+      "hz_mq.unbindRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_queue_name(), target);
   }
@@ -3177,12 +3177,12 @@ uint8_t* unbindRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.unbindRequest)
   return target;
 }
 
 size_t unbindRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.unbindRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.unbindRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3234,7 +3234,7 @@ void unbindRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void unbindRequest::MergeFrom(const unbindRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.unbindRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.unbindRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3255,7 +3255,7 @@ void unbindRequest::MergeFrom(const unbindRequest& from) {
 }
 
 void unbindRequest::CopyFrom(const unbindRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.unbindRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.unbindRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3298,10 +3298,10 @@ void unbindRequest::InternalSwap(unbindRequest* other) {
 
 class basicPublishRequest::_Internal {
  public:
-  static const ::hare_mq::BasicProperties& properties(const basicPublishRequest* msg);
+  static const ::hz_mq::BasicProperties& properties(const basicPublishRequest* msg);
 };
 
-const ::hare_mq::BasicProperties&
+const ::hz_mq::BasicProperties&
 basicPublishRequest::_Internal::properties(const basicPublishRequest* msg) {
   return *msg->properties_;
 }
@@ -3315,7 +3315,7 @@ basicPublishRequest::basicPublishRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicPublishRequest)
 }
 basicPublishRequest::basicPublishRequest(const basicPublishRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3353,11 +3353,11 @@ basicPublishRequest::basicPublishRequest(const basicPublishRequest& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_properties()) {
-    properties_ = new ::hare_mq::BasicProperties(*from.properties_);
+    properties_ = new ::hz_mq::BasicProperties(*from.properties_);
   } else {
     properties_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicPublishRequest)
 }
 
 inline void basicPublishRequest::SharedCtor() {
@@ -3381,7 +3381,7 @@ properties_ = nullptr;
 }
 
 basicPublishRequest::~basicPublishRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.basicPublishRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3403,7 +3403,7 @@ void basicPublishRequest::SetCachedSize(int size) const {
 }
 
 void basicPublishRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicPublishRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicPublishRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3431,7 +3431,7 @@ const char* basicPublishRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicPublishRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicPublishRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -3441,7 +3441,7 @@ const char* basicPublishRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicPublishRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicPublishRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -3451,7 +3451,7 @@ const char* basicPublishRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_exchange_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicPublishRequest.exchange_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicPublishRequest.exchange_name"));
         } else
           goto handle_unusual;
         continue;
@@ -3461,11 +3461,11 @@ const char* basicPublishRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_body();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicPublishRequest.body"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicPublishRequest.body"));
         } else
           goto handle_unusual;
         continue;
-      // .hare_mq.BasicProperties properties = 5;
+      // .hz_mq.BasicProperties properties = 5;
       case 5:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_properties(), ptr);
@@ -3498,7 +3498,7 @@ failure:
 
 uint8_t* basicPublishRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicPublishRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3507,7 +3507,7 @@ uint8_t* basicPublishRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicPublishRequest.rid");
+      "hz_mq.basicPublishRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -3517,7 +3517,7 @@ uint8_t* basicPublishRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicPublishRequest.cid");
+      "hz_mq.basicPublishRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -3527,7 +3527,7 @@ uint8_t* basicPublishRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_exchange_name().data(), static_cast<int>(this->_internal_exchange_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicPublishRequest.exchange_name");
+      "hz_mq.basicPublishRequest.exchange_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_exchange_name(), target);
   }
@@ -3537,12 +3537,12 @@ uint8_t* basicPublishRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_body().data(), static_cast<int>(this->_internal_body().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicPublishRequest.body");
+      "hz_mq.basicPublishRequest.body");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_body(), target);
   }
 
-  // .hare_mq.BasicProperties properties = 5;
+  // .hz_mq.BasicProperties properties = 5;
   if (this->_internal_has_properties()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(5, _Internal::properties(this),
@@ -3553,12 +3553,12 @@ uint8_t* basicPublishRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicPublishRequest)
   return target;
 }
 
 size_t basicPublishRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicPublishRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicPublishRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3593,7 +3593,7 @@ size_t basicPublishRequest::ByteSizeLong() const {
         this->_internal_body());
   }
 
-  // .hare_mq.BasicProperties properties = 5;
+  // .hz_mq.BasicProperties properties = 5;
   if (this->_internal_has_properties()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -3617,7 +3617,7 @@ void basicPublishRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicPublishRequest::MergeFrom(const basicPublishRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicPublishRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicPublishRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3635,13 +3635,13 @@ void basicPublishRequest::MergeFrom(const basicPublishRequest& from) {
     _internal_set_body(from._internal_body());
   }
   if (from._internal_has_properties()) {
-    _internal_mutable_properties()->::hare_mq::BasicProperties::MergeFrom(from._internal_properties());
+    _internal_mutable_properties()->::hz_mq::BasicProperties::MergeFrom(from._internal_properties());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void basicPublishRequest::CopyFrom(const basicPublishRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicPublishRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicPublishRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -3691,7 +3691,7 @@ basicAckRequest::basicAckRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicAckRequest)
 }
 basicAckRequest::basicAckRequest(const basicAckRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -3728,7 +3728,7 @@ basicAckRequest::basicAckRequest(const basicAckRequest& from)
     message_id_.Set(from._internal_message_id(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicAckRequest)
 }
 
 inline void basicAckRequest::SharedCtor() {
@@ -3751,7 +3751,7 @@ message_id_.InitDefault();
 }
 
 basicAckRequest::~basicAckRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.basicAckRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -3772,7 +3772,7 @@ void basicAckRequest::SetCachedSize(int size) const {
 }
 
 void basicAckRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicAckRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicAckRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -3796,7 +3796,7 @@ const char* basicAckRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicAckRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicAckRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -3806,7 +3806,7 @@ const char* basicAckRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicAckRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicAckRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -3816,7 +3816,7 @@ const char* basicAckRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicAckRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicAckRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -3826,7 +3826,7 @@ const char* basicAckRequest::_InternalParse(const char* ptr, ::_pbi::ParseContex
           auto str = _internal_mutable_message_id();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicAckRequest.message_id"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicAckRequest.message_id"));
         } else
           goto handle_unusual;
         continue;
@@ -3855,7 +3855,7 @@ failure:
 
 uint8_t* basicAckRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicAckRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -3864,7 +3864,7 @@ uint8_t* basicAckRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicAckRequest.rid");
+      "hz_mq.basicAckRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -3874,7 +3874,7 @@ uint8_t* basicAckRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicAckRequest.cid");
+      "hz_mq.basicAckRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -3884,7 +3884,7 @@ uint8_t* basicAckRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicAckRequest.queue_name");
+      "hz_mq.basicAckRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_queue_name(), target);
   }
@@ -3894,7 +3894,7 @@ uint8_t* basicAckRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_message_id().data(), static_cast<int>(this->_internal_message_id().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicAckRequest.message_id");
+      "hz_mq.basicAckRequest.message_id");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_message_id(), target);
   }
@@ -3903,12 +3903,12 @@ uint8_t* basicAckRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicAckRequest)
   return target;
 }
 
 size_t basicAckRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicAckRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicAckRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -3960,7 +3960,7 @@ void basicAckRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicAckRequest::MergeFrom(const basicAckRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicAckRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicAckRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -3981,7 +3981,7 @@ void basicAckRequest::MergeFrom(const basicAckRequest& from) {
 }
 
 void basicAckRequest::CopyFrom(const basicAckRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicAckRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicAckRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4030,7 +4030,7 @@ basicConsumeRequest::basicConsumeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicConsumeRequest)
 }
 basicConsumeRequest::basicConsumeRequest(const basicConsumeRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4068,7 +4068,7 @@ basicConsumeRequest::basicConsumeRequest(const basicConsumeRequest& from)
       GetArenaForAllocation());
   }
   auto_ack_ = from.auto_ack_;
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicConsumeRequest)
 }
 
 inline void basicConsumeRequest::SharedCtor() {
@@ -4092,7 +4092,7 @@ auto_ack_ = false;
 }
 
 basicConsumeRequest::~basicConsumeRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.basicConsumeRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4113,7 +4113,7 @@ void basicConsumeRequest::SetCachedSize(int size) const {
 }
 
 void basicConsumeRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicConsumeRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicConsumeRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4138,7 +4138,7 @@ const char* basicConsumeRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -4148,7 +4148,7 @@ const char* basicConsumeRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -4158,7 +4158,7 @@ const char* basicConsumeRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_consumer_tag();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeRequest.consumer_tag"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeRequest.consumer_tag"));
         } else
           goto handle_unusual;
         continue;
@@ -4168,7 +4168,7 @@ const char* basicConsumeRequest::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -4205,7 +4205,7 @@ failure:
 
 uint8_t* basicConsumeRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicConsumeRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4214,7 +4214,7 @@ uint8_t* basicConsumeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeRequest.rid");
+      "hz_mq.basicConsumeRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -4224,7 +4224,7 @@ uint8_t* basicConsumeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeRequest.cid");
+      "hz_mq.basicConsumeRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -4234,7 +4234,7 @@ uint8_t* basicConsumeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_consumer_tag().data(), static_cast<int>(this->_internal_consumer_tag().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeRequest.consumer_tag");
+      "hz_mq.basicConsumeRequest.consumer_tag");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_consumer_tag(), target);
   }
@@ -4244,7 +4244,7 @@ uint8_t* basicConsumeRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeRequest.queue_name");
+      "hz_mq.basicConsumeRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_queue_name(), target);
   }
@@ -4259,12 +4259,12 @@ uint8_t* basicConsumeRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicConsumeRequest)
   return target;
 }
 
 size_t basicConsumeRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicConsumeRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicConsumeRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4321,7 +4321,7 @@ void basicConsumeRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicConsumeRequest::MergeFrom(const basicConsumeRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicConsumeRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicConsumeRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4345,7 +4345,7 @@ void basicConsumeRequest::MergeFrom(const basicConsumeRequest& from) {
 }
 
 void basicConsumeRequest::CopyFrom(const basicConsumeRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicConsumeRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicConsumeRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4395,7 +4395,7 @@ basicCancelRequest::basicCancelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicCancelRequest)
 }
 basicCancelRequest::basicCancelRequest(const basicCancelRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4432,7 +4432,7 @@ basicCancelRequest::basicCancelRequest(const basicCancelRequest& from)
     queue_name_.Set(from._internal_queue_name(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicCancelRequest)
 }
 
 inline void basicCancelRequest::SharedCtor() {
@@ -4455,7 +4455,7 @@ queue_name_.InitDefault();
 }
 
 basicCancelRequest::~basicCancelRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.basicCancelRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4476,7 +4476,7 @@ void basicCancelRequest::SetCachedSize(int size) const {
 }
 
 void basicCancelRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicCancelRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicCancelRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4500,7 +4500,7 @@ const char* basicCancelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCancelRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCancelRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -4510,7 +4510,7 @@ const char* basicCancelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCancelRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCancelRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -4520,7 +4520,7 @@ const char* basicCancelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_consumer_tag();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCancelRequest.consumer_tag"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCancelRequest.consumer_tag"));
         } else
           goto handle_unusual;
         continue;
@@ -4530,7 +4530,7 @@ const char* basicCancelRequest::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_queue_name();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCancelRequest.queue_name"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCancelRequest.queue_name"));
         } else
           goto handle_unusual;
         continue;
@@ -4559,7 +4559,7 @@ failure:
 
 uint8_t* basicCancelRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicCancelRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4568,7 +4568,7 @@ uint8_t* basicCancelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCancelRequest.rid");
+      "hz_mq.basicCancelRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -4578,7 +4578,7 @@ uint8_t* basicCancelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCancelRequest.cid");
+      "hz_mq.basicCancelRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -4588,7 +4588,7 @@ uint8_t* basicCancelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_consumer_tag().data(), static_cast<int>(this->_internal_consumer_tag().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCancelRequest.consumer_tag");
+      "hz_mq.basicCancelRequest.consumer_tag");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_consumer_tag(), target);
   }
@@ -4598,7 +4598,7 @@ uint8_t* basicCancelRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_queue_name().data(), static_cast<int>(this->_internal_queue_name().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCancelRequest.queue_name");
+      "hz_mq.basicCancelRequest.queue_name");
     target = stream->WriteStringMaybeAliased(
         4, this->_internal_queue_name(), target);
   }
@@ -4607,12 +4607,12 @@ uint8_t* basicCancelRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicCancelRequest)
   return target;
 }
 
 size_t basicCancelRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicCancelRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicCancelRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4664,7 +4664,7 @@ void basicCancelRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicCancelRequest::MergeFrom(const basicCancelRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicCancelRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicCancelRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4685,7 +4685,7 @@ void basicCancelRequest::MergeFrom(const basicCancelRequest& from) {
 }
 
 void basicCancelRequest::CopyFrom(const basicCancelRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicCancelRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicCancelRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4734,7 +4734,7 @@ basicQueryRequest::basicQueryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicQueryRequest)
 }
 basicQueryRequest::basicQueryRequest(const basicQueryRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4755,7 +4755,7 @@ basicQueryRequest::basicQueryRequest(const basicQueryRequest& from)
     cid_.Set(from._internal_cid(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicQueryRequest)
 }
 
 inline void basicQueryRequest::SharedCtor() {
@@ -4770,7 +4770,7 @@ cid_.InitDefault();
 }
 
 basicQueryRequest::~basicQueryRequest() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(destructor:hz_mq.basicQueryRequest)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -4789,7 +4789,7 @@ void basicQueryRequest::SetCachedSize(int size) const {
 }
 
 void basicQueryRequest::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicQueryRequest)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicQueryRequest)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -4811,7 +4811,7 @@ const char* basicQueryRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicQueryRequest.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicQueryRequest.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -4821,7 +4821,7 @@ const char* basicQueryRequest::_InternalParse(const char* ptr, ::_pbi::ParseCont
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicQueryRequest.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicQueryRequest.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -4850,7 +4850,7 @@ failure:
 
 uint8_t* basicQueryRequest::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicQueryRequest)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -4859,7 +4859,7 @@ uint8_t* basicQueryRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicQueryRequest.rid");
+      "hz_mq.basicQueryRequest.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -4869,7 +4869,7 @@ uint8_t* basicQueryRequest::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicQueryRequest.cid");
+      "hz_mq.basicQueryRequest.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -4878,12 +4878,12 @@ uint8_t* basicQueryRequest::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicQueryRequest)
   return target;
 }
 
 size_t basicQueryRequest::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicQueryRequest)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicQueryRequest)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -4921,7 +4921,7 @@ void basicQueryRequest::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicQueryRequest::MergeFrom(const basicQueryRequest& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicQueryRequest)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicQueryRequest)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -4936,7 +4936,7 @@ void basicQueryRequest::MergeFrom(const basicQueryRequest& from) {
 }
 
 void basicQueryRequest::CopyFrom(const basicQueryRequest& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicQueryRequest)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicQueryRequest)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -4977,7 +4977,7 @@ basicCommonResponse::basicCommonResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicCommonResponse)
 }
 basicCommonResponse::basicCommonResponse(const basicCommonResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -4999,7 +4999,7 @@ basicCommonResponse::basicCommonResponse(const basicCommonResponse& from)
       GetArenaForAllocation());
   }
   ok_ = from.ok_;
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicCommonResponse)
 }
 
 inline void basicCommonResponse::SharedCtor() {
@@ -5015,7 +5015,7 @@ ok_ = false;
 }
 
 basicCommonResponse::~basicCommonResponse() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(destructor:hz_mq.basicCommonResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5034,7 +5034,7 @@ void basicCommonResponse::SetCachedSize(int size) const {
 }
 
 void basicCommonResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicCommonResponse)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicCommonResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5057,7 +5057,7 @@ const char* basicCommonResponse::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCommonResponse.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCommonResponse.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -5067,7 +5067,7 @@ const char* basicCommonResponse::_InternalParse(const char* ptr, ::_pbi::ParseCo
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicCommonResponse.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicCommonResponse.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -5104,7 +5104,7 @@ failure:
 
 uint8_t* basicCommonResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicCommonResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5113,7 +5113,7 @@ uint8_t* basicCommonResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCommonResponse.rid");
+      "hz_mq.basicCommonResponse.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -5123,7 +5123,7 @@ uint8_t* basicCommonResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicCommonResponse.cid");
+      "hz_mq.basicCommonResponse.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -5138,12 +5138,12 @@ uint8_t* basicCommonResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicCommonResponse)
   return target;
 }
 
 size_t basicCommonResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicCommonResponse)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicCommonResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5186,7 +5186,7 @@ void basicCommonResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicCommonResponse::MergeFrom(const basicCommonResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicCommonResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicCommonResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5204,7 +5204,7 @@ void basicCommonResponse::MergeFrom(const basicCommonResponse& from) {
 }
 
 void basicCommonResponse::CopyFrom(const basicCommonResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicCommonResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicCommonResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5240,10 +5240,10 @@ void basicCommonResponse::InternalSwap(basicCommonResponse* other) {
 
 class basicConsumeResponse::_Internal {
  public:
-  static const ::hare_mq::BasicProperties& properties(const basicConsumeResponse* msg);
+  static const ::hz_mq::BasicProperties& properties(const basicConsumeResponse* msg);
 };
 
-const ::hare_mq::BasicProperties&
+const ::hz_mq::BasicProperties&
 basicConsumeResponse::_Internal::properties(const basicConsumeResponse* msg) {
   return *msg->properties_;
 }
@@ -5257,7 +5257,7 @@ basicConsumeResponse::basicConsumeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicConsumeResponse)
 }
 basicConsumeResponse::basicConsumeResponse(const basicConsumeResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5287,11 +5287,11 @@ basicConsumeResponse::basicConsumeResponse(const basicConsumeResponse& from)
       GetArenaForAllocation());
   }
   if (from._internal_has_properties()) {
-    properties_ = new ::hare_mq::BasicProperties(*from.properties_);
+    properties_ = new ::hz_mq::BasicProperties(*from.properties_);
   } else {
     properties_ = nullptr;
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicConsumeResponse)
 }
 
 inline void basicConsumeResponse::SharedCtor() {
@@ -5311,7 +5311,7 @@ properties_ = nullptr;
 }
 
 basicConsumeResponse::~basicConsumeResponse() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(destructor:hz_mq.basicConsumeResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5332,7 +5332,7 @@ void basicConsumeResponse::SetCachedSize(int size) const {
 }
 
 void basicConsumeResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicConsumeResponse)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicConsumeResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5359,7 +5359,7 @@ const char* basicConsumeResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeResponse.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeResponse.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -5369,7 +5369,7 @@ const char* basicConsumeResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_consumer_tag();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeResponse.consumer_tag"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeResponse.consumer_tag"));
         } else
           goto handle_unusual;
         continue;
@@ -5379,11 +5379,11 @@ const char* basicConsumeResponse::_InternalParse(const char* ptr, ::_pbi::ParseC
           auto str = _internal_mutable_body();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicConsumeResponse.body"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicConsumeResponse.body"));
         } else
           goto handle_unusual;
         continue;
-      // .hare_mq.BasicProperties properties = 4;
+      // .hz_mq.BasicProperties properties = 4;
       case 4:
         if (PROTOBUF_PREDICT_TRUE(static_cast<uint8_t>(tag) == 34)) {
           ptr = ctx->ParseMessage(_internal_mutable_properties(), ptr);
@@ -5416,7 +5416,7 @@ failure:
 
 uint8_t* basicConsumeResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicConsumeResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5425,7 +5425,7 @@ uint8_t* basicConsumeResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeResponse.cid");
+      "hz_mq.basicConsumeResponse.cid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_cid(), target);
   }
@@ -5435,7 +5435,7 @@ uint8_t* basicConsumeResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_consumer_tag().data(), static_cast<int>(this->_internal_consumer_tag().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeResponse.consumer_tag");
+      "hz_mq.basicConsumeResponse.consumer_tag");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_consumer_tag(), target);
   }
@@ -5445,12 +5445,12 @@ uint8_t* basicConsumeResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_body().data(), static_cast<int>(this->_internal_body().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicConsumeResponse.body");
+      "hz_mq.basicConsumeResponse.body");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_body(), target);
   }
 
-  // .hare_mq.BasicProperties properties = 4;
+  // .hz_mq.BasicProperties properties = 4;
   if (this->_internal_has_properties()) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
       InternalWriteMessage(4, _Internal::properties(this),
@@ -5461,12 +5461,12 @@ uint8_t* basicConsumeResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicConsumeResponse)
   return target;
 }
 
 size_t basicConsumeResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicConsumeResponse)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicConsumeResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5494,7 +5494,7 @@ size_t basicConsumeResponse::ByteSizeLong() const {
         this->_internal_body());
   }
 
-  // .hare_mq.BasicProperties properties = 4;
+  // .hz_mq.BasicProperties properties = 4;
   if (this->_internal_has_properties()) {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
@@ -5518,7 +5518,7 @@ void basicConsumeResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicConsumeResponse::MergeFrom(const basicConsumeResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicConsumeResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicConsumeResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5533,13 +5533,13 @@ void basicConsumeResponse::MergeFrom(const basicConsumeResponse& from) {
     _internal_set_body(from._internal_body());
   }
   if (from._internal_has_properties()) {
-    _internal_mutable_properties()->::hare_mq::BasicProperties::MergeFrom(from._internal_properties());
+    _internal_mutable_properties()->::hz_mq::BasicProperties::MergeFrom(from._internal_properties());
   }
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
 }
 
 void basicConsumeResponse::CopyFrom(const basicConsumeResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicConsumeResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicConsumeResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5585,7 +5585,7 @@ basicQueryResponse::basicQueryResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
                          bool is_message_owned)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena, is_message_owned) {
   SharedCtor();
-  // @@protoc_insertion_point(arena_constructor:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(arena_constructor:hz_mq.basicQueryResponse)
 }
 basicQueryResponse::basicQueryResponse(const basicQueryResponse& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
@@ -5614,7 +5614,7 @@ basicQueryResponse::basicQueryResponse(const basicQueryResponse& from)
     body_.Set(from._internal_body(), 
       GetArenaForAllocation());
   }
-  // @@protoc_insertion_point(copy_constructor:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(copy_constructor:hz_mq.basicQueryResponse)
 }
 
 inline void basicQueryResponse::SharedCtor() {
@@ -5633,7 +5633,7 @@ body_.InitDefault();
 }
 
 basicQueryResponse::~basicQueryResponse() {
-  // @@protoc_insertion_point(destructor:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(destructor:hz_mq.basicQueryResponse)
   if (auto *arena = _internal_metadata_.DeleteReturnArena<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>()) {
   (void)arena;
     return;
@@ -5653,7 +5653,7 @@ void basicQueryResponse::SetCachedSize(int size) const {
 }
 
 void basicQueryResponse::Clear() {
-// @@protoc_insertion_point(message_clear_start:hare_mq.basicQueryResponse)
+// @@protoc_insertion_point(message_clear_start:hz_mq.basicQueryResponse)
   uint32_t cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
@@ -5676,7 +5676,7 @@ const char* basicQueryResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_rid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicQueryResponse.rid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicQueryResponse.rid"));
         } else
           goto handle_unusual;
         continue;
@@ -5686,7 +5686,7 @@ const char* basicQueryResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_cid();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicQueryResponse.cid"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicQueryResponse.cid"));
         } else
           goto handle_unusual;
         continue;
@@ -5696,7 +5696,7 @@ const char* basicQueryResponse::_InternalParse(const char* ptr, ::_pbi::ParseCon
           auto str = _internal_mutable_body();
           ptr = ::_pbi::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(ptr);
-          CHK_(::_pbi::VerifyUTF8(str, "hare_mq.basicQueryResponse.body"));
+          CHK_(::_pbi::VerifyUTF8(str, "hz_mq.basicQueryResponse.body"));
         } else
           goto handle_unusual;
         continue;
@@ -5725,7 +5725,7 @@ failure:
 
 uint8_t* basicQueryResponse::_InternalSerialize(
     uint8_t* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(serialize_to_array_start:hz_mq.basicQueryResponse)
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
 
@@ -5734,7 +5734,7 @@ uint8_t* basicQueryResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_rid().data(), static_cast<int>(this->_internal_rid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicQueryResponse.rid");
+      "hz_mq.basicQueryResponse.rid");
     target = stream->WriteStringMaybeAliased(
         1, this->_internal_rid(), target);
   }
@@ -5744,7 +5744,7 @@ uint8_t* basicQueryResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_cid().data(), static_cast<int>(this->_internal_cid().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicQueryResponse.cid");
+      "hz_mq.basicQueryResponse.cid");
     target = stream->WriteStringMaybeAliased(
         2, this->_internal_cid(), target);
   }
@@ -5754,7 +5754,7 @@ uint8_t* basicQueryResponse::_InternalSerialize(
     ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
       this->_internal_body().data(), static_cast<int>(this->_internal_body().length()),
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "hare_mq.basicQueryResponse.body");
+      "hz_mq.basicQueryResponse.body");
     target = stream->WriteStringMaybeAliased(
         3, this->_internal_body(), target);
   }
@@ -5763,12 +5763,12 @@ uint8_t* basicQueryResponse::_InternalSerialize(
     target = ::_pbi::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
   }
-  // @@protoc_insertion_point(serialize_to_array_end:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(serialize_to_array_end:hz_mq.basicQueryResponse)
   return target;
 }
 
 size_t basicQueryResponse::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:hare_mq.basicQueryResponse)
+// @@protoc_insertion_point(message_byte_size_start:hz_mq.basicQueryResponse)
   size_t total_size = 0;
 
   uint32_t cached_has_bits = 0;
@@ -5813,7 +5813,7 @@ void basicQueryResponse::MergeImpl(::PROTOBUF_NAMESPACE_ID::Message* to,
 
 
 void basicQueryResponse::MergeFrom(const basicQueryResponse& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:hare_mq.basicQueryResponse)
+// @@protoc_insertion_point(class_specific_merge_from_start:hz_mq.basicQueryResponse)
   GOOGLE_DCHECK_NE(&from, this);
   uint32_t cached_has_bits = 0;
   (void) cached_has_bits;
@@ -5831,7 +5831,7 @@ void basicQueryResponse::MergeFrom(const basicQueryResponse& from) {
 }
 
 void basicQueryResponse::CopyFrom(const basicQueryResponse& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:hare_mq.basicQueryResponse)
+// @@protoc_insertion_point(class_specific_copy_from_start:hz_mq.basicQueryResponse)
   if (&from == this) return;
   Clear();
   MergeFrom(from);
@@ -5867,79 +5867,79 @@ void basicQueryResponse::InternalSwap(basicQueryResponse* other) {
 }
 
 // @@protoc_insertion_point(namespace_scope)
-}  // namespace hare_mq
+}  // namespace hz_mq
 PROTOBUF_NAMESPACE_OPEN
-template<> PROTOBUF_NOINLINE ::hare_mq::openChannelRequest*
-Arena::CreateMaybeMessage< ::hare_mq::openChannelRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::openChannelRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::openChannelRequest*
+Arena::CreateMaybeMessage< ::hz_mq::openChannelRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::openChannelRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::closeChannelRequest*
-Arena::CreateMaybeMessage< ::hare_mq::closeChannelRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::closeChannelRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::closeChannelRequest*
+Arena::CreateMaybeMessage< ::hz_mq::closeChannelRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::closeChannelRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse*
-Arena::CreateMaybeMessage< ::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse*
+Arena::CreateMaybeMessage< ::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::declareExchangeRequest*
-Arena::CreateMaybeMessage< ::hare_mq::declareExchangeRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::declareExchangeRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::declareExchangeRequest*
+Arena::CreateMaybeMessage< ::hz_mq::declareExchangeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::declareExchangeRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::deleteExchangeRequest*
-Arena::CreateMaybeMessage< ::hare_mq::deleteExchangeRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::deleteExchangeRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::deleteExchangeRequest*
+Arena::CreateMaybeMessage< ::hz_mq::deleteExchangeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::deleteExchangeRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse*
-Arena::CreateMaybeMessage< ::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse*
+Arena::CreateMaybeMessage< ::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::declareQueueRequest*
-Arena::CreateMaybeMessage< ::hare_mq::declareQueueRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::declareQueueRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::declareQueueRequest*
+Arena::CreateMaybeMessage< ::hz_mq::declareQueueRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::declareQueueRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::deleteQueueRequest*
-Arena::CreateMaybeMessage< ::hare_mq::deleteQueueRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::deleteQueueRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::deleteQueueRequest*
+Arena::CreateMaybeMessage< ::hz_mq::deleteQueueRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::deleteQueueRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::bindRequest*
-Arena::CreateMaybeMessage< ::hare_mq::bindRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::bindRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::bindRequest*
+Arena::CreateMaybeMessage< ::hz_mq::bindRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::bindRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::unbindRequest*
-Arena::CreateMaybeMessage< ::hare_mq::unbindRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::unbindRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::unbindRequest*
+Arena::CreateMaybeMessage< ::hz_mq::unbindRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::unbindRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicPublishRequest*
-Arena::CreateMaybeMessage< ::hare_mq::basicPublishRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicPublishRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicPublishRequest*
+Arena::CreateMaybeMessage< ::hz_mq::basicPublishRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicPublishRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicAckRequest*
-Arena::CreateMaybeMessage< ::hare_mq::basicAckRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicAckRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicAckRequest*
+Arena::CreateMaybeMessage< ::hz_mq::basicAckRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicAckRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicConsumeRequest*
-Arena::CreateMaybeMessage< ::hare_mq::basicConsumeRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicConsumeRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicConsumeRequest*
+Arena::CreateMaybeMessage< ::hz_mq::basicConsumeRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicConsumeRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicCancelRequest*
-Arena::CreateMaybeMessage< ::hare_mq::basicCancelRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicCancelRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicCancelRequest*
+Arena::CreateMaybeMessage< ::hz_mq::basicCancelRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicCancelRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicQueryRequest*
-Arena::CreateMaybeMessage< ::hare_mq::basicQueryRequest >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicQueryRequest >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicQueryRequest*
+Arena::CreateMaybeMessage< ::hz_mq::basicQueryRequest >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicQueryRequest >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicCommonResponse*
-Arena::CreateMaybeMessage< ::hare_mq::basicCommonResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicCommonResponse >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicCommonResponse*
+Arena::CreateMaybeMessage< ::hz_mq::basicCommonResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicCommonResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicConsumeResponse*
-Arena::CreateMaybeMessage< ::hare_mq::basicConsumeResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicConsumeResponse >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicConsumeResponse*
+Arena::CreateMaybeMessage< ::hz_mq::basicConsumeResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicConsumeResponse >(arena);
 }
-template<> PROTOBUF_NOINLINE ::hare_mq::basicQueryResponse*
-Arena::CreateMaybeMessage< ::hare_mq::basicQueryResponse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::hare_mq::basicQueryResponse >(arena);
+template<> PROTOBUF_NOINLINE ::hz_mq::basicQueryResponse*
+Arena::CreateMaybeMessage< ::hz_mq::basicQueryResponse >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::hz_mq::basicQueryResponse >(arena);
 }
 PROTOBUF_NAMESPACE_CLOSE
 

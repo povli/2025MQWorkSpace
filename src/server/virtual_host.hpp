@@ -1,7 +1,4 @@
 #pragma once
-// 若需传统写法：
-// #ifndef HARE_MQ_VIRTUAL_HOST_HPP
-// #define HARE_MQ_VIRTUAL_HOST_HPP
 
 #include <string>
 #include <unordered_map>
@@ -15,7 +12,7 @@
 #include "../common/protocol.pb.h"  // ExchangeType
 #include "../common/msg.pb.h"       // BasicProperties, Message
 
-namespace hare_mq {
+namespace hz_mq {
 
 class queue_message;                       // 前向声明：单队列持久化 / 运行时消息存储
 using queue_message_ptr = std::shared_ptr<queue_message>;
@@ -56,10 +53,18 @@ public:
 
     msg_queue_binding_map exchange_bindings(const std::string& exchange_name);
 
+    bool basic_publish_queue(const std::string& queue_name,
+        BasicProperties* bp,
+        const std::string& body);   
     // ------------------- Message --------------------
-    bool basic_publish(const std::string& queue_name, BasicProperties* bp,
-                       const std::string& body);
+    bool basic_publish(const std::string& queue_name,
+        BasicProperties*   bp,
+        const std::string& body);
 
+    bool publish_ex(const std::string& exchange_name,
+        const std::string& routing_key,
+         BasicProperties*   bp,
+        const std::string& body);
     message_ptr basic_consume(const std::string& queue_name);
     void basic_ack(const std::string& queue_name, const std::string& msg_id);
 
@@ -78,4 +83,4 @@ private:
     static std::string generate_id();  // 若调用方需要自行生成 msg_id
 };
 
-} // namespace hare_mq
+} 

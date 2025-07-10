@@ -6,7 +6,7 @@
 #include <mutex>
 #include <memory>
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------- 队列元数据 ----------
 struct msg_queue {

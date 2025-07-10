@@ -1,7 +1,7 @@
 // ======================= thread_pool.cpp =======================
 #include "thread_pool.hpp"
 
-namespace hare_mq {
+namespace hz_mq {
 
 thread_pool::thread_pool(size_t num_threads)
     : __stop(false)

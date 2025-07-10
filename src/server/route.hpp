@@ -11,7 +11,7 @@
 #include <string>
 #include "../common/protocol.pb.h"   // ExchangeType
 
-namespace hare_mq::router {
+namespace hz_mq::router {
 
 // 判断 routing_key 是否匹配 binding_key（根据交换机类型）
 inline bool match_route(ExchangeType type,

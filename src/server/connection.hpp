@@ -17,7 +17,7 @@ using TcpConnectionPtr = std::shared_ptr<TcpConnection>;
 
 class ProtobufCodec;  // Muduo Protobuf 编解码器
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ================================================================
 // connection : 管理单条 TCP 连接及其 channels

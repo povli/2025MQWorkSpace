@@ -49,7 +49,7 @@ struct TableStruct_protocol_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_protocol_2eproto;
-namespace hare_mq {
+namespace hz_mq {
 class basicAckRequest;
 struct basicAckRequestDefaultTypeInternal;
 extern basicAckRequestDefaultTypeInternal _basicAckRequest_default_instance_;
@@ -104,28 +104,28 @@ extern openChannelRequestDefaultTypeInternal _openChannelRequest_default_instanc
 class unbindRequest;
 struct unbindRequestDefaultTypeInternal;
 extern unbindRequestDefaultTypeInternal _unbindRequest_default_instance_;
-}  // namespace hare_mq
+}  // namespace hz_mq
 PROTOBUF_NAMESPACE_OPEN
-template<> ::hare_mq::basicAckRequest* Arena::CreateMaybeMessage<::hare_mq::basicAckRequest>(Arena*);
-template<> ::hare_mq::basicCancelRequest* Arena::CreateMaybeMessage<::hare_mq::basicCancelRequest>(Arena*);
-template<> ::hare_mq::basicCommonResponse* Arena::CreateMaybeMessage<::hare_mq::basicCommonResponse>(Arena*);
-template<> ::hare_mq::basicConsumeRequest* Arena::CreateMaybeMessage<::hare_mq::basicConsumeRequest>(Arena*);
-template<> ::hare_mq::basicConsumeResponse* Arena::CreateMaybeMessage<::hare_mq::basicConsumeResponse>(Arena*);
-template<> ::hare_mq::basicPublishRequest* Arena::CreateMaybeMessage<::hare_mq::basicPublishRequest>(Arena*);
-template<> ::hare_mq::basicQueryRequest* Arena::CreateMaybeMessage<::hare_mq::basicQueryRequest>(Arena*);
-template<> ::hare_mq::basicQueryResponse* Arena::CreateMaybeMessage<::hare_mq::basicQueryResponse>(Arena*);
-template<> ::hare_mq::bindRequest* Arena::CreateMaybeMessage<::hare_mq::bindRequest>(Arena*);
-template<> ::hare_mq::closeChannelRequest* Arena::CreateMaybeMessage<::hare_mq::closeChannelRequest>(Arena*);
-template<> ::hare_mq::declareExchangeRequest* Arena::CreateMaybeMessage<::hare_mq::declareExchangeRequest>(Arena*);
-template<> ::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse* Arena::CreateMaybeMessage<::hare_mq::declareExchangeRequest_ArgsEntry_DoNotUse>(Arena*);
-template<> ::hare_mq::declareQueueRequest* Arena::CreateMaybeMessage<::hare_mq::declareQueueRequest>(Arena*);
-template<> ::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse* Arena::CreateMaybeMessage<::hare_mq::declareQueueRequest_ArgsEntry_DoNotUse>(Arena*);
-template<> ::hare_mq::deleteExchangeRequest* Arena::CreateMaybeMessage<::hare_mq::deleteExchangeRequest>(Arena*);
-template<> ::hare_mq::deleteQueueRequest* Arena::CreateMaybeMessage<::hare_mq::deleteQueueRequest>(Arena*);
-template<> ::hare_mq::openChannelRequest* Arena::CreateMaybeMessage<::hare_mq::openChannelRequest>(Arena*);
-template<> ::hare_mq::unbindRequest* Arena::CreateMaybeMessage<::hare_mq::unbindRequest>(Arena*);
+template<> ::hz_mq::basicAckRequest* Arena::CreateMaybeMessage<::hz_mq::basicAckRequest>(Arena*);
+template<> ::hz_mq::basicCancelRequest* Arena::CreateMaybeMessage<::hz_mq::basicCancelRequest>(Arena*);
+template<> ::hz_mq::basicCommonResponse* Arena::CreateMaybeMessage<::hz_mq::basicCommonResponse>(Arena*);
+template<> ::hz_mq::basicConsumeRequest* Arena::CreateMaybeMessage<::hz_mq::basicConsumeRequest>(Arena*);
+template<> ::hz_mq::basicConsumeResponse* Arena::CreateMaybeMessage<::hz_mq::basicConsumeResponse>(Arena*);
+template<> ::hz_mq::basicPublishRequest* Arena::CreateMaybeMessage<::hz_mq::basicPublishRequest>(Arena*);
+template<> ::hz_mq::basicQueryRequest* Arena::CreateMaybeMessage<::hz_mq::basicQueryRequest>(Arena*);
+template<> ::hz_mq::basicQueryResponse* Arena::CreateMaybeMessage<::hz_mq::basicQueryResponse>(Arena*);
+template<> ::hz_mq::bindRequest* Arena::CreateMaybeMessage<::hz_mq::bindRequest>(Arena*);
+template<> ::hz_mq::closeChannelRequest* Arena::CreateMaybeMessage<::hz_mq::closeChannelRequest>(Arena*);
+template<> ::hz_mq::declareExchangeRequest* Arena::CreateMaybeMessage<::hz_mq::declareExchangeRequest>(Arena*);
+template<> ::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse* Arena::CreateMaybeMessage<::hz_mq::declareExchangeRequest_ArgsEntry_DoNotUse>(Arena*);
+template<> ::hz_mq::declareQueueRequest* Arena::CreateMaybeMessage<::hz_mq::declareQueueRequest>(Arena*);
+template<> ::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse* Arena::CreateMaybeMessage<::hz_mq::declareQueueRequest_ArgsEntry_DoNotUse>(Arena*);
+template<> ::hz_mq::deleteExchangeRequest* Arena::CreateMaybeMessage<::hz_mq::deleteExchangeRequest>(Arena*);
+template<> ::hz_mq::deleteQueueRequest* Arena::CreateMaybeMessage<::hz_mq::deleteQueueRequest>(Arena*);
+template<> ::hz_mq::openChannelRequest* Arena::CreateMaybeMessage<::hz_mq::openChannelRequest>(Arena*);
+template<> ::hz_mq::unbindRequest* Arena::CreateMaybeMessage<::hz_mq::unbindRequest>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace hare_mq {
+namespace hz_mq {
 
 enum ExchangeType : int {
   DIRECT = 0,
@@ -156,7 +156,7 @@ inline bool ExchangeType_Parse(
 // ===================================================================
 
 class openChannelRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.openChannelRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.openChannelRequest) */ {
  public:
   inline openChannelRequest() : openChannelRequest(nullptr) {}
   ~openChannelRequest() override;
@@ -257,7 +257,7 @@ class openChannelRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.openChannelRequest";
+    return "hz_mq.openChannelRequest";
   }
   protected:
   explicit openChannelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -305,7 +305,7 @@ class openChannelRequest final :
   std::string* _internal_mutable_cid();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.openChannelRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.openChannelRequest)
  private:
   class _Internal;
 
@@ -320,7 +320,7 @@ class openChannelRequest final :
 // -------------------------------------------------------------------
 
 class closeChannelRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.closeChannelRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.closeChannelRequest) */ {
  public:
   inline closeChannelRequest() : closeChannelRequest(nullptr) {}
   ~closeChannelRequest() override;
@@ -421,7 +421,7 @@ class closeChannelRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.closeChannelRequest";
+    return "hz_mq.closeChannelRequest";
   }
   protected:
   explicit closeChannelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -469,7 +469,7 @@ class closeChannelRequest final :
   std::string* _internal_mutable_cid();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.closeChannelRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.closeChannelRequest)
  private:
   class _Internal;
 
@@ -499,10 +499,10 @@ public:
   void MergeFrom(const declareExchangeRequest_ArgsEntry_DoNotUse& other);
   static const declareExchangeRequest_ArgsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const declareExchangeRequest_ArgsEntry_DoNotUse*>(&_declareExchangeRequest_ArgsEntry_DoNotUse_default_instance_); }
   static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hare_mq.declareExchangeRequest.ArgsEntry.key");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hz_mq.declareExchangeRequest.ArgsEntry.key");
  }
   static bool ValidateValue(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hare_mq.declareExchangeRequest.ArgsEntry.value");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hz_mq.declareExchangeRequest.ArgsEntry.value");
  }
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
@@ -512,7 +512,7 @@ public:
 // -------------------------------------------------------------------
 
 class declareExchangeRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.declareExchangeRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.declareExchangeRequest) */ {
  public:
   inline declareExchangeRequest() : declareExchangeRequest(nullptr) {}
   ~declareExchangeRequest() override;
@@ -613,7 +613,7 @@ class declareExchangeRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.declareExchangeRequest";
+    return "hz_mq.declareExchangeRequest";
   }
   protected:
   explicit declareExchangeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -700,13 +700,13 @@ class declareExchangeRequest final :
   std::string* _internal_mutable_exchange_name();
   public:
 
-  // .hare_mq.ExchangeType exchange_type = 4;
+  // .hz_mq.ExchangeType exchange_type = 4;
   void clear_exchange_type();
-  ::hare_mq::ExchangeType exchange_type() const;
-  void set_exchange_type(::hare_mq::ExchangeType value);
+  ::hz_mq::ExchangeType exchange_type() const;
+  void set_exchange_type(::hz_mq::ExchangeType value);
   private:
-  ::hare_mq::ExchangeType _internal_exchange_type() const;
-  void _internal_set_exchange_type(::hare_mq::ExchangeType value);
+  ::hz_mq::ExchangeType _internal_exchange_type() const;
+  void _internal_set_exchange_type(::hz_mq::ExchangeType value);
   public:
 
   // bool durable = 5;
@@ -727,7 +727,7 @@ class declareExchangeRequest final :
   void _internal_set_auto_delete(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.declareExchangeRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.declareExchangeRequest)
  private:
   class _Internal;
 
@@ -751,7 +751,7 @@ class declareExchangeRequest final :
 // -------------------------------------------------------------------
 
 class deleteExchangeRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.deleteExchangeRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.deleteExchangeRequest) */ {
  public:
   inline deleteExchangeRequest() : deleteExchangeRequest(nullptr) {}
   ~deleteExchangeRequest() override;
@@ -852,7 +852,7 @@ class deleteExchangeRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.deleteExchangeRequest";
+    return "hz_mq.deleteExchangeRequest";
   }
   protected:
   explicit deleteExchangeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -915,7 +915,7 @@ class deleteExchangeRequest final :
   std::string* _internal_mutable_exchange_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.deleteExchangeRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.deleteExchangeRequest)
  private:
   class _Internal;
 
@@ -946,10 +946,10 @@ public:
   void MergeFrom(const declareQueueRequest_ArgsEntry_DoNotUse& other);
   static const declareQueueRequest_ArgsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const declareQueueRequest_ArgsEntry_DoNotUse*>(&_declareQueueRequest_ArgsEntry_DoNotUse_default_instance_); }
   static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hare_mq.declareQueueRequest.ArgsEntry.key");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hz_mq.declareQueueRequest.ArgsEntry.key");
  }
   static bool ValidateValue(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hare_mq.declareQueueRequest.ArgsEntry.value");
+    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "hz_mq.declareQueueRequest.ArgsEntry.value");
  }
   using ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom;
   ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
@@ -959,7 +959,7 @@ public:
 // -------------------------------------------------------------------
 
 class declareQueueRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.declareQueueRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.declareQueueRequest) */ {
  public:
   inline declareQueueRequest() : declareQueueRequest(nullptr) {}
   ~declareQueueRequest() override;
@@ -1060,7 +1060,7 @@ class declareQueueRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.declareQueueRequest";
+    return "hz_mq.declareQueueRequest";
   }
   protected:
   explicit declareQueueRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1174,7 +1174,7 @@ class declareQueueRequest final :
   void _internal_set_auto_delete(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.declareQueueRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.declareQueueRequest)
  private:
   class _Internal;
 
@@ -1198,7 +1198,7 @@ class declareQueueRequest final :
 // -------------------------------------------------------------------
 
 class deleteQueueRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.deleteQueueRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.deleteQueueRequest) */ {
  public:
   inline deleteQueueRequest() : deleteQueueRequest(nullptr) {}
   ~deleteQueueRequest() override;
@@ -1299,7 +1299,7 @@ class deleteQueueRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.deleteQueueRequest";
+    return "hz_mq.deleteQueueRequest";
   }
   protected:
   explicit deleteQueueRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1362,7 +1362,7 @@ class deleteQueueRequest final :
   std::string* _internal_mutable_queue_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.deleteQueueRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.deleteQueueRequest)
  private:
   class _Internal;
 
@@ -1378,7 +1378,7 @@ class deleteQueueRequest final :
 // -------------------------------------------------------------------
 
 class bindRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.bindRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.bindRequest) */ {
  public:
   inline bindRequest() : bindRequest(nullptr) {}
   ~bindRequest() override;
@@ -1479,7 +1479,7 @@ class bindRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.bindRequest";
+    return "hz_mq.bindRequest";
   }
   protected:
   explicit bindRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1572,7 +1572,7 @@ class bindRequest final :
   std::string* _internal_mutable_binding_key();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.bindRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.bindRequest)
  private:
   class _Internal;
 
@@ -1590,7 +1590,7 @@ class bindRequest final :
 // -------------------------------------------------------------------
 
 class unbindRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.unbindRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.unbindRequest) */ {
  public:
   inline unbindRequest() : unbindRequest(nullptr) {}
   ~unbindRequest() override;
@@ -1691,7 +1691,7 @@ class unbindRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.unbindRequest";
+    return "hz_mq.unbindRequest";
   }
   protected:
   explicit unbindRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1769,7 +1769,7 @@ class unbindRequest final :
   std::string* _internal_mutable_queue_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.unbindRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.unbindRequest)
  private:
   class _Internal;
 
@@ -1786,7 +1786,7 @@ class unbindRequest final :
 // -------------------------------------------------------------------
 
 class basicPublishRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicPublishRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicPublishRequest) */ {
  public:
   inline basicPublishRequest() : basicPublishRequest(nullptr) {}
   ~basicPublishRequest() override;
@@ -1887,7 +1887,7 @@ class basicPublishRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicPublishRequest";
+    return "hz_mq.basicPublishRequest";
   }
   protected:
   explicit basicPublishRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -1966,25 +1966,25 @@ class basicPublishRequest final :
   std::string* _internal_mutable_body();
   public:
 
-  // .hare_mq.BasicProperties properties = 5;
+  // .hz_mq.BasicProperties properties = 5;
   bool has_properties() const;
   private:
   bool _internal_has_properties() const;
   public:
   void clear_properties();
-  const ::hare_mq::BasicProperties& properties() const;
-  PROTOBUF_NODISCARD ::hare_mq::BasicProperties* release_properties();
-  ::hare_mq::BasicProperties* mutable_properties();
-  void set_allocated_properties(::hare_mq::BasicProperties* properties);
+  const ::hz_mq::BasicProperties& properties() const;
+  PROTOBUF_NODISCARD ::hz_mq::BasicProperties* release_properties();
+  ::hz_mq::BasicProperties* mutable_properties();
+  void set_allocated_properties(::hz_mq::BasicProperties* properties);
   private:
-  const ::hare_mq::BasicProperties& _internal_properties() const;
-  ::hare_mq::BasicProperties* _internal_mutable_properties();
+  const ::hz_mq::BasicProperties& _internal_properties() const;
+  ::hz_mq::BasicProperties* _internal_mutable_properties();
   public:
   void unsafe_arena_set_allocated_properties(
-      ::hare_mq::BasicProperties* properties);
-  ::hare_mq::BasicProperties* unsafe_arena_release_properties();
+      ::hz_mq::BasicProperties* properties);
+  ::hz_mq::BasicProperties* unsafe_arena_release_properties();
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicPublishRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicPublishRequest)
  private:
   class _Internal;
 
@@ -1995,14 +1995,14 @@ class basicPublishRequest final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr exchange_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr body_;
-  ::hare_mq::BasicProperties* properties_;
+  ::hz_mq::BasicProperties* properties_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protocol_2eproto;
 };
 // -------------------------------------------------------------------
 
 class basicAckRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicAckRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicAckRequest) */ {
  public:
   inline basicAckRequest() : basicAckRequest(nullptr) {}
   ~basicAckRequest() override;
@@ -2103,7 +2103,7 @@ class basicAckRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicAckRequest";
+    return "hz_mq.basicAckRequest";
   }
   protected:
   explicit basicAckRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2181,7 +2181,7 @@ class basicAckRequest final :
   std::string* _internal_mutable_message_id();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicAckRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicAckRequest)
  private:
   class _Internal;
 
@@ -2198,7 +2198,7 @@ class basicAckRequest final :
 // -------------------------------------------------------------------
 
 class basicConsumeRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicConsumeRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicConsumeRequest) */ {
  public:
   inline basicConsumeRequest() : basicConsumeRequest(nullptr) {}
   ~basicConsumeRequest() override;
@@ -2299,7 +2299,7 @@ class basicConsumeRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicConsumeRequest";
+    return "hz_mq.basicConsumeRequest";
   }
   protected:
   explicit basicConsumeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2387,7 +2387,7 @@ class basicConsumeRequest final :
   void _internal_set_auto_ack(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicConsumeRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicConsumeRequest)
  private:
   class _Internal;
 
@@ -2405,7 +2405,7 @@ class basicConsumeRequest final :
 // -------------------------------------------------------------------
 
 class basicCancelRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicCancelRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicCancelRequest) */ {
  public:
   inline basicCancelRequest() : basicCancelRequest(nullptr) {}
   ~basicCancelRequest() override;
@@ -2506,7 +2506,7 @@ class basicCancelRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicCancelRequest";
+    return "hz_mq.basicCancelRequest";
   }
   protected:
   explicit basicCancelRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2584,7 +2584,7 @@ class basicCancelRequest final :
   std::string* _internal_mutable_queue_name();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicCancelRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicCancelRequest)
  private:
   class _Internal;
 
@@ -2601,7 +2601,7 @@ class basicCancelRequest final :
 // -------------------------------------------------------------------
 
 class basicQueryRequest final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicQueryRequest) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicQueryRequest) */ {
  public:
   inline basicQueryRequest() : basicQueryRequest(nullptr) {}
   ~basicQueryRequest() override;
@@ -2702,7 +2702,7 @@ class basicQueryRequest final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicQueryRequest";
+    return "hz_mq.basicQueryRequest";
   }
   protected:
   explicit basicQueryRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2750,7 +2750,7 @@ class basicQueryRequest final :
   std::string* _internal_mutable_cid();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicQueryRequest)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicQueryRequest)
  private:
   class _Internal;
 
@@ -2765,7 +2765,7 @@ class basicQueryRequest final :
 // -------------------------------------------------------------------
 
 class basicCommonResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicCommonResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicCommonResponse) */ {
  public:
   inline basicCommonResponse() : basicCommonResponse(nullptr) {}
   ~basicCommonResponse() override;
@@ -2866,7 +2866,7 @@ class basicCommonResponse final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicCommonResponse";
+    return "hz_mq.basicCommonResponse";
   }
   protected:
   explicit basicCommonResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -2924,7 +2924,7 @@ class basicCommonResponse final :
   void _internal_set_ok(bool value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicCommonResponse)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicCommonResponse)
  private:
   class _Internal;
 
@@ -2940,7 +2940,7 @@ class basicCommonResponse final :
 // -------------------------------------------------------------------
 
 class basicConsumeResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicConsumeResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicConsumeResponse) */ {
  public:
   inline basicConsumeResponse() : basicConsumeResponse(nullptr) {}
   ~basicConsumeResponse() override;
@@ -3041,7 +3041,7 @@ class basicConsumeResponse final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicConsumeResponse";
+    return "hz_mq.basicConsumeResponse";
   }
   protected:
   explicit basicConsumeResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3105,25 +3105,25 @@ class basicConsumeResponse final :
   std::string* _internal_mutable_body();
   public:
 
-  // .hare_mq.BasicProperties properties = 4;
+  // .hz_mq.BasicProperties properties = 4;
   bool has_properties() const;
   private:
   bool _internal_has_properties() const;
   public:
   void clear_properties();
-  const ::hare_mq::BasicProperties& properties() const;
-  PROTOBUF_NODISCARD ::hare_mq::BasicProperties* release_properties();
-  ::hare_mq::BasicProperties* mutable_properties();
-  void set_allocated_properties(::hare_mq::BasicProperties* properties);
+  const ::hz_mq::BasicProperties& properties() const;
+  PROTOBUF_NODISCARD ::hz_mq::BasicProperties* release_properties();
+  ::hz_mq::BasicProperties* mutable_properties();
+  void set_allocated_properties(::hz_mq::BasicProperties* properties);
   private:
-  const ::hare_mq::BasicProperties& _internal_properties() const;
-  ::hare_mq::BasicProperties* _internal_mutable_properties();
+  const ::hz_mq::BasicProperties& _internal_properties() const;
+  ::hz_mq::BasicProperties* _internal_mutable_properties();
   public:
   void unsafe_arena_set_allocated_properties(
-      ::hare_mq::BasicProperties* properties);
-  ::hare_mq::BasicProperties* unsafe_arena_release_properties();
+      ::hz_mq::BasicProperties* properties);
+  ::hz_mq::BasicProperties* unsafe_arena_release_properties();
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicConsumeResponse)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicConsumeResponse)
  private:
   class _Internal;
 
@@ -3133,14 +3133,14 @@ class basicConsumeResponse final :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr cid_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr consumer_tag_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr body_;
-  ::hare_mq::BasicProperties* properties_;
+  ::hz_mq::BasicProperties* properties_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_protocol_2eproto;
 };
 // -------------------------------------------------------------------
 
 class basicQueryResponse final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.basicQueryResponse) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.basicQueryResponse) */ {
  public:
   inline basicQueryResponse() : basicQueryResponse(nullptr) {}
   ~basicQueryResponse() override;
@@ -3241,7 +3241,7 @@ class basicQueryResponse final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.basicQueryResponse";
+    return "hz_mq.basicQueryResponse";
   }
   protected:
   explicit basicQueryResponse(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -3304,7 +3304,7 @@ class basicQueryResponse final :
   std::string* _internal_mutable_body();
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.basicQueryResponse)
+  // @@protoc_insertion_point(class_scope:hz_mq.basicQueryResponse)
  private:
   class _Internal;
 
@@ -3333,7 +3333,7 @@ inline void openChannelRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& openChannelRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.openChannelRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.openChannelRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3341,11 +3341,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void openChannelRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.openChannelRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.openChannelRequest.rid)
 }
 inline std::string* openChannelRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.openChannelRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.openChannelRequest.rid)
   return _s;
 }
 inline const std::string& openChannelRequest::_internal_rid() const {
@@ -3360,7 +3360,7 @@ inline std::string* openChannelRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* openChannelRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.openChannelRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.openChannelRequest.rid)
   return rid_.Release();
 }
 inline void openChannelRequest::set_allocated_rid(std::string* rid) {
@@ -3375,7 +3375,7 @@ inline void openChannelRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.openChannelRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.openChannelRequest.rid)
 }
 
 // string cid = 2;
@@ -3383,7 +3383,7 @@ inline void openChannelRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& openChannelRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.openChannelRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.openChannelRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3391,11 +3391,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void openChannelRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.openChannelRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.openChannelRequest.cid)
 }
 inline std::string* openChannelRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.openChannelRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.openChannelRequest.cid)
   return _s;
 }
 inline const std::string& openChannelRequest::_internal_cid() const {
@@ -3410,7 +3410,7 @@ inline std::string* openChannelRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* openChannelRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.openChannelRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.openChannelRequest.cid)
   return cid_.Release();
 }
 inline void openChannelRequest::set_allocated_cid(std::string* cid) {
@@ -3425,7 +3425,7 @@ inline void openChannelRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.openChannelRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.openChannelRequest.cid)
 }
 
 // -------------------------------------------------------------------
@@ -3437,7 +3437,7 @@ inline void closeChannelRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& closeChannelRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.closeChannelRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.closeChannelRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3445,11 +3445,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void closeChannelRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.closeChannelRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.closeChannelRequest.rid)
 }
 inline std::string* closeChannelRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.closeChannelRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.closeChannelRequest.rid)
   return _s;
 }
 inline const std::string& closeChannelRequest::_internal_rid() const {
@@ -3464,7 +3464,7 @@ inline std::string* closeChannelRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* closeChannelRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.closeChannelRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.closeChannelRequest.rid)
   return rid_.Release();
 }
 inline void closeChannelRequest::set_allocated_rid(std::string* rid) {
@@ -3479,7 +3479,7 @@ inline void closeChannelRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.closeChannelRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.closeChannelRequest.rid)
 }
 
 // string cid = 2;
@@ -3487,7 +3487,7 @@ inline void closeChannelRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& closeChannelRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.closeChannelRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.closeChannelRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3495,11 +3495,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void closeChannelRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.closeChannelRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.closeChannelRequest.cid)
 }
 inline std::string* closeChannelRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.closeChannelRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.closeChannelRequest.cid)
   return _s;
 }
 inline const std::string& closeChannelRequest::_internal_cid() const {
@@ -3514,7 +3514,7 @@ inline std::string* closeChannelRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* closeChannelRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.closeChannelRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.closeChannelRequest.cid)
   return cid_.Release();
 }
 inline void closeChannelRequest::set_allocated_cid(std::string* cid) {
@@ -3529,7 +3529,7 @@ inline void closeChannelRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.closeChannelRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.closeChannelRequest.cid)
 }
 
 // -------------------------------------------------------------------
@@ -3543,7 +3543,7 @@ inline void declareExchangeRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& declareExchangeRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3551,11 +3551,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareExchangeRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.rid)
 }
 inline std::string* declareExchangeRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareExchangeRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareExchangeRequest.rid)
   return _s;
 }
 inline const std::string& declareExchangeRequest::_internal_rid() const {
@@ -3570,7 +3570,7 @@ inline std::string* declareExchangeRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareExchangeRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareExchangeRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.declareExchangeRequest.rid)
   return rid_.Release();
 }
 inline void declareExchangeRequest::set_allocated_rid(std::string* rid) {
@@ -3585,7 +3585,7 @@ inline void declareExchangeRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareExchangeRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareExchangeRequest.rid)
 }
 
 // string cid = 2;
@@ -3593,7 +3593,7 @@ inline void declareExchangeRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& declareExchangeRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3601,11 +3601,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareExchangeRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.cid)
 }
 inline std::string* declareExchangeRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareExchangeRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareExchangeRequest.cid)
   return _s;
 }
 inline const std::string& declareExchangeRequest::_internal_cid() const {
@@ -3620,7 +3620,7 @@ inline std::string* declareExchangeRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareExchangeRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareExchangeRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.declareExchangeRequest.cid)
   return cid_.Release();
 }
 inline void declareExchangeRequest::set_allocated_cid(std::string* cid) {
@@ -3635,7 +3635,7 @@ inline void declareExchangeRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareExchangeRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareExchangeRequest.cid)
 }
 
 // string exchange_name = 3;
@@ -3643,7 +3643,7 @@ inline void declareExchangeRequest::clear_exchange_name() {
   exchange_name_.ClearToEmpty();
 }
 inline const std::string& declareExchangeRequest::exchange_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.exchange_name)
   return _internal_exchange_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3651,11 +3651,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareExchangeRequest::set_exchange_name(ArgT0&& arg0, ArgT... args) {
  
  exchange_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.exchange_name)
 }
 inline std::string* declareExchangeRequest::mutable_exchange_name() {
   std::string* _s = _internal_mutable_exchange_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareExchangeRequest.exchange_name)
   return _s;
 }
 inline const std::string& declareExchangeRequest::_internal_exchange_name() const {
@@ -3670,7 +3670,7 @@ inline std::string* declareExchangeRequest::_internal_mutable_exchange_name() {
   return exchange_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareExchangeRequest::release_exchange_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_release:hz_mq.declareExchangeRequest.exchange_name)
   return exchange_name_.Release();
 }
 inline void declareExchangeRequest::set_allocated_exchange_name(std::string* exchange_name) {
@@ -3685,27 +3685,27 @@ inline void declareExchangeRequest::set_allocated_exchange_name(std::string* exc
     exchange_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareExchangeRequest.exchange_name)
 }
 
-// .hare_mq.ExchangeType exchange_type = 4;
+// .hz_mq.ExchangeType exchange_type = 4;
 inline void declareExchangeRequest::clear_exchange_type() {
   exchange_type_ = 0;
 }
-inline ::hare_mq::ExchangeType declareExchangeRequest::_internal_exchange_type() const {
-  return static_cast< ::hare_mq::ExchangeType >(exchange_type_);
+inline ::hz_mq::ExchangeType declareExchangeRequest::_internal_exchange_type() const {
+  return static_cast< ::hz_mq::ExchangeType >(exchange_type_);
 }
-inline ::hare_mq::ExchangeType declareExchangeRequest::exchange_type() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.exchange_type)
+inline ::hz_mq::ExchangeType declareExchangeRequest::exchange_type() const {
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.exchange_type)
   return _internal_exchange_type();
 }
-inline void declareExchangeRequest::_internal_set_exchange_type(::hare_mq::ExchangeType value) {
+inline void declareExchangeRequest::_internal_set_exchange_type(::hz_mq::ExchangeType value) {
   
   exchange_type_ = value;
 }
-inline void declareExchangeRequest::set_exchange_type(::hare_mq::ExchangeType value) {
+inline void declareExchangeRequest::set_exchange_type(::hz_mq::ExchangeType value) {
   _internal_set_exchange_type(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.exchange_type)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.exchange_type)
 }
 
 // bool durable = 5;
@@ -3716,7 +3716,7 @@ inline bool declareExchangeRequest::_internal_durable() const {
   return durable_;
 }
 inline bool declareExchangeRequest::durable() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.durable)
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.durable)
   return _internal_durable();
 }
 inline void declareExchangeRequest::_internal_set_durable(bool value) {
@@ -3725,7 +3725,7 @@ inline void declareExchangeRequest::_internal_set_durable(bool value) {
 }
 inline void declareExchangeRequest::set_durable(bool value) {
   _internal_set_durable(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.durable)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.durable)
 }
 
 // bool auto_delete = 6;
@@ -3736,7 +3736,7 @@ inline bool declareExchangeRequest::_internal_auto_delete() const {
   return auto_delete_;
 }
 inline bool declareExchangeRequest::auto_delete() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareExchangeRequest.auto_delete)
+  // @@protoc_insertion_point(field_get:hz_mq.declareExchangeRequest.auto_delete)
   return _internal_auto_delete();
 }
 inline void declareExchangeRequest::_internal_set_auto_delete(bool value) {
@@ -3745,7 +3745,7 @@ inline void declareExchangeRequest::_internal_set_auto_delete(bool value) {
 }
 inline void declareExchangeRequest::set_auto_delete(bool value) {
   _internal_set_auto_delete(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareExchangeRequest.auto_delete)
+  // @@protoc_insertion_point(field_set:hz_mq.declareExchangeRequest.auto_delete)
 }
 
 // map<string, string> args = 7;
@@ -3764,7 +3764,7 @@ declareExchangeRequest::_internal_args() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
 declareExchangeRequest::args() const {
-  // @@protoc_insertion_point(field_map:hare_mq.declareExchangeRequest.args)
+  // @@protoc_insertion_point(field_map:hz_mq.declareExchangeRequest.args)
   return _internal_args();
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
@@ -3773,7 +3773,7 @@ declareExchangeRequest::_internal_mutable_args() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
 declareExchangeRequest::mutable_args() {
-  // @@protoc_insertion_point(field_mutable_map:hare_mq.declareExchangeRequest.args)
+  // @@protoc_insertion_point(field_mutable_map:hz_mq.declareExchangeRequest.args)
   return _internal_mutable_args();
 }
 
@@ -3786,7 +3786,7 @@ inline void deleteExchangeRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& deleteExchangeRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteExchangeRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteExchangeRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3794,11 +3794,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteExchangeRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteExchangeRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteExchangeRequest.rid)
 }
 inline std::string* deleteExchangeRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteExchangeRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteExchangeRequest.rid)
   return _s;
 }
 inline const std::string& deleteExchangeRequest::_internal_rid() const {
@@ -3813,7 +3813,7 @@ inline std::string* deleteExchangeRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteExchangeRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteExchangeRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteExchangeRequest.rid)
   return rid_.Release();
 }
 inline void deleteExchangeRequest::set_allocated_rid(std::string* rid) {
@@ -3828,7 +3828,7 @@ inline void deleteExchangeRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteExchangeRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteExchangeRequest.rid)
 }
 
 // string cid = 2;
@@ -3836,7 +3836,7 @@ inline void deleteExchangeRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& deleteExchangeRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteExchangeRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteExchangeRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3844,11 +3844,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteExchangeRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteExchangeRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteExchangeRequest.cid)
 }
 inline std::string* deleteExchangeRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteExchangeRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteExchangeRequest.cid)
   return _s;
 }
 inline const std::string& deleteExchangeRequest::_internal_cid() const {
@@ -3863,7 +3863,7 @@ inline std::string* deleteExchangeRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteExchangeRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteExchangeRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteExchangeRequest.cid)
   return cid_.Release();
 }
 inline void deleteExchangeRequest::set_allocated_cid(std::string* cid) {
@@ -3878,7 +3878,7 @@ inline void deleteExchangeRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteExchangeRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteExchangeRequest.cid)
 }
 
 // string exchange_name = 3;
@@ -3886,7 +3886,7 @@ inline void deleteExchangeRequest::clear_exchange_name() {
   exchange_name_.ClearToEmpty();
 }
 inline const std::string& deleteExchangeRequest::exchange_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteExchangeRequest.exchange_name)
   return _internal_exchange_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3894,11 +3894,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteExchangeRequest::set_exchange_name(ArgT0&& arg0, ArgT... args) {
  
  exchange_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteExchangeRequest.exchange_name)
 }
 inline std::string* deleteExchangeRequest::mutable_exchange_name() {
   std::string* _s = _internal_mutable_exchange_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteExchangeRequest.exchange_name)
   return _s;
 }
 inline const std::string& deleteExchangeRequest::_internal_exchange_name() const {
@@ -3913,7 +3913,7 @@ inline std::string* deleteExchangeRequest::_internal_mutable_exchange_name() {
   return exchange_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteExchangeRequest::release_exchange_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteExchangeRequest.exchange_name)
   return exchange_name_.Release();
 }
 inline void deleteExchangeRequest::set_allocated_exchange_name(std::string* exchange_name) {
@@ -3928,7 +3928,7 @@ inline void deleteExchangeRequest::set_allocated_exchange_name(std::string* exch
     exchange_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteExchangeRequest.exchange_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteExchangeRequest.exchange_name)
 }
 
 // -------------------------------------------------------------------
@@ -3942,7 +3942,7 @@ inline void declareQueueRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& declareQueueRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -3950,11 +3950,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareQueueRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.rid)
 }
 inline std::string* declareQueueRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareQueueRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareQueueRequest.rid)
   return _s;
 }
 inline const std::string& declareQueueRequest::_internal_rid() const {
@@ -3969,7 +3969,7 @@ inline std::string* declareQueueRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareQueueRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareQueueRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.declareQueueRequest.rid)
   return rid_.Release();
 }
 inline void declareQueueRequest::set_allocated_rid(std::string* rid) {
@@ -3984,7 +3984,7 @@ inline void declareQueueRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareQueueRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareQueueRequest.rid)
 }
 
 // string cid = 2;
@@ -3992,7 +3992,7 @@ inline void declareQueueRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& declareQueueRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4000,11 +4000,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareQueueRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.cid)
 }
 inline std::string* declareQueueRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareQueueRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareQueueRequest.cid)
   return _s;
 }
 inline const std::string& declareQueueRequest::_internal_cid() const {
@@ -4019,7 +4019,7 @@ inline std::string* declareQueueRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareQueueRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareQueueRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.declareQueueRequest.cid)
   return cid_.Release();
 }
 inline void declareQueueRequest::set_allocated_cid(std::string* cid) {
@@ -4034,7 +4034,7 @@ inline void declareQueueRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareQueueRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareQueueRequest.cid)
 }
 
 // string queue_name = 3;
@@ -4042,7 +4042,7 @@ inline void declareQueueRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& declareQueueRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4050,11 +4050,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void declareQueueRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.queue_name)
 }
 inline std::string* declareQueueRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.declareQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.declareQueueRequest.queue_name)
   return _s;
 }
 inline const std::string& declareQueueRequest::_internal_queue_name() const {
@@ -4069,7 +4069,7 @@ inline std::string* declareQueueRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* declareQueueRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.declareQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.declareQueueRequest.queue_name)
   return queue_name_.Release();
 }
 inline void declareQueueRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -4084,7 +4084,7 @@ inline void declareQueueRequest::set_allocated_queue_name(std::string* queue_nam
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.declareQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.declareQueueRequest.queue_name)
 }
 
 // bool exclusive = 4;
@@ -4095,7 +4095,7 @@ inline bool declareQueueRequest::_internal_exclusive() const {
   return exclusive_;
 }
 inline bool declareQueueRequest::exclusive() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.exclusive)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.exclusive)
   return _internal_exclusive();
 }
 inline void declareQueueRequest::_internal_set_exclusive(bool value) {
@@ -4104,7 +4104,7 @@ inline void declareQueueRequest::_internal_set_exclusive(bool value) {
 }
 inline void declareQueueRequest::set_exclusive(bool value) {
   _internal_set_exclusive(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.exclusive)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.exclusive)
 }
 
 // bool durable = 5;
@@ -4115,7 +4115,7 @@ inline bool declareQueueRequest::_internal_durable() const {
   return durable_;
 }
 inline bool declareQueueRequest::durable() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.durable)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.durable)
   return _internal_durable();
 }
 inline void declareQueueRequest::_internal_set_durable(bool value) {
@@ -4124,7 +4124,7 @@ inline void declareQueueRequest::_internal_set_durable(bool value) {
 }
 inline void declareQueueRequest::set_durable(bool value) {
   _internal_set_durable(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.durable)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.durable)
 }
 
 // bool auto_delete = 6;
@@ -4135,7 +4135,7 @@ inline bool declareQueueRequest::_internal_auto_delete() const {
   return auto_delete_;
 }
 inline bool declareQueueRequest::auto_delete() const {
-  // @@protoc_insertion_point(field_get:hare_mq.declareQueueRequest.auto_delete)
+  // @@protoc_insertion_point(field_get:hz_mq.declareQueueRequest.auto_delete)
   return _internal_auto_delete();
 }
 inline void declareQueueRequest::_internal_set_auto_delete(bool value) {
@@ -4144,7 +4144,7 @@ inline void declareQueueRequest::_internal_set_auto_delete(bool value) {
 }
 inline void declareQueueRequest::set_auto_delete(bool value) {
   _internal_set_auto_delete(value);
-  // @@protoc_insertion_point(field_set:hare_mq.declareQueueRequest.auto_delete)
+  // @@protoc_insertion_point(field_set:hz_mq.declareQueueRequest.auto_delete)
 }
 
 // map<string, string> args = 7;
@@ -4163,7 +4163,7 @@ declareQueueRequest::_internal_args() const {
 }
 inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
 declareQueueRequest::args() const {
-  // @@protoc_insertion_point(field_map:hare_mq.declareQueueRequest.args)
+  // @@protoc_insertion_point(field_map:hz_mq.declareQueueRequest.args)
   return _internal_args();
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
@@ -4172,7 +4172,7 @@ declareQueueRequest::_internal_mutable_args() {
 }
 inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
 declareQueueRequest::mutable_args() {
-  // @@protoc_insertion_point(field_mutable_map:hare_mq.declareQueueRequest.args)
+  // @@protoc_insertion_point(field_mutable_map:hz_mq.declareQueueRequest.args)
   return _internal_mutable_args();
 }
 
@@ -4185,7 +4185,7 @@ inline void deleteQueueRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& deleteQueueRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteQueueRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteQueueRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4193,11 +4193,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteQueueRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteQueueRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteQueueRequest.rid)
 }
 inline std::string* deleteQueueRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteQueueRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteQueueRequest.rid)
   return _s;
 }
 inline const std::string& deleteQueueRequest::_internal_rid() const {
@@ -4212,7 +4212,7 @@ inline std::string* deleteQueueRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteQueueRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteQueueRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteQueueRequest.rid)
   return rid_.Release();
 }
 inline void deleteQueueRequest::set_allocated_rid(std::string* rid) {
@@ -4227,7 +4227,7 @@ inline void deleteQueueRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteQueueRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteQueueRequest.rid)
 }
 
 // string cid = 2;
@@ -4235,7 +4235,7 @@ inline void deleteQueueRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& deleteQueueRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteQueueRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteQueueRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4243,11 +4243,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteQueueRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteQueueRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteQueueRequest.cid)
 }
 inline std::string* deleteQueueRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteQueueRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteQueueRequest.cid)
   return _s;
 }
 inline const std::string& deleteQueueRequest::_internal_cid() const {
@@ -4262,7 +4262,7 @@ inline std::string* deleteQueueRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteQueueRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteQueueRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteQueueRequest.cid)
   return cid_.Release();
 }
 inline void deleteQueueRequest::set_allocated_cid(std::string* cid) {
@@ -4277,7 +4277,7 @@ inline void deleteQueueRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteQueueRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteQueueRequest.cid)
 }
 
 // string queue_name = 3;
@@ -4285,7 +4285,7 @@ inline void deleteQueueRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& deleteQueueRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.deleteQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.deleteQueueRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4293,11 +4293,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void deleteQueueRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.deleteQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.deleteQueueRequest.queue_name)
 }
 inline std::string* deleteQueueRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.deleteQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.deleteQueueRequest.queue_name)
   return _s;
 }
 inline const std::string& deleteQueueRequest::_internal_queue_name() const {
@@ -4312,7 +4312,7 @@ inline std::string* deleteQueueRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* deleteQueueRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.deleteQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.deleteQueueRequest.queue_name)
   return queue_name_.Release();
 }
 inline void deleteQueueRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -4327,7 +4327,7 @@ inline void deleteQueueRequest::set_allocated_queue_name(std::string* queue_name
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.deleteQueueRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.deleteQueueRequest.queue_name)
 }
 
 // -------------------------------------------------------------------
@@ -4339,7 +4339,7 @@ inline void bindRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& bindRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.bindRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.bindRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4347,11 +4347,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void bindRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.bindRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.bindRequest.rid)
 }
 inline std::string* bindRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.bindRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.bindRequest.rid)
   return _s;
 }
 inline const std::string& bindRequest::_internal_rid() const {
@@ -4366,7 +4366,7 @@ inline std::string* bindRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* bindRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.bindRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.bindRequest.rid)
   return rid_.Release();
 }
 inline void bindRequest::set_allocated_rid(std::string* rid) {
@@ -4381,7 +4381,7 @@ inline void bindRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.bindRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.bindRequest.rid)
 }
 
 // string cid = 2;
@@ -4389,7 +4389,7 @@ inline void bindRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& bindRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.bindRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.bindRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4397,11 +4397,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void bindRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.bindRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.bindRequest.cid)
 }
 inline std::string* bindRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.bindRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.bindRequest.cid)
   return _s;
 }
 inline const std::string& bindRequest::_internal_cid() const {
@@ -4416,7 +4416,7 @@ inline std::string* bindRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* bindRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.bindRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.bindRequest.cid)
   return cid_.Release();
 }
 inline void bindRequest::set_allocated_cid(std::string* cid) {
@@ -4431,7 +4431,7 @@ inline void bindRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.bindRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.bindRequest.cid)
 }
 
 // string exchange_name = 3;
@@ -4439,7 +4439,7 @@ inline void bindRequest::clear_exchange_name() {
   exchange_name_.ClearToEmpty();
 }
 inline const std::string& bindRequest::exchange_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.bindRequest.exchange_name)
+  // @@protoc_insertion_point(field_get:hz_mq.bindRequest.exchange_name)
   return _internal_exchange_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4447,11 +4447,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void bindRequest::set_exchange_name(ArgT0&& arg0, ArgT... args) {
  
  exchange_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.bindRequest.exchange_name)
+  // @@protoc_insertion_point(field_set:hz_mq.bindRequest.exchange_name)
 }
 inline std::string* bindRequest::mutable_exchange_name() {
   std::string* _s = _internal_mutable_exchange_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.bindRequest.exchange_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.bindRequest.exchange_name)
   return _s;
 }
 inline const std::string& bindRequest::_internal_exchange_name() const {
@@ -4466,7 +4466,7 @@ inline std::string* bindRequest::_internal_mutable_exchange_name() {
   return exchange_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* bindRequest::release_exchange_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.bindRequest.exchange_name)
+  // @@protoc_insertion_point(field_release:hz_mq.bindRequest.exchange_name)
   return exchange_name_.Release();
 }
 inline void bindRequest::set_allocated_exchange_name(std::string* exchange_name) {
@@ -4481,7 +4481,7 @@ inline void bindRequest::set_allocated_exchange_name(std::string* exchange_name)
     exchange_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.bindRequest.exchange_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.bindRequest.exchange_name)
 }
 
 // string queue_name = 4;
@@ -4489,7 +4489,7 @@ inline void bindRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& bindRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.bindRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.bindRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4497,11 +4497,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void bindRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.bindRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.bindRequest.queue_name)
 }
 inline std::string* bindRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.bindRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.bindRequest.queue_name)
   return _s;
 }
 inline const std::string& bindRequest::_internal_queue_name() const {
@@ -4516,7 +4516,7 @@ inline std::string* bindRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* bindRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.bindRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.bindRequest.queue_name)
   return queue_name_.Release();
 }
 inline void bindRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -4531,7 +4531,7 @@ inline void bindRequest::set_allocated_queue_name(std::string* queue_name) {
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.bindRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.bindRequest.queue_name)
 }
 
 // string binding_key = 5;
@@ -4539,7 +4539,7 @@ inline void bindRequest::clear_binding_key() {
   binding_key_.ClearToEmpty();
 }
 inline const std::string& bindRequest::binding_key() const {
-  // @@protoc_insertion_point(field_get:hare_mq.bindRequest.binding_key)
+  // @@protoc_insertion_point(field_get:hz_mq.bindRequest.binding_key)
   return _internal_binding_key();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4547,11 +4547,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void bindRequest::set_binding_key(ArgT0&& arg0, ArgT... args) {
  
  binding_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.bindRequest.binding_key)
+  // @@protoc_insertion_point(field_set:hz_mq.bindRequest.binding_key)
 }
 inline std::string* bindRequest::mutable_binding_key() {
   std::string* _s = _internal_mutable_binding_key();
-  // @@protoc_insertion_point(field_mutable:hare_mq.bindRequest.binding_key)
+  // @@protoc_insertion_point(field_mutable:hz_mq.bindRequest.binding_key)
   return _s;
 }
 inline const std::string& bindRequest::_internal_binding_key() const {
@@ -4566,7 +4566,7 @@ inline std::string* bindRequest::_internal_mutable_binding_key() {
   return binding_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* bindRequest::release_binding_key() {
-  // @@protoc_insertion_point(field_release:hare_mq.bindRequest.binding_key)
+  // @@protoc_insertion_point(field_release:hz_mq.bindRequest.binding_key)
   return binding_key_.Release();
 }
 inline void bindRequest::set_allocated_binding_key(std::string* binding_key) {
@@ -4581,7 +4581,7 @@ inline void bindRequest::set_allocated_binding_key(std::string* binding_key) {
     binding_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.bindRequest.binding_key)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.bindRequest.binding_key)
 }
 
 // -------------------------------------------------------------------
@@ -4593,7 +4593,7 @@ inline void unbindRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& unbindRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.unbindRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.unbindRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4601,11 +4601,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void unbindRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.unbindRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.unbindRequest.rid)
 }
 inline std::string* unbindRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.unbindRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.unbindRequest.rid)
   return _s;
 }
 inline const std::string& unbindRequest::_internal_rid() const {
@@ -4620,7 +4620,7 @@ inline std::string* unbindRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* unbindRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.unbindRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.unbindRequest.rid)
   return rid_.Release();
 }
 inline void unbindRequest::set_allocated_rid(std::string* rid) {
@@ -4635,7 +4635,7 @@ inline void unbindRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.unbindRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.unbindRequest.rid)
 }
 
 // string cid = 2;
@@ -4643,7 +4643,7 @@ inline void unbindRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& unbindRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.unbindRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.unbindRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4651,11 +4651,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void unbindRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.unbindRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.unbindRequest.cid)
 }
 inline std::string* unbindRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.unbindRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.unbindRequest.cid)
   return _s;
 }
 inline const std::string& unbindRequest::_internal_cid() const {
@@ -4670,7 +4670,7 @@ inline std::string* unbindRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* unbindRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.unbindRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.unbindRequest.cid)
   return cid_.Release();
 }
 inline void unbindRequest::set_allocated_cid(std::string* cid) {
@@ -4685,7 +4685,7 @@ inline void unbindRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.unbindRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.unbindRequest.cid)
 }
 
 // string exchange_name = 3;
@@ -4693,7 +4693,7 @@ inline void unbindRequest::clear_exchange_name() {
   exchange_name_.ClearToEmpty();
 }
 inline const std::string& unbindRequest::exchange_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.unbindRequest.exchange_name)
+  // @@protoc_insertion_point(field_get:hz_mq.unbindRequest.exchange_name)
   return _internal_exchange_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4701,11 +4701,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void unbindRequest::set_exchange_name(ArgT0&& arg0, ArgT... args) {
  
  exchange_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.unbindRequest.exchange_name)
+  // @@protoc_insertion_point(field_set:hz_mq.unbindRequest.exchange_name)
 }
 inline std::string* unbindRequest::mutable_exchange_name() {
   std::string* _s = _internal_mutable_exchange_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.unbindRequest.exchange_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.unbindRequest.exchange_name)
   return _s;
 }
 inline const std::string& unbindRequest::_internal_exchange_name() const {
@@ -4720,7 +4720,7 @@ inline std::string* unbindRequest::_internal_mutable_exchange_name() {
   return exchange_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* unbindRequest::release_exchange_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.unbindRequest.exchange_name)
+  // @@protoc_insertion_point(field_release:hz_mq.unbindRequest.exchange_name)
   return exchange_name_.Release();
 }
 inline void unbindRequest::set_allocated_exchange_name(std::string* exchange_name) {
@@ -4735,7 +4735,7 @@ inline void unbindRequest::set_allocated_exchange_name(std::string* exchange_nam
     exchange_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.unbindRequest.exchange_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.unbindRequest.exchange_name)
 }
 
 // string queue_name = 4;
@@ -4743,7 +4743,7 @@ inline void unbindRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& unbindRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.unbindRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.unbindRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4751,11 +4751,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void unbindRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.unbindRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.unbindRequest.queue_name)
 }
 inline std::string* unbindRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.unbindRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.unbindRequest.queue_name)
   return _s;
 }
 inline const std::string& unbindRequest::_internal_queue_name() const {
@@ -4770,7 +4770,7 @@ inline std::string* unbindRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* unbindRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.unbindRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.unbindRequest.queue_name)
   return queue_name_.Release();
 }
 inline void unbindRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -4785,7 +4785,7 @@ inline void unbindRequest::set_allocated_queue_name(std::string* queue_name) {
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.unbindRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.unbindRequest.queue_name)
 }
 
 // -------------------------------------------------------------------
@@ -4797,7 +4797,7 @@ inline void basicPublishRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicPublishRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicPublishRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicPublishRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4805,11 +4805,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicPublishRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicPublishRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicPublishRequest.rid)
 }
 inline std::string* basicPublishRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicPublishRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicPublishRequest.rid)
   return _s;
 }
 inline const std::string& basicPublishRequest::_internal_rid() const {
@@ -4824,7 +4824,7 @@ inline std::string* basicPublishRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicPublishRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicPublishRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicPublishRequest.rid)
   return rid_.Release();
 }
 inline void basicPublishRequest::set_allocated_rid(std::string* rid) {
@@ -4839,7 +4839,7 @@ inline void basicPublishRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicPublishRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicPublishRequest.rid)
 }
 
 // string cid = 2;
@@ -4847,7 +4847,7 @@ inline void basicPublishRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicPublishRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicPublishRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicPublishRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4855,11 +4855,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicPublishRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicPublishRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicPublishRequest.cid)
 }
 inline std::string* basicPublishRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicPublishRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicPublishRequest.cid)
   return _s;
 }
 inline const std::string& basicPublishRequest::_internal_cid() const {
@@ -4874,7 +4874,7 @@ inline std::string* basicPublishRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicPublishRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicPublishRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicPublishRequest.cid)
   return cid_.Release();
 }
 inline void basicPublishRequest::set_allocated_cid(std::string* cid) {
@@ -4889,7 +4889,7 @@ inline void basicPublishRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicPublishRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicPublishRequest.cid)
 }
 
 // string exchange_name = 3;
@@ -4897,7 +4897,7 @@ inline void basicPublishRequest::clear_exchange_name() {
   exchange_name_.ClearToEmpty();
 }
 inline const std::string& basicPublishRequest::exchange_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicPublishRequest.exchange_name)
+  // @@protoc_insertion_point(field_get:hz_mq.basicPublishRequest.exchange_name)
   return _internal_exchange_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4905,11 +4905,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicPublishRequest::set_exchange_name(ArgT0&& arg0, ArgT... args) {
  
  exchange_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicPublishRequest.exchange_name)
+  // @@protoc_insertion_point(field_set:hz_mq.basicPublishRequest.exchange_name)
 }
 inline std::string* basicPublishRequest::mutable_exchange_name() {
   std::string* _s = _internal_mutable_exchange_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicPublishRequest.exchange_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicPublishRequest.exchange_name)
   return _s;
 }
 inline const std::string& basicPublishRequest::_internal_exchange_name() const {
@@ -4924,7 +4924,7 @@ inline std::string* basicPublishRequest::_internal_mutable_exchange_name() {
   return exchange_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicPublishRequest::release_exchange_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicPublishRequest.exchange_name)
+  // @@protoc_insertion_point(field_release:hz_mq.basicPublishRequest.exchange_name)
   return exchange_name_.Release();
 }
 inline void basicPublishRequest::set_allocated_exchange_name(std::string* exchange_name) {
@@ -4939,7 +4939,7 @@ inline void basicPublishRequest::set_allocated_exchange_name(std::string* exchan
     exchange_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicPublishRequest.exchange_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicPublishRequest.exchange_name)
 }
 
 // string body = 4;
@@ -4947,7 +4947,7 @@ inline void basicPublishRequest::clear_body() {
   body_.ClearToEmpty();
 }
 inline const std::string& basicPublishRequest::body() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicPublishRequest.body)
+  // @@protoc_insertion_point(field_get:hz_mq.basicPublishRequest.body)
   return _internal_body();
 }
 template <typename ArgT0, typename... ArgT>
@@ -4955,11 +4955,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicPublishRequest::set_body(ArgT0&& arg0, ArgT... args) {
  
  body_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicPublishRequest.body)
+  // @@protoc_insertion_point(field_set:hz_mq.basicPublishRequest.body)
 }
 inline std::string* basicPublishRequest::mutable_body() {
   std::string* _s = _internal_mutable_body();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicPublishRequest.body)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicPublishRequest.body)
   return _s;
 }
 inline const std::string& basicPublishRequest::_internal_body() const {
@@ -4974,7 +4974,7 @@ inline std::string* basicPublishRequest::_internal_mutable_body() {
   return body_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicPublishRequest::release_body() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicPublishRequest.body)
+  // @@protoc_insertion_point(field_release:hz_mq.basicPublishRequest.body)
   return body_.Release();
 }
 inline void basicPublishRequest::set_allocated_body(std::string* body) {
@@ -4989,27 +4989,27 @@ inline void basicPublishRequest::set_allocated_body(std::string* body) {
     body_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicPublishRequest.body)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicPublishRequest.body)
 }
 
-// .hare_mq.BasicProperties properties = 5;
+// .hz_mq.BasicProperties properties = 5;
 inline bool basicPublishRequest::_internal_has_properties() const {
   return this != internal_default_instance() && properties_ != nullptr;
 }
 inline bool basicPublishRequest::has_properties() const {
   return _internal_has_properties();
 }
-inline const ::hare_mq::BasicProperties& basicPublishRequest::_internal_properties() const {
-  const ::hare_mq::BasicProperties* p = properties_;
-  return p != nullptr ? *p : reinterpret_cast<const ::hare_mq::BasicProperties&>(
-      ::hare_mq::_BasicProperties_default_instance_);
+inline const ::hz_mq::BasicProperties& basicPublishRequest::_internal_properties() const {
+  const ::hz_mq::BasicProperties* p = properties_;
+  return p != nullptr ? *p : reinterpret_cast<const ::hz_mq::BasicProperties&>(
+      ::hz_mq::_BasicProperties_default_instance_);
 }
-inline const ::hare_mq::BasicProperties& basicPublishRequest::properties() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicPublishRequest.properties)
+inline const ::hz_mq::BasicProperties& basicPublishRequest::properties() const {
+  // @@protoc_insertion_point(field_get:hz_mq.basicPublishRequest.properties)
   return _internal_properties();
 }
 inline void basicPublishRequest::unsafe_arena_set_allocated_properties(
-    ::hare_mq::BasicProperties* properties) {
+    ::hz_mq::BasicProperties* properties) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(properties_);
   }
@@ -5019,11 +5019,11 @@ inline void basicPublishRequest::unsafe_arena_set_allocated_properties(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hare_mq.basicPublishRequest.properties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hz_mq.basicPublishRequest.properties)
 }
-inline ::hare_mq::BasicProperties* basicPublishRequest::release_properties() {
+inline ::hz_mq::BasicProperties* basicPublishRequest::release_properties() {
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -5036,27 +5036,27 @@ inline ::hare_mq::BasicProperties* basicPublishRequest::release_properties() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::hare_mq::BasicProperties* basicPublishRequest::unsafe_arena_release_properties() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicPublishRequest.properties)
+inline ::hz_mq::BasicProperties* basicPublishRequest::unsafe_arena_release_properties() {
+  // @@protoc_insertion_point(field_release:hz_mq.basicPublishRequest.properties)
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
   return temp;
 }
-inline ::hare_mq::BasicProperties* basicPublishRequest::_internal_mutable_properties() {
+inline ::hz_mq::BasicProperties* basicPublishRequest::_internal_mutable_properties() {
   
   if (properties_ == nullptr) {
-    auto* p = CreateMaybeMessage<::hare_mq::BasicProperties>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::hz_mq::BasicProperties>(GetArenaForAllocation());
     properties_ = p;
   }
   return properties_;
 }
-inline ::hare_mq::BasicProperties* basicPublishRequest::mutable_properties() {
-  ::hare_mq::BasicProperties* _msg = _internal_mutable_properties();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicPublishRequest.properties)
+inline ::hz_mq::BasicProperties* basicPublishRequest::mutable_properties() {
+  ::hz_mq::BasicProperties* _msg = _internal_mutable_properties();
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicPublishRequest.properties)
   return _msg;
 }
-inline void basicPublishRequest::set_allocated_properties(::hare_mq::BasicProperties* properties) {
+inline void basicPublishRequest::set_allocated_properties(::hz_mq::BasicProperties* properties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(properties_);
@@ -5074,7 +5074,7 @@ inline void basicPublishRequest::set_allocated_properties(::hare_mq::BasicProper
     
   }
   properties_ = properties;
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicPublishRequest.properties)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicPublishRequest.properties)
 }
 
 // -------------------------------------------------------------------
@@ -5086,7 +5086,7 @@ inline void basicAckRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicAckRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicAckRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicAckRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5094,11 +5094,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicAckRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicAckRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicAckRequest.rid)
 }
 inline std::string* basicAckRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicAckRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicAckRequest.rid)
   return _s;
 }
 inline const std::string& basicAckRequest::_internal_rid() const {
@@ -5113,7 +5113,7 @@ inline std::string* basicAckRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicAckRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicAckRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicAckRequest.rid)
   return rid_.Release();
 }
 inline void basicAckRequest::set_allocated_rid(std::string* rid) {
@@ -5128,7 +5128,7 @@ inline void basicAckRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicAckRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicAckRequest.rid)
 }
 
 // string cid = 2;
@@ -5136,7 +5136,7 @@ inline void basicAckRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicAckRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicAckRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicAckRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5144,11 +5144,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicAckRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicAckRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicAckRequest.cid)
 }
 inline std::string* basicAckRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicAckRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicAckRequest.cid)
   return _s;
 }
 inline const std::string& basicAckRequest::_internal_cid() const {
@@ -5163,7 +5163,7 @@ inline std::string* basicAckRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicAckRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicAckRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicAckRequest.cid)
   return cid_.Release();
 }
 inline void basicAckRequest::set_allocated_cid(std::string* cid) {
@@ -5178,7 +5178,7 @@ inline void basicAckRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicAckRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicAckRequest.cid)
 }
 
 // string queue_name = 3;
@@ -5186,7 +5186,7 @@ inline void basicAckRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& basicAckRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicAckRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.basicAckRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5194,11 +5194,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicAckRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicAckRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.basicAckRequest.queue_name)
 }
 inline std::string* basicAckRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicAckRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicAckRequest.queue_name)
   return _s;
 }
 inline const std::string& basicAckRequest::_internal_queue_name() const {
@@ -5213,7 +5213,7 @@ inline std::string* basicAckRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicAckRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicAckRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.basicAckRequest.queue_name)
   return queue_name_.Release();
 }
 inline void basicAckRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -5228,7 +5228,7 @@ inline void basicAckRequest::set_allocated_queue_name(std::string* queue_name) {
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicAckRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicAckRequest.queue_name)
 }
 
 // string message_id = 4;
@@ -5236,7 +5236,7 @@ inline void basicAckRequest::clear_message_id() {
   message_id_.ClearToEmpty();
 }
 inline const std::string& basicAckRequest::message_id() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicAckRequest.message_id)
+  // @@protoc_insertion_point(field_get:hz_mq.basicAckRequest.message_id)
   return _internal_message_id();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5244,11 +5244,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicAckRequest::set_message_id(ArgT0&& arg0, ArgT... args) {
  
  message_id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicAckRequest.message_id)
+  // @@protoc_insertion_point(field_set:hz_mq.basicAckRequest.message_id)
 }
 inline std::string* basicAckRequest::mutable_message_id() {
   std::string* _s = _internal_mutable_message_id();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicAckRequest.message_id)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicAckRequest.message_id)
   return _s;
 }
 inline const std::string& basicAckRequest::_internal_message_id() const {
@@ -5263,7 +5263,7 @@ inline std::string* basicAckRequest::_internal_mutable_message_id() {
   return message_id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicAckRequest::release_message_id() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicAckRequest.message_id)
+  // @@protoc_insertion_point(field_release:hz_mq.basicAckRequest.message_id)
   return message_id_.Release();
 }
 inline void basicAckRequest::set_allocated_message_id(std::string* message_id) {
@@ -5278,7 +5278,7 @@ inline void basicAckRequest::set_allocated_message_id(std::string* message_id) {
     message_id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicAckRequest.message_id)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicAckRequest.message_id)
 }
 
 // -------------------------------------------------------------------
@@ -5290,7 +5290,7 @@ inline void basicConsumeRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicConsumeRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5298,11 +5298,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeRequest.rid)
 }
 inline std::string* basicConsumeRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeRequest.rid)
   return _s;
 }
 inline const std::string& basicConsumeRequest::_internal_rid() const {
@@ -5317,7 +5317,7 @@ inline std::string* basicConsumeRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeRequest.rid)
   return rid_.Release();
 }
 inline void basicConsumeRequest::set_allocated_rid(std::string* rid) {
@@ -5332,7 +5332,7 @@ inline void basicConsumeRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeRequest.rid)
 }
 
 // string cid = 2;
@@ -5340,7 +5340,7 @@ inline void basicConsumeRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicConsumeRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5348,11 +5348,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeRequest.cid)
 }
 inline std::string* basicConsumeRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeRequest.cid)
   return _s;
 }
 inline const std::string& basicConsumeRequest::_internal_cid() const {
@@ -5367,7 +5367,7 @@ inline std::string* basicConsumeRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeRequest.cid)
   return cid_.Release();
 }
 inline void basicConsumeRequest::set_allocated_cid(std::string* cid) {
@@ -5382,7 +5382,7 @@ inline void basicConsumeRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeRequest.cid)
 }
 
 // string consumer_tag = 3;
@@ -5390,7 +5390,7 @@ inline void basicConsumeRequest::clear_consumer_tag() {
   consumer_tag_.ClearToEmpty();
 }
 inline const std::string& basicConsumeRequest::consumer_tag() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeRequest.consumer_tag)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeRequest.consumer_tag)
   return _internal_consumer_tag();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5398,11 +5398,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeRequest::set_consumer_tag(ArgT0&& arg0, ArgT... args) {
  
  consumer_tag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeRequest.consumer_tag)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeRequest.consumer_tag)
 }
 inline std::string* basicConsumeRequest::mutable_consumer_tag() {
   std::string* _s = _internal_mutable_consumer_tag();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeRequest.consumer_tag)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeRequest.consumer_tag)
   return _s;
 }
 inline const std::string& basicConsumeRequest::_internal_consumer_tag() const {
@@ -5417,7 +5417,7 @@ inline std::string* basicConsumeRequest::_internal_mutable_consumer_tag() {
   return consumer_tag_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeRequest::release_consumer_tag() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeRequest.consumer_tag)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeRequest.consumer_tag)
   return consumer_tag_.Release();
 }
 inline void basicConsumeRequest::set_allocated_consumer_tag(std::string* consumer_tag) {
@@ -5432,7 +5432,7 @@ inline void basicConsumeRequest::set_allocated_consumer_tag(std::string* consume
     consumer_tag_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeRequest.consumer_tag)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeRequest.consumer_tag)
 }
 
 // string queue_name = 4;
@@ -5440,7 +5440,7 @@ inline void basicConsumeRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& basicConsumeRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5448,11 +5448,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeRequest.queue_name)
 }
 inline std::string* basicConsumeRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeRequest.queue_name)
   return _s;
 }
 inline const std::string& basicConsumeRequest::_internal_queue_name() const {
@@ -5467,7 +5467,7 @@ inline std::string* basicConsumeRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeRequest.queue_name)
   return queue_name_.Release();
 }
 inline void basicConsumeRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -5482,7 +5482,7 @@ inline void basicConsumeRequest::set_allocated_queue_name(std::string* queue_nam
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeRequest.queue_name)
 }
 
 // bool auto_ack = 5;
@@ -5493,7 +5493,7 @@ inline bool basicConsumeRequest::_internal_auto_ack() const {
   return auto_ack_;
 }
 inline bool basicConsumeRequest::auto_ack() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeRequest.auto_ack)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeRequest.auto_ack)
   return _internal_auto_ack();
 }
 inline void basicConsumeRequest::_internal_set_auto_ack(bool value) {
@@ -5502,7 +5502,7 @@ inline void basicConsumeRequest::_internal_set_auto_ack(bool value) {
 }
 inline void basicConsumeRequest::set_auto_ack(bool value) {
   _internal_set_auto_ack(value);
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeRequest.auto_ack)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeRequest.auto_ack)
 }
 
 // -------------------------------------------------------------------
@@ -5514,7 +5514,7 @@ inline void basicCancelRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicCancelRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCancelRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCancelRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5522,11 +5522,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCancelRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCancelRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCancelRequest.rid)
 }
 inline std::string* basicCancelRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCancelRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCancelRequest.rid)
   return _s;
 }
 inline const std::string& basicCancelRequest::_internal_rid() const {
@@ -5541,7 +5541,7 @@ inline std::string* basicCancelRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCancelRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCancelRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCancelRequest.rid)
   return rid_.Release();
 }
 inline void basicCancelRequest::set_allocated_rid(std::string* rid) {
@@ -5556,7 +5556,7 @@ inline void basicCancelRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCancelRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCancelRequest.rid)
 }
 
 // string cid = 2;
@@ -5564,7 +5564,7 @@ inline void basicCancelRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicCancelRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCancelRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCancelRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5572,11 +5572,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCancelRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCancelRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCancelRequest.cid)
 }
 inline std::string* basicCancelRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCancelRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCancelRequest.cid)
   return _s;
 }
 inline const std::string& basicCancelRequest::_internal_cid() const {
@@ -5591,7 +5591,7 @@ inline std::string* basicCancelRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCancelRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCancelRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCancelRequest.cid)
   return cid_.Release();
 }
 inline void basicCancelRequest::set_allocated_cid(std::string* cid) {
@@ -5606,7 +5606,7 @@ inline void basicCancelRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCancelRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCancelRequest.cid)
 }
 
 // string consumer_tag = 3;
@@ -5614,7 +5614,7 @@ inline void basicCancelRequest::clear_consumer_tag() {
   consumer_tag_.ClearToEmpty();
 }
 inline const std::string& basicCancelRequest::consumer_tag() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCancelRequest.consumer_tag)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCancelRequest.consumer_tag)
   return _internal_consumer_tag();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5622,11 +5622,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCancelRequest::set_consumer_tag(ArgT0&& arg0, ArgT... args) {
  
  consumer_tag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCancelRequest.consumer_tag)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCancelRequest.consumer_tag)
 }
 inline std::string* basicCancelRequest::mutable_consumer_tag() {
   std::string* _s = _internal_mutable_consumer_tag();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCancelRequest.consumer_tag)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCancelRequest.consumer_tag)
   return _s;
 }
 inline const std::string& basicCancelRequest::_internal_consumer_tag() const {
@@ -5641,7 +5641,7 @@ inline std::string* basicCancelRequest::_internal_mutable_consumer_tag() {
   return consumer_tag_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCancelRequest::release_consumer_tag() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCancelRequest.consumer_tag)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCancelRequest.consumer_tag)
   return consumer_tag_.Release();
 }
 inline void basicCancelRequest::set_allocated_consumer_tag(std::string* consumer_tag) {
@@ -5656,7 +5656,7 @@ inline void basicCancelRequest::set_allocated_consumer_tag(std::string* consumer
     consumer_tag_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCancelRequest.consumer_tag)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCancelRequest.consumer_tag)
 }
 
 // string queue_name = 4;
@@ -5664,7 +5664,7 @@ inline void basicCancelRequest::clear_queue_name() {
   queue_name_.ClearToEmpty();
 }
 inline const std::string& basicCancelRequest::queue_name() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCancelRequest.queue_name)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCancelRequest.queue_name)
   return _internal_queue_name();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5672,11 +5672,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCancelRequest::set_queue_name(ArgT0&& arg0, ArgT... args) {
  
  queue_name_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCancelRequest.queue_name)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCancelRequest.queue_name)
 }
 inline std::string* basicCancelRequest::mutable_queue_name() {
   std::string* _s = _internal_mutable_queue_name();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCancelRequest.queue_name)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCancelRequest.queue_name)
   return _s;
 }
 inline const std::string& basicCancelRequest::_internal_queue_name() const {
@@ -5691,7 +5691,7 @@ inline std::string* basicCancelRequest::_internal_mutable_queue_name() {
   return queue_name_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCancelRequest::release_queue_name() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCancelRequest.queue_name)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCancelRequest.queue_name)
   return queue_name_.Release();
 }
 inline void basicCancelRequest::set_allocated_queue_name(std::string* queue_name) {
@@ -5706,7 +5706,7 @@ inline void basicCancelRequest::set_allocated_queue_name(std::string* queue_name
     queue_name_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCancelRequest.queue_name)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCancelRequest.queue_name)
 }
 
 // -------------------------------------------------------------------
@@ -5718,7 +5718,7 @@ inline void basicQueryRequest::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicQueryRequest::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicQueryRequest.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicQueryRequest.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5726,11 +5726,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicQueryRequest::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicQueryRequest.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicQueryRequest.rid)
 }
 inline std::string* basicQueryRequest::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicQueryRequest.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicQueryRequest.rid)
   return _s;
 }
 inline const std::string& basicQueryRequest::_internal_rid() const {
@@ -5745,7 +5745,7 @@ inline std::string* basicQueryRequest::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicQueryRequest::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicQueryRequest.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicQueryRequest.rid)
   return rid_.Release();
 }
 inline void basicQueryRequest::set_allocated_rid(std::string* rid) {
@@ -5760,7 +5760,7 @@ inline void basicQueryRequest::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicQueryRequest.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicQueryRequest.rid)
 }
 
 // string cid = 2;
@@ -5768,7 +5768,7 @@ inline void basicQueryRequest::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicQueryRequest::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicQueryRequest.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicQueryRequest.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5776,11 +5776,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicQueryRequest::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicQueryRequest.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicQueryRequest.cid)
 }
 inline std::string* basicQueryRequest::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicQueryRequest.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicQueryRequest.cid)
   return _s;
 }
 inline const std::string& basicQueryRequest::_internal_cid() const {
@@ -5795,7 +5795,7 @@ inline std::string* basicQueryRequest::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicQueryRequest::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicQueryRequest.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicQueryRequest.cid)
   return cid_.Release();
 }
 inline void basicQueryRequest::set_allocated_cid(std::string* cid) {
@@ -5810,7 +5810,7 @@ inline void basicQueryRequest::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicQueryRequest.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicQueryRequest.cid)
 }
 
 // -------------------------------------------------------------------
@@ -5822,7 +5822,7 @@ inline void basicCommonResponse::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicCommonResponse::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCommonResponse.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCommonResponse.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5830,11 +5830,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCommonResponse::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCommonResponse.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCommonResponse.rid)
 }
 inline std::string* basicCommonResponse::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCommonResponse.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCommonResponse.rid)
   return _s;
 }
 inline const std::string& basicCommonResponse::_internal_rid() const {
@@ -5849,7 +5849,7 @@ inline std::string* basicCommonResponse::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCommonResponse::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCommonResponse.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCommonResponse.rid)
   return rid_.Release();
 }
 inline void basicCommonResponse::set_allocated_rid(std::string* rid) {
@@ -5864,7 +5864,7 @@ inline void basicCommonResponse::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCommonResponse.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCommonResponse.rid)
 }
 
 // string cid = 2;
@@ -5872,7 +5872,7 @@ inline void basicCommonResponse::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicCommonResponse::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCommonResponse.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCommonResponse.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5880,11 +5880,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicCommonResponse::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicCommonResponse.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCommonResponse.cid)
 }
 inline std::string* basicCommonResponse::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicCommonResponse.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicCommonResponse.cid)
   return _s;
 }
 inline const std::string& basicCommonResponse::_internal_cid() const {
@@ -5899,7 +5899,7 @@ inline std::string* basicCommonResponse::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicCommonResponse::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicCommonResponse.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicCommonResponse.cid)
   return cid_.Release();
 }
 inline void basicCommonResponse::set_allocated_cid(std::string* cid) {
@@ -5914,7 +5914,7 @@ inline void basicCommonResponse::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicCommonResponse.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicCommonResponse.cid)
 }
 
 // bool ok = 3;
@@ -5925,7 +5925,7 @@ inline bool basicCommonResponse::_internal_ok() const {
   return ok_;
 }
 inline bool basicCommonResponse::ok() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicCommonResponse.ok)
+  // @@protoc_insertion_point(field_get:hz_mq.basicCommonResponse.ok)
   return _internal_ok();
 }
 inline void basicCommonResponse::_internal_set_ok(bool value) {
@@ -5934,7 +5934,7 @@ inline void basicCommonResponse::_internal_set_ok(bool value) {
 }
 inline void basicCommonResponse::set_ok(bool value) {
   _internal_set_ok(value);
-  // @@protoc_insertion_point(field_set:hare_mq.basicCommonResponse.ok)
+  // @@protoc_insertion_point(field_set:hz_mq.basicCommonResponse.ok)
 }
 
 // -------------------------------------------------------------------
@@ -5946,7 +5946,7 @@ inline void basicConsumeResponse::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicConsumeResponse::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeResponse.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeResponse.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -5954,11 +5954,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeResponse::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeResponse.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeResponse.cid)
 }
 inline std::string* basicConsumeResponse::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeResponse.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeResponse.cid)
   return _s;
 }
 inline const std::string& basicConsumeResponse::_internal_cid() const {
@@ -5973,7 +5973,7 @@ inline std::string* basicConsumeResponse::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeResponse::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeResponse.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeResponse.cid)
   return cid_.Release();
 }
 inline void basicConsumeResponse::set_allocated_cid(std::string* cid) {
@@ -5988,7 +5988,7 @@ inline void basicConsumeResponse::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeResponse.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeResponse.cid)
 }
 
 // string consumer_tag = 2;
@@ -5996,7 +5996,7 @@ inline void basicConsumeResponse::clear_consumer_tag() {
   consumer_tag_.ClearToEmpty();
 }
 inline const std::string& basicConsumeResponse::consumer_tag() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeResponse.consumer_tag)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeResponse.consumer_tag)
   return _internal_consumer_tag();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6004,11 +6004,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeResponse::set_consumer_tag(ArgT0&& arg0, ArgT... args) {
  
  consumer_tag_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeResponse.consumer_tag)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeResponse.consumer_tag)
 }
 inline std::string* basicConsumeResponse::mutable_consumer_tag() {
   std::string* _s = _internal_mutable_consumer_tag();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeResponse.consumer_tag)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeResponse.consumer_tag)
   return _s;
 }
 inline const std::string& basicConsumeResponse::_internal_consumer_tag() const {
@@ -6023,7 +6023,7 @@ inline std::string* basicConsumeResponse::_internal_mutable_consumer_tag() {
   return consumer_tag_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeResponse::release_consumer_tag() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeResponse.consumer_tag)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeResponse.consumer_tag)
   return consumer_tag_.Release();
 }
 inline void basicConsumeResponse::set_allocated_consumer_tag(std::string* consumer_tag) {
@@ -6038,7 +6038,7 @@ inline void basicConsumeResponse::set_allocated_consumer_tag(std::string* consum
     consumer_tag_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeResponse.consumer_tag)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeResponse.consumer_tag)
 }
 
 // string body = 3;
@@ -6046,7 +6046,7 @@ inline void basicConsumeResponse::clear_body() {
   body_.ClearToEmpty();
 }
 inline const std::string& basicConsumeResponse::body() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeResponse.body)
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeResponse.body)
   return _internal_body();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6054,11 +6054,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicConsumeResponse::set_body(ArgT0&& arg0, ArgT... args) {
  
  body_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicConsumeResponse.body)
+  // @@protoc_insertion_point(field_set:hz_mq.basicConsumeResponse.body)
 }
 inline std::string* basicConsumeResponse::mutable_body() {
   std::string* _s = _internal_mutable_body();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeResponse.body)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeResponse.body)
   return _s;
 }
 inline const std::string& basicConsumeResponse::_internal_body() const {
@@ -6073,7 +6073,7 @@ inline std::string* basicConsumeResponse::_internal_mutable_body() {
   return body_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicConsumeResponse::release_body() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeResponse.body)
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeResponse.body)
   return body_.Release();
 }
 inline void basicConsumeResponse::set_allocated_body(std::string* body) {
@@ -6088,27 +6088,27 @@ inline void basicConsumeResponse::set_allocated_body(std::string* body) {
     body_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeResponse.body)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeResponse.body)
 }
 
-// .hare_mq.BasicProperties properties = 4;
+// .hz_mq.BasicProperties properties = 4;
 inline bool basicConsumeResponse::_internal_has_properties() const {
   return this != internal_default_instance() && properties_ != nullptr;
 }
 inline bool basicConsumeResponse::has_properties() const {
   return _internal_has_properties();
 }
-inline const ::hare_mq::BasicProperties& basicConsumeResponse::_internal_properties() const {
-  const ::hare_mq::BasicProperties* p = properties_;
-  return p != nullptr ? *p : reinterpret_cast<const ::hare_mq::BasicProperties&>(
-      ::hare_mq::_BasicProperties_default_instance_);
+inline const ::hz_mq::BasicProperties& basicConsumeResponse::_internal_properties() const {
+  const ::hz_mq::BasicProperties* p = properties_;
+  return p != nullptr ? *p : reinterpret_cast<const ::hz_mq::BasicProperties&>(
+      ::hz_mq::_BasicProperties_default_instance_);
 }
-inline const ::hare_mq::BasicProperties& basicConsumeResponse::properties() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicConsumeResponse.properties)
+inline const ::hz_mq::BasicProperties& basicConsumeResponse::properties() const {
+  // @@protoc_insertion_point(field_get:hz_mq.basicConsumeResponse.properties)
   return _internal_properties();
 }
 inline void basicConsumeResponse::unsafe_arena_set_allocated_properties(
-    ::hare_mq::BasicProperties* properties) {
+    ::hz_mq::BasicProperties* properties) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(properties_);
   }
@@ -6118,11 +6118,11 @@ inline void basicConsumeResponse::unsafe_arena_set_allocated_properties(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hare_mq.basicConsumeResponse.properties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hz_mq.basicConsumeResponse.properties)
 }
-inline ::hare_mq::BasicProperties* basicConsumeResponse::release_properties() {
+inline ::hz_mq::BasicProperties* basicConsumeResponse::release_properties() {
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -6135,27 +6135,27 @@ inline ::hare_mq::BasicProperties* basicConsumeResponse::release_properties() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::hare_mq::BasicProperties* basicConsumeResponse::unsafe_arena_release_properties() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicConsumeResponse.properties)
+inline ::hz_mq::BasicProperties* basicConsumeResponse::unsafe_arena_release_properties() {
+  // @@protoc_insertion_point(field_release:hz_mq.basicConsumeResponse.properties)
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
   return temp;
 }
-inline ::hare_mq::BasicProperties* basicConsumeResponse::_internal_mutable_properties() {
+inline ::hz_mq::BasicProperties* basicConsumeResponse::_internal_mutable_properties() {
   
   if (properties_ == nullptr) {
-    auto* p = CreateMaybeMessage<::hare_mq::BasicProperties>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::hz_mq::BasicProperties>(GetArenaForAllocation());
     properties_ = p;
   }
   return properties_;
 }
-inline ::hare_mq::BasicProperties* basicConsumeResponse::mutable_properties() {
-  ::hare_mq::BasicProperties* _msg = _internal_mutable_properties();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicConsumeResponse.properties)
+inline ::hz_mq::BasicProperties* basicConsumeResponse::mutable_properties() {
+  ::hz_mq::BasicProperties* _msg = _internal_mutable_properties();
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicConsumeResponse.properties)
   return _msg;
 }
-inline void basicConsumeResponse::set_allocated_properties(::hare_mq::BasicProperties* properties) {
+inline void basicConsumeResponse::set_allocated_properties(::hz_mq::BasicProperties* properties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(properties_);
@@ -6173,7 +6173,7 @@ inline void basicConsumeResponse::set_allocated_properties(::hare_mq::BasicPrope
     
   }
   properties_ = properties;
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicConsumeResponse.properties)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicConsumeResponse.properties)
 }
 
 // -------------------------------------------------------------------
@@ -6185,7 +6185,7 @@ inline void basicQueryResponse::clear_rid() {
   rid_.ClearToEmpty();
 }
 inline const std::string& basicQueryResponse::rid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicQueryResponse.rid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicQueryResponse.rid)
   return _internal_rid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6193,11 +6193,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicQueryResponse::set_rid(ArgT0&& arg0, ArgT... args) {
  
  rid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicQueryResponse.rid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicQueryResponse.rid)
 }
 inline std::string* basicQueryResponse::mutable_rid() {
   std::string* _s = _internal_mutable_rid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicQueryResponse.rid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicQueryResponse.rid)
   return _s;
 }
 inline const std::string& basicQueryResponse::_internal_rid() const {
@@ -6212,7 +6212,7 @@ inline std::string* basicQueryResponse::_internal_mutable_rid() {
   return rid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicQueryResponse::release_rid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicQueryResponse.rid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicQueryResponse.rid)
   return rid_.Release();
 }
 inline void basicQueryResponse::set_allocated_rid(std::string* rid) {
@@ -6227,7 +6227,7 @@ inline void basicQueryResponse::set_allocated_rid(std::string* rid) {
     rid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicQueryResponse.rid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicQueryResponse.rid)
 }
 
 // string cid = 2;
@@ -6235,7 +6235,7 @@ inline void basicQueryResponse::clear_cid() {
   cid_.ClearToEmpty();
 }
 inline const std::string& basicQueryResponse::cid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicQueryResponse.cid)
+  // @@protoc_insertion_point(field_get:hz_mq.basicQueryResponse.cid)
   return _internal_cid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6243,11 +6243,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicQueryResponse::set_cid(ArgT0&& arg0, ArgT... args) {
  
  cid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicQueryResponse.cid)
+  // @@protoc_insertion_point(field_set:hz_mq.basicQueryResponse.cid)
 }
 inline std::string* basicQueryResponse::mutable_cid() {
   std::string* _s = _internal_mutable_cid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicQueryResponse.cid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicQueryResponse.cid)
   return _s;
 }
 inline const std::string& basicQueryResponse::_internal_cid() const {
@@ -6262,7 +6262,7 @@ inline std::string* basicQueryResponse::_internal_mutable_cid() {
   return cid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicQueryResponse::release_cid() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicQueryResponse.cid)
+  // @@protoc_insertion_point(field_release:hz_mq.basicQueryResponse.cid)
   return cid_.Release();
 }
 inline void basicQueryResponse::set_allocated_cid(std::string* cid) {
@@ -6277,7 +6277,7 @@ inline void basicQueryResponse::set_allocated_cid(std::string* cid) {
     cid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicQueryResponse.cid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicQueryResponse.cid)
 }
 
 // string body = 3;
@@ -6285,7 +6285,7 @@ inline void basicQueryResponse::clear_body() {
   body_.ClearToEmpty();
 }
 inline const std::string& basicQueryResponse::body() const {
-  // @@protoc_insertion_point(field_get:hare_mq.basicQueryResponse.body)
+  // @@protoc_insertion_point(field_get:hz_mq.basicQueryResponse.body)
   return _internal_body();
 }
 template <typename ArgT0, typename... ArgT>
@@ -6293,11 +6293,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void basicQueryResponse::set_body(ArgT0&& arg0, ArgT... args) {
  
  body_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.basicQueryResponse.body)
+  // @@protoc_insertion_point(field_set:hz_mq.basicQueryResponse.body)
 }
 inline std::string* basicQueryResponse::mutable_body() {
   std::string* _s = _internal_mutable_body();
-  // @@protoc_insertion_point(field_mutable:hare_mq.basicQueryResponse.body)
+  // @@protoc_insertion_point(field_mutable:hz_mq.basicQueryResponse.body)
   return _s;
 }
 inline const std::string& basicQueryResponse::_internal_body() const {
@@ -6312,7 +6312,7 @@ inline std::string* basicQueryResponse::_internal_mutable_body() {
   return body_.Mutable(GetArenaForAllocation());
 }
 inline std::string* basicQueryResponse::release_body() {
-  // @@protoc_insertion_point(field_release:hare_mq.basicQueryResponse.body)
+  // @@protoc_insertion_point(field_release:hz_mq.basicQueryResponse.body)
   return body_.Release();
 }
 inline void basicQueryResponse::set_allocated_body(std::string* body) {
@@ -6327,7 +6327,7 @@ inline void basicQueryResponse::set_allocated_body(std::string* body) {
     body_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.basicQueryResponse.body)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.basicQueryResponse.body)
 }
 
 #ifdef __GNUC__
@@ -6370,14 +6370,14 @@ inline void basicQueryResponse::set_allocated_body(std::string* body) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace hare_mq
+}  // namespace hz_mq
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::hare_mq::ExchangeType> : ::std::true_type {};
+template <> struct is_proto_enum< ::hz_mq::ExchangeType> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::hare_mq::ExchangeType>() {
-  return ::hare_mq::ExchangeType_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::hz_mq::ExchangeType>() {
+  return ::hz_mq::ExchangeType_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

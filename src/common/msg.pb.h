@@ -45,7 +45,7 @@ struct TableStruct_msg_2eproto {
   static const uint32_t offsets[];
 };
 extern const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_msg_2eproto;
-namespace hare_mq {
+namespace hz_mq {
 class BasicProperties;
 struct BasicPropertiesDefaultTypeInternal;
 extern BasicPropertiesDefaultTypeInternal _BasicProperties_default_instance_;
@@ -55,13 +55,13 @@ extern MessageDefaultTypeInternal _Message_default_instance_;
 class MessagePayload;
 struct MessagePayloadDefaultTypeInternal;
 extern MessagePayloadDefaultTypeInternal _MessagePayload_default_instance_;
-}  // namespace hare_mq
+}  // namespace hz_mq
 PROTOBUF_NAMESPACE_OPEN
-template<> ::hare_mq::BasicProperties* Arena::CreateMaybeMessage<::hare_mq::BasicProperties>(Arena*);
-template<> ::hare_mq::Message* Arena::CreateMaybeMessage<::hare_mq::Message>(Arena*);
-template<> ::hare_mq::MessagePayload* Arena::CreateMaybeMessage<::hare_mq::MessagePayload>(Arena*);
+template<> ::hz_mq::BasicProperties* Arena::CreateMaybeMessage<::hz_mq::BasicProperties>(Arena*);
+template<> ::hz_mq::Message* Arena::CreateMaybeMessage<::hz_mq::Message>(Arena*);
+template<> ::hz_mq::MessagePayload* Arena::CreateMaybeMessage<::hz_mq::MessagePayload>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
-namespace hare_mq {
+namespace hz_mq {
 
 enum DeliveryMode : int {
   UNDURABLE = 0,
@@ -91,7 +91,7 @@ inline bool DeliveryMode_Parse(
 // ===================================================================
 
 class BasicProperties final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.BasicProperties) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.BasicProperties) */ {
  public:
   inline BasicProperties() : BasicProperties(nullptr) {}
   ~BasicProperties() override;
@@ -192,7 +192,7 @@ class BasicProperties final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.BasicProperties";
+    return "hz_mq.BasicProperties";
   }
   protected:
   explicit BasicProperties(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -241,16 +241,16 @@ class BasicProperties final :
   std::string* _internal_mutable_routing_key();
   public:
 
-  // .hare_mq.DeliveryMode delivery_mode = 2;
+  // .hz_mq.DeliveryMode delivery_mode = 2;
   void clear_delivery_mode();
-  ::hare_mq::DeliveryMode delivery_mode() const;
-  void set_delivery_mode(::hare_mq::DeliveryMode value);
+  ::hz_mq::DeliveryMode delivery_mode() const;
+  void set_delivery_mode(::hz_mq::DeliveryMode value);
   private:
-  ::hare_mq::DeliveryMode _internal_delivery_mode() const;
-  void _internal_set_delivery_mode(::hare_mq::DeliveryMode value);
+  ::hz_mq::DeliveryMode _internal_delivery_mode() const;
+  void _internal_set_delivery_mode(::hz_mq::DeliveryMode value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.BasicProperties)
+  // @@protoc_insertion_point(class_scope:hz_mq.BasicProperties)
  private:
   class _Internal;
 
@@ -266,7 +266,7 @@ class BasicProperties final :
 // -------------------------------------------------------------------
 
 class MessagePayload final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.MessagePayload) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.MessagePayload) */ {
  public:
   inline MessagePayload() : MessagePayload(nullptr) {}
   ~MessagePayload() override;
@@ -367,7 +367,7 @@ class MessagePayload final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.MessagePayload";
+    return "hz_mq.MessagePayload";
   }
   protected:
   explicit MessagePayload(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -416,25 +416,25 @@ class MessagePayload final :
   std::string* _internal_mutable_valid();
   public:
 
-  // .hare_mq.BasicProperties properties = 1;
+  // .hz_mq.BasicProperties properties = 1;
   bool has_properties() const;
   private:
   bool _internal_has_properties() const;
   public:
   void clear_properties();
-  const ::hare_mq::BasicProperties& properties() const;
-  PROTOBUF_NODISCARD ::hare_mq::BasicProperties* release_properties();
-  ::hare_mq::BasicProperties* mutable_properties();
-  void set_allocated_properties(::hare_mq::BasicProperties* properties);
+  const ::hz_mq::BasicProperties& properties() const;
+  PROTOBUF_NODISCARD ::hz_mq::BasicProperties* release_properties();
+  ::hz_mq::BasicProperties* mutable_properties();
+  void set_allocated_properties(::hz_mq::BasicProperties* properties);
   private:
-  const ::hare_mq::BasicProperties& _internal_properties() const;
-  ::hare_mq::BasicProperties* _internal_mutable_properties();
+  const ::hz_mq::BasicProperties& _internal_properties() const;
+  ::hz_mq::BasicProperties* _internal_mutable_properties();
   public:
   void unsafe_arena_set_allocated_properties(
-      ::hare_mq::BasicProperties* properties);
-  ::hare_mq::BasicProperties* unsafe_arena_release_properties();
+      ::hz_mq::BasicProperties* properties);
+  ::hz_mq::BasicProperties* unsafe_arena_release_properties();
 
-  // @@protoc_insertion_point(class_scope:hare_mq.MessagePayload)
+  // @@protoc_insertion_point(class_scope:hz_mq.MessagePayload)
  private:
   class _Internal;
 
@@ -443,14 +443,14 @@ class MessagePayload final :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr body_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr valid_;
-  ::hare_mq::BasicProperties* properties_;
+  ::hz_mq::BasicProperties* properties_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_msg_2eproto;
 };
 // -------------------------------------------------------------------
 
 class Message final :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hare_mq.Message) */ {
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hz_mq.Message) */ {
  public:
   inline Message() : Message(nullptr) {}
   ~Message() override;
@@ -551,7 +551,7 @@ class Message final :
   private:
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hare_mq.Message";
+    return "hz_mq.Message";
   }
   protected:
   explicit Message(::PROTOBUF_NAMESPACE_ID::Arena* arena,
@@ -572,23 +572,23 @@ class Message final :
     kOffsetFieldNumber = 2,
     kLengthFieldNumber = 3,
   };
-  // .hare_mq.MessagePayload payload = 1;
+  // .hz_mq.MessagePayload payload = 1;
   bool has_payload() const;
   private:
   bool _internal_has_payload() const;
   public:
   void clear_payload();
-  const ::hare_mq::MessagePayload& payload() const;
-  PROTOBUF_NODISCARD ::hare_mq::MessagePayload* release_payload();
-  ::hare_mq::MessagePayload* mutable_payload();
-  void set_allocated_payload(::hare_mq::MessagePayload* payload);
+  const ::hz_mq::MessagePayload& payload() const;
+  PROTOBUF_NODISCARD ::hz_mq::MessagePayload* release_payload();
+  ::hz_mq::MessagePayload* mutable_payload();
+  void set_allocated_payload(::hz_mq::MessagePayload* payload);
   private:
-  const ::hare_mq::MessagePayload& _internal_payload() const;
-  ::hare_mq::MessagePayload* _internal_mutable_payload();
+  const ::hz_mq::MessagePayload& _internal_payload() const;
+  ::hz_mq::MessagePayload* _internal_mutable_payload();
   public:
   void unsafe_arena_set_allocated_payload(
-      ::hare_mq::MessagePayload* payload);
-  ::hare_mq::MessagePayload* unsafe_arena_release_payload();
+      ::hz_mq::MessagePayload* payload);
+  ::hz_mq::MessagePayload* unsafe_arena_release_payload();
 
   // uint64 offset = 2;
   void clear_offset();
@@ -608,14 +608,14 @@ class Message final :
   void _internal_set_length(uint64_t value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hare_mq.Message)
+  // @@protoc_insertion_point(class_scope:hz_mq.Message)
  private:
   class _Internal;
 
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::hare_mq::MessagePayload* payload_;
+  ::hz_mq::MessagePayload* payload_;
   uint64_t offset_;
   uint64_t length_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -637,7 +637,7 @@ inline void BasicProperties::clear_id() {
   id_.ClearToEmpty();
 }
 inline const std::string& BasicProperties::id() const {
-  // @@protoc_insertion_point(field_get:hare_mq.BasicProperties.id)
+  // @@protoc_insertion_point(field_get:hz_mq.BasicProperties.id)
   return _internal_id();
 }
 template <typename ArgT0, typename... ArgT>
@@ -645,11 +645,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void BasicProperties::set_id(ArgT0&& arg0, ArgT... args) {
  
  id_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.BasicProperties.id)
+  // @@protoc_insertion_point(field_set:hz_mq.BasicProperties.id)
 }
 inline std::string* BasicProperties::mutable_id() {
   std::string* _s = _internal_mutable_id();
-  // @@protoc_insertion_point(field_mutable:hare_mq.BasicProperties.id)
+  // @@protoc_insertion_point(field_mutable:hz_mq.BasicProperties.id)
   return _s;
 }
 inline const std::string& BasicProperties::_internal_id() const {
@@ -664,7 +664,7 @@ inline std::string* BasicProperties::_internal_mutable_id() {
   return id_.Mutable(GetArenaForAllocation());
 }
 inline std::string* BasicProperties::release_id() {
-  // @@protoc_insertion_point(field_release:hare_mq.BasicProperties.id)
+  // @@protoc_insertion_point(field_release:hz_mq.BasicProperties.id)
   return id_.Release();
 }
 inline void BasicProperties::set_allocated_id(std::string* id) {
@@ -679,27 +679,27 @@ inline void BasicProperties::set_allocated_id(std::string* id) {
     id_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.BasicProperties.id)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.BasicProperties.id)
 }
 
-// .hare_mq.DeliveryMode delivery_mode = 2;
+// .hz_mq.DeliveryMode delivery_mode = 2;
 inline void BasicProperties::clear_delivery_mode() {
   delivery_mode_ = 0;
 }
-inline ::hare_mq::DeliveryMode BasicProperties::_internal_delivery_mode() const {
-  return static_cast< ::hare_mq::DeliveryMode >(delivery_mode_);
+inline ::hz_mq::DeliveryMode BasicProperties::_internal_delivery_mode() const {
+  return static_cast< ::hz_mq::DeliveryMode >(delivery_mode_);
 }
-inline ::hare_mq::DeliveryMode BasicProperties::delivery_mode() const {
-  // @@protoc_insertion_point(field_get:hare_mq.BasicProperties.delivery_mode)
+inline ::hz_mq::DeliveryMode BasicProperties::delivery_mode() const {
+  // @@protoc_insertion_point(field_get:hz_mq.BasicProperties.delivery_mode)
   return _internal_delivery_mode();
 }
-inline void BasicProperties::_internal_set_delivery_mode(::hare_mq::DeliveryMode value) {
+inline void BasicProperties::_internal_set_delivery_mode(::hz_mq::DeliveryMode value) {
   
   delivery_mode_ = value;
 }
-inline void BasicProperties::set_delivery_mode(::hare_mq::DeliveryMode value) {
+inline void BasicProperties::set_delivery_mode(::hz_mq::DeliveryMode value) {
   _internal_set_delivery_mode(value);
-  // @@protoc_insertion_point(field_set:hare_mq.BasicProperties.delivery_mode)
+  // @@protoc_insertion_point(field_set:hz_mq.BasicProperties.delivery_mode)
 }
 
 // string routing_key = 3;
@@ -707,7 +707,7 @@ inline void BasicProperties::clear_routing_key() {
   routing_key_.ClearToEmpty();
 }
 inline const std::string& BasicProperties::routing_key() const {
-  // @@protoc_insertion_point(field_get:hare_mq.BasicProperties.routing_key)
+  // @@protoc_insertion_point(field_get:hz_mq.BasicProperties.routing_key)
   return _internal_routing_key();
 }
 template <typename ArgT0, typename... ArgT>
@@ -715,11 +715,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void BasicProperties::set_routing_key(ArgT0&& arg0, ArgT... args) {
  
  routing_key_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.BasicProperties.routing_key)
+  // @@protoc_insertion_point(field_set:hz_mq.BasicProperties.routing_key)
 }
 inline std::string* BasicProperties::mutable_routing_key() {
   std::string* _s = _internal_mutable_routing_key();
-  // @@protoc_insertion_point(field_mutable:hare_mq.BasicProperties.routing_key)
+  // @@protoc_insertion_point(field_mutable:hz_mq.BasicProperties.routing_key)
   return _s;
 }
 inline const std::string& BasicProperties::_internal_routing_key() const {
@@ -734,7 +734,7 @@ inline std::string* BasicProperties::_internal_mutable_routing_key() {
   return routing_key_.Mutable(GetArenaForAllocation());
 }
 inline std::string* BasicProperties::release_routing_key() {
-  // @@protoc_insertion_point(field_release:hare_mq.BasicProperties.routing_key)
+  // @@protoc_insertion_point(field_release:hz_mq.BasicProperties.routing_key)
   return routing_key_.Release();
 }
 inline void BasicProperties::set_allocated_routing_key(std::string* routing_key) {
@@ -749,14 +749,14 @@ inline void BasicProperties::set_allocated_routing_key(std::string* routing_key)
     routing_key_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.BasicProperties.routing_key)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.BasicProperties.routing_key)
 }
 
 // -------------------------------------------------------------------
 
 // MessagePayload
 
-// .hare_mq.BasicProperties properties = 1;
+// .hz_mq.BasicProperties properties = 1;
 inline bool MessagePayload::_internal_has_properties() const {
   return this != internal_default_instance() && properties_ != nullptr;
 }
@@ -769,17 +769,17 @@ inline void MessagePayload::clear_properties() {
   }
   properties_ = nullptr;
 }
-inline const ::hare_mq::BasicProperties& MessagePayload::_internal_properties() const {
-  const ::hare_mq::BasicProperties* p = properties_;
-  return p != nullptr ? *p : reinterpret_cast<const ::hare_mq::BasicProperties&>(
-      ::hare_mq::_BasicProperties_default_instance_);
+inline const ::hz_mq::BasicProperties& MessagePayload::_internal_properties() const {
+  const ::hz_mq::BasicProperties* p = properties_;
+  return p != nullptr ? *p : reinterpret_cast<const ::hz_mq::BasicProperties&>(
+      ::hz_mq::_BasicProperties_default_instance_);
 }
-inline const ::hare_mq::BasicProperties& MessagePayload::properties() const {
-  // @@protoc_insertion_point(field_get:hare_mq.MessagePayload.properties)
+inline const ::hz_mq::BasicProperties& MessagePayload::properties() const {
+  // @@protoc_insertion_point(field_get:hz_mq.MessagePayload.properties)
   return _internal_properties();
 }
 inline void MessagePayload::unsafe_arena_set_allocated_properties(
-    ::hare_mq::BasicProperties* properties) {
+    ::hz_mq::BasicProperties* properties) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(properties_);
   }
@@ -789,11 +789,11 @@ inline void MessagePayload::unsafe_arena_set_allocated_properties(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hare_mq.MessagePayload.properties)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hz_mq.MessagePayload.properties)
 }
-inline ::hare_mq::BasicProperties* MessagePayload::release_properties() {
+inline ::hz_mq::BasicProperties* MessagePayload::release_properties() {
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -806,27 +806,27 @@ inline ::hare_mq::BasicProperties* MessagePayload::release_properties() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::hare_mq::BasicProperties* MessagePayload::unsafe_arena_release_properties() {
-  // @@protoc_insertion_point(field_release:hare_mq.MessagePayload.properties)
+inline ::hz_mq::BasicProperties* MessagePayload::unsafe_arena_release_properties() {
+  // @@protoc_insertion_point(field_release:hz_mq.MessagePayload.properties)
   
-  ::hare_mq::BasicProperties* temp = properties_;
+  ::hz_mq::BasicProperties* temp = properties_;
   properties_ = nullptr;
   return temp;
 }
-inline ::hare_mq::BasicProperties* MessagePayload::_internal_mutable_properties() {
+inline ::hz_mq::BasicProperties* MessagePayload::_internal_mutable_properties() {
   
   if (properties_ == nullptr) {
-    auto* p = CreateMaybeMessage<::hare_mq::BasicProperties>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::hz_mq::BasicProperties>(GetArenaForAllocation());
     properties_ = p;
   }
   return properties_;
 }
-inline ::hare_mq::BasicProperties* MessagePayload::mutable_properties() {
-  ::hare_mq::BasicProperties* _msg = _internal_mutable_properties();
-  // @@protoc_insertion_point(field_mutable:hare_mq.MessagePayload.properties)
+inline ::hz_mq::BasicProperties* MessagePayload::mutable_properties() {
+  ::hz_mq::BasicProperties* _msg = _internal_mutable_properties();
+  // @@protoc_insertion_point(field_mutable:hz_mq.MessagePayload.properties)
   return _msg;
 }
-inline void MessagePayload::set_allocated_properties(::hare_mq::BasicProperties* properties) {
+inline void MessagePayload::set_allocated_properties(::hz_mq::BasicProperties* properties) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete properties_;
@@ -843,7 +843,7 @@ inline void MessagePayload::set_allocated_properties(::hare_mq::BasicProperties*
     
   }
   properties_ = properties;
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.MessagePayload.properties)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.MessagePayload.properties)
 }
 
 // string body = 2;
@@ -851,7 +851,7 @@ inline void MessagePayload::clear_body() {
   body_.ClearToEmpty();
 }
 inline const std::string& MessagePayload::body() const {
-  // @@protoc_insertion_point(field_get:hare_mq.MessagePayload.body)
+  // @@protoc_insertion_point(field_get:hz_mq.MessagePayload.body)
   return _internal_body();
 }
 template <typename ArgT0, typename... ArgT>
@@ -859,11 +859,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void MessagePayload::set_body(ArgT0&& arg0, ArgT... args) {
  
  body_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.MessagePayload.body)
+  // @@protoc_insertion_point(field_set:hz_mq.MessagePayload.body)
 }
 inline std::string* MessagePayload::mutable_body() {
   std::string* _s = _internal_mutable_body();
-  // @@protoc_insertion_point(field_mutable:hare_mq.MessagePayload.body)
+  // @@protoc_insertion_point(field_mutable:hz_mq.MessagePayload.body)
   return _s;
 }
 inline const std::string& MessagePayload::_internal_body() const {
@@ -878,7 +878,7 @@ inline std::string* MessagePayload::_internal_mutable_body() {
   return body_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MessagePayload::release_body() {
-  // @@protoc_insertion_point(field_release:hare_mq.MessagePayload.body)
+  // @@protoc_insertion_point(field_release:hz_mq.MessagePayload.body)
   return body_.Release();
 }
 inline void MessagePayload::set_allocated_body(std::string* body) {
@@ -893,7 +893,7 @@ inline void MessagePayload::set_allocated_body(std::string* body) {
     body_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.MessagePayload.body)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.MessagePayload.body)
 }
 
 // string valid = 3;
@@ -901,7 +901,7 @@ inline void MessagePayload::clear_valid() {
   valid_.ClearToEmpty();
 }
 inline const std::string& MessagePayload::valid() const {
-  // @@protoc_insertion_point(field_get:hare_mq.MessagePayload.valid)
+  // @@protoc_insertion_point(field_get:hz_mq.MessagePayload.valid)
   return _internal_valid();
 }
 template <typename ArgT0, typename... ArgT>
@@ -909,11 +909,11 @@ inline PROTOBUF_ALWAYS_INLINE
 void MessagePayload::set_valid(ArgT0&& arg0, ArgT... args) {
  
  valid_.Set(static_cast<ArgT0 &&>(arg0), args..., GetArenaForAllocation());
-  // @@protoc_insertion_point(field_set:hare_mq.MessagePayload.valid)
+  // @@protoc_insertion_point(field_set:hz_mq.MessagePayload.valid)
 }
 inline std::string* MessagePayload::mutable_valid() {
   std::string* _s = _internal_mutable_valid();
-  // @@protoc_insertion_point(field_mutable:hare_mq.MessagePayload.valid)
+  // @@protoc_insertion_point(field_mutable:hz_mq.MessagePayload.valid)
   return _s;
 }
 inline const std::string& MessagePayload::_internal_valid() const {
@@ -928,7 +928,7 @@ inline std::string* MessagePayload::_internal_mutable_valid() {
   return valid_.Mutable(GetArenaForAllocation());
 }
 inline std::string* MessagePayload::release_valid() {
-  // @@protoc_insertion_point(field_release:hare_mq.MessagePayload.valid)
+  // @@protoc_insertion_point(field_release:hz_mq.MessagePayload.valid)
   return valid_.Release();
 }
 inline void MessagePayload::set_allocated_valid(std::string* valid) {
@@ -943,14 +943,14 @@ inline void MessagePayload::set_allocated_valid(std::string* valid) {
     valid_.Set("", GetArenaForAllocation());
   }
 #endif // PROTOBUF_FORCE_COPY_DEFAULT_STRING
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.MessagePayload.valid)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.MessagePayload.valid)
 }
 
 // -------------------------------------------------------------------
 
 // Message
 
-// .hare_mq.MessagePayload payload = 1;
+// .hz_mq.MessagePayload payload = 1;
 inline bool Message::_internal_has_payload() const {
   return this != internal_default_instance() && payload_ != nullptr;
 }
@@ -963,17 +963,17 @@ inline void Message::clear_payload() {
   }
   payload_ = nullptr;
 }
-inline const ::hare_mq::MessagePayload& Message::_internal_payload() const {
-  const ::hare_mq::MessagePayload* p = payload_;
-  return p != nullptr ? *p : reinterpret_cast<const ::hare_mq::MessagePayload&>(
-      ::hare_mq::_MessagePayload_default_instance_);
+inline const ::hz_mq::MessagePayload& Message::_internal_payload() const {
+  const ::hz_mq::MessagePayload* p = payload_;
+  return p != nullptr ? *p : reinterpret_cast<const ::hz_mq::MessagePayload&>(
+      ::hz_mq::_MessagePayload_default_instance_);
 }
-inline const ::hare_mq::MessagePayload& Message::payload() const {
-  // @@protoc_insertion_point(field_get:hare_mq.Message.payload)
+inline const ::hz_mq::MessagePayload& Message::payload() const {
+  // @@protoc_insertion_point(field_get:hz_mq.Message.payload)
   return _internal_payload();
 }
 inline void Message::unsafe_arena_set_allocated_payload(
-    ::hare_mq::MessagePayload* payload) {
+    ::hz_mq::MessagePayload* payload) {
   if (GetArenaForAllocation() == nullptr) {
     delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(payload_);
   }
@@ -983,11 +983,11 @@ inline void Message::unsafe_arena_set_allocated_payload(
   } else {
     
   }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hare_mq.Message.payload)
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:hz_mq.Message.payload)
 }
-inline ::hare_mq::MessagePayload* Message::release_payload() {
+inline ::hz_mq::MessagePayload* Message::release_payload() {
   
-  ::hare_mq::MessagePayload* temp = payload_;
+  ::hz_mq::MessagePayload* temp = payload_;
   payload_ = nullptr;
 #ifdef PROTOBUF_FORCE_COPY_IN_RELEASE
   auto* old =  reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(temp);
@@ -1000,27 +1000,27 @@ inline ::hare_mq::MessagePayload* Message::release_payload() {
 #endif  // !PROTOBUF_FORCE_COPY_IN_RELEASE
   return temp;
 }
-inline ::hare_mq::MessagePayload* Message::unsafe_arena_release_payload() {
-  // @@protoc_insertion_point(field_release:hare_mq.Message.payload)
+inline ::hz_mq::MessagePayload* Message::unsafe_arena_release_payload() {
+  // @@protoc_insertion_point(field_release:hz_mq.Message.payload)
   
-  ::hare_mq::MessagePayload* temp = payload_;
+  ::hz_mq::MessagePayload* temp = payload_;
   payload_ = nullptr;
   return temp;
 }
-inline ::hare_mq::MessagePayload* Message::_internal_mutable_payload() {
+inline ::hz_mq::MessagePayload* Message::_internal_mutable_payload() {
   
   if (payload_ == nullptr) {
-    auto* p = CreateMaybeMessage<::hare_mq::MessagePayload>(GetArenaForAllocation());
+    auto* p = CreateMaybeMessage<::hz_mq::MessagePayload>(GetArenaForAllocation());
     payload_ = p;
   }
   return payload_;
 }
-inline ::hare_mq::MessagePayload* Message::mutable_payload() {
-  ::hare_mq::MessagePayload* _msg = _internal_mutable_payload();
-  // @@protoc_insertion_point(field_mutable:hare_mq.Message.payload)
+inline ::hz_mq::MessagePayload* Message::mutable_payload() {
+  ::hz_mq::MessagePayload* _msg = _internal_mutable_payload();
+  // @@protoc_insertion_point(field_mutable:hz_mq.Message.payload)
   return _msg;
 }
-inline void Message::set_allocated_payload(::hare_mq::MessagePayload* payload) {
+inline void Message::set_allocated_payload(::hz_mq::MessagePayload* payload) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArenaForAllocation();
   if (message_arena == nullptr) {
     delete payload_;
@@ -1037,7 +1037,7 @@ inline void Message::set_allocated_payload(::hare_mq::MessagePayload* payload) {
     
   }
   payload_ = payload;
-  // @@protoc_insertion_point(field_set_allocated:hare_mq.Message.payload)
+  // @@protoc_insertion_point(field_set_allocated:hz_mq.Message.payload)
 }
 
 // uint64 offset = 2;
@@ -1048,7 +1048,7 @@ inline uint64_t Message::_internal_offset() const {
   return offset_;
 }
 inline uint64_t Message::offset() const {
-  // @@protoc_insertion_point(field_get:hare_mq.Message.offset)
+  // @@protoc_insertion_point(field_get:hz_mq.Message.offset)
   return _internal_offset();
 }
 inline void Message::_internal_set_offset(uint64_t value) {
@@ -1057,7 +1057,7 @@ inline void Message::_internal_set_offset(uint64_t value) {
 }
 inline void Message::set_offset(uint64_t value) {
   _internal_set_offset(value);
-  // @@protoc_insertion_point(field_set:hare_mq.Message.offset)
+  // @@protoc_insertion_point(field_set:hz_mq.Message.offset)
 }
 
 // uint64 length = 3;
@@ -1068,7 +1068,7 @@ inline uint64_t Message::_internal_length() const {
   return length_;
 }
 inline uint64_t Message::length() const {
-  // @@protoc_insertion_point(field_get:hare_mq.Message.length)
+  // @@protoc_insertion_point(field_get:hz_mq.Message.length)
   return _internal_length();
 }
 inline void Message::_internal_set_length(uint64_t value) {
@@ -1077,7 +1077,7 @@ inline void Message::_internal_set_length(uint64_t value) {
 }
 inline void Message::set_length(uint64_t value) {
   _internal_set_length(value);
-  // @@protoc_insertion_point(field_set:hare_mq.Message.length)
+  // @@protoc_insertion_point(field_set:hz_mq.Message.length)
 }
 
 #ifdef __GNUC__
@@ -1090,14 +1090,14 @@ inline void Message::set_length(uint64_t value) {
 
 // @@protoc_insertion_point(namespace_scope)
 
-}  // namespace hare_mq
+}  // namespace hz_mq
 
 PROTOBUF_NAMESPACE_OPEN
 
-template <> struct is_proto_enum< ::hare_mq::DeliveryMode> : ::std::true_type {};
+template <> struct is_proto_enum< ::hz_mq::DeliveryMode> : ::std::true_type {};
 template <>
-inline const EnumDescriptor* GetEnumDescriptor< ::hare_mq::DeliveryMode>() {
-  return ::hare_mq::DeliveryMode_descriptor();
+inline const EnumDescriptor* GetEnumDescriptor< ::hz_mq::DeliveryMode>() {
+  return ::hz_mq::DeliveryMode_descriptor();
 }
 
 PROTOBUF_NAMESPACE_CLOSE

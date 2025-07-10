@@ -10,7 +10,7 @@
 
 #include "../common/msg.pb.h"   // BasicProperties
 
-namespace hare_mq {
+namespace hz_mq {
 
 // 回调：consumer_tag, message_properties, message_body
 using consumer_callback =

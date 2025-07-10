@@ -1,5 +1,5 @@
 syntax = "proto3";
-package hare_mq;
+package hz_mq;
 
 // Define delivery mode constants for message persistence
 enum DeliveryMode {

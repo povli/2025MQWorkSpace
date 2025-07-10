@@ -2,7 +2,7 @@
 #include "consumer.hpp"
 #include "../common/logger.hpp"
 
-namespace hare_mq {
+namespace hz_mq {
 
 // --------- consumer ----------
 consumer::consumer(const std::string& ctag, const std::string& queue_name,

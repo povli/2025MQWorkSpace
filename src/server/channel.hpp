@@ -23,7 +23,7 @@ using TcpConnectionPtr = std::shared_ptr<TcpConnection>;
 
 
 
-namespace hare_mq {
+namespace hz_mq {
 
 // -----------------------------------------------------------------
 // 便捷别名（各类请求的 shared_ptr）

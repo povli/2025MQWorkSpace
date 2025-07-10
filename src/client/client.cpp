@@ -12,7 +12,7 @@
 #include "../common/protocol.pb.h"
 #include "../common/msg.pb.h"
 
-using namespace hare_mq;
+using namespace hz_mq;
 using muduo::net::TcpConnectionPtr;
 using ProtobufCodecPtr = std::shared_ptr<ProtobufCodec>;
 

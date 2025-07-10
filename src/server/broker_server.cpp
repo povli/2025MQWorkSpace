@@ -21,7 +21,7 @@
 #include "connection.hpp"
 #include "route.hpp"
 
-namespace hare_mq {
+namespace hz_mq {
 
 // -----------------------------------------------------------------------------
 BrokerServer::BrokerServer(int port, const std::string& base_dir)
@@ -29,7 +29,7 @@ BrokerServer::BrokerServer(int port, const std::string& base_dir)
     // 1. 创建核心组件 ----------------------------------------------------------
     __loop  = std::make_unique<muduo::net::EventLoop>();
     __server= std::make_unique<muduo::net::TcpServer>(__loop.get(), muduo::net::InetAddress("0.0.0.0", port),
-                                                      "hare_mq_server", muduo::net::TcpServer::kReusePort);
+                                                      "hz_mq_server", muduo::net::TcpServer::kReusePort);
 
     __dispatcher = std::make_unique<ProtobufDispatcher>(
         std::bind(&BrokerServer::onUnknownMessage, this, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3));

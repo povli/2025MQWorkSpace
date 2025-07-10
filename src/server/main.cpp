@@ -12,7 +12,7 @@ int main(int argc, char* argv[]) {
     if (argc >= 3) {
         base_dir = argv[2];
     }
-    hare_mq::BrokerServer server(port, base_dir);
+    hz_mq::BrokerServer server(port, base_dir);
     server.start();
     return 0;
 }

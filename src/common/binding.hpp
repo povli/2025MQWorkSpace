@@ -5,7 +5,7 @@
 #include <memory>
 #include <unordered_map>
 
-namespace hare_mq {
+namespace hz_mq {
 
 // 交换机与队列的绑定关系
 struct binding {

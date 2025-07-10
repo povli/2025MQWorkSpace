@@ -3,7 +3,7 @@
 #include "../common/logger.hpp"
 
 
-namespace hare_mq {
+namespace hz_mq {
 
 // ---------------------------------------------------------------------------
 // connection
