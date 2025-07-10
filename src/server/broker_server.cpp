@@ -13,6 +13,7 @@
 #include <unistd.h>
 #include <ctime>
 #include <sys/types.h>
+#include <chrono>
 
 // ---- 本项目 ------------------------------------------------------
 #include "../common/logger.hpp"
@@ -67,11 +68,16 @@ BrokerServer::BrokerServer(int port, const std::string& base_dir)
     REG(basicConsumeRequest,     &BrokerServer::on_basicConsume);
     REG(basicCancelRequest,      &BrokerServer::on_basicCancel);
     REG(basicQueryRequest,       &BrokerServer::on_basicQuery);
+    REG(heartbeatRequest,        &BrokerServer::on_heartbeat);
 #undef REG
 
     // 5. 网络层回调 ------------------------------------------------------------
     __server->setMessageCallback( std::bind(&ProtobufCodec::onMessage, __codec, std::placeholders::_1, std::placeholders::_2, std::placeholders::_3) );
     __server->setConnectionCallback( std::bind(&BrokerServer::onConnection, this, std::placeholders::_1) );
+
+    __loop->runEvery(5.0, [this]() {
+        __connection_manager->check_timeout(std::chrono::seconds(30));
+    });
 }
 
 // -----------------------------------------------------------------------------
@@ -146,6 +152,7 @@ void BrokerServer::onUnknownMessage(const muduo::net::TcpConnectionPtr& conn, co
         conn->shutdown();                                                                        \
         return;                                                                                  \
     }
+    __connection_manager->refresh_connection(conn);
 
 #define GET_CHANNEL(cid)                                                                         \
     auto ch = conn_ctx->select_channel(cid);                                                     \
@@ -270,6 +277,15 @@ void BrokerServer::on_basicQuery(const muduo::net::TcpConnectionPtr& conn, const
     GET_CHANNEL(msg->cid());
     LOG_REQ(basicQueryRequest);
     ch->basic_query(msg);
+}
+
+void BrokerServer::on_heartbeat(const muduo::net::TcpConnectionPtr& conn, const heartbeatRequestPtr& msg, muduo::Timestamp ts)
+{
+    (void)ts;
+    __connection_manager->refresh_connection(conn);
+    heartbeatResponse resp;
+    resp.set_rid(msg->rid());
+    __codec->send(conn, resp);
 }
 
 #undef GET_CONN_CTX

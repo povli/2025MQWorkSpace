@@ -4,6 +4,7 @@
 #include <memory>
 #include <mutex>
 #include <unordered_map>
+#include <chrono>
 
 #include "channel.hpp"  // channel / channel_manager
 
@@ -36,6 +37,10 @@ public:
     void open_channel(const openChannelRequestPtr& req);
     void close_channel(const closeChannelRequestPtr& req);
 
+    void refresh();
+    bool expired(std::chrono::seconds timeout) const;
+    muduo::net::TcpConnectionPtr tcp() const { return __conn; }
+
     channel::ptr select_channel(const std::string& cid);
 
 private:
@@ -47,7 +52,8 @@ private:
     virtual_host::ptr             __host;
     thread_pool::ptr              __pool;
     channel_manager::ptr          __channels;
-};
+    std::chrono::steady_clock::time_point __last_active;
+}; 
 
 // ================================================================
 // connection_manager : 管理服务器上的所有 TCP 连接
@@ -68,6 +74,9 @@ public:
     void delete_connection(const muduo::net::TcpConnectionPtr& conn);
 
     connection::ptr select_connection(const muduo::net::TcpConnectionPtr& conn);
+
+    void refresh_connection(const muduo::net::TcpConnectionPtr& conn);
+    void check_timeout(std::chrono::seconds timeout);
 
 private:
     std::mutex                                                      __mtx;
