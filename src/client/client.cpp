@@ -49,6 +49,10 @@ void onQueryResponse(const TcpConnectionPtr&, const std::shared_ptr<basicQueryRe
     }
 }
 
+void onHeartbeatResponse(const TcpConnectionPtr&, const std::shared_ptr<heartbeatResponse>&, muduo::Timestamp) {
+    // ignore
+}
+
 int main(int argc, char* argv[]) {
     /* ① 启动专用 EventLoop 线程 */
     g_loop = g_loopThread.startLoop();      // ★ 保证 loop() 在同线程
@@ -66,6 +70,7 @@ int main(int argc, char* argv[]) {
     g_dispatcher.registerMessageCallback<basicCommonResponse>(onCommonResponse);
     g_dispatcher.registerMessageCallback<basicConsumeResponse>(onConsumeResponse);
     g_dispatcher.registerMessageCallback<basicQueryResponse>(onQueryResponse);
+    g_dispatcher.registerMessageCallback<heartbeatResponse>(onHeartbeatResponse);
 
     g_codec = std::make_shared<ProtobufCodec>(
         std::bind(&ProtobufDispatcher::onProtobufMessage, &g_dispatcher,
@@ -73,6 +78,17 @@ int main(int argc, char* argv[]) {
 
     client.setMessageCallback(onMessage);
     client.connect();
+
+    std::thread hb([&](){
+        while (true) {
+            std::this_thread::sleep_for(std::chrono::seconds(5));
+            if (!g_conn) continue;
+            heartbeatRequest req;
+            req.set_rid("hb");
+            g_codec->send(g_conn, req);
+        }
+    });
+    hb.detach();
 
 
     std::cout << "Connected to message queue server at " << host << ":" << port << std::endl;

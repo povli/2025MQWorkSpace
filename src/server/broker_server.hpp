@@ -48,6 +48,7 @@ using basicAckRequestPtr       = std::shared_ptr<basicAckRequest>;
 using basicConsumeRequestPtr   = std::shared_ptr<basicConsumeRequest>;
 using basicCancelRequestPtr    = std::shared_ptr<basicCancelRequest>;
 using basicQueryRequestPtr     = std::shared_ptr<basicQueryRequest>;
+using heartbeatRequestPtr      = std::shared_ptr<heartbeatRequest>;
 using MessagePtr               = std::shared_ptr<::google::protobuf::Message>;
 
 // 常量 -------------------------------------------------------------
@@ -89,6 +90,7 @@ private:
     void on_basicConsume  (const muduo::net::TcpConnectionPtr&, const basicConsumeRequestPtr&,   muduo::Timestamp);
     void on_basicCancel   (const muduo::net::TcpConnectionPtr&, const basicCancelRequestPtr&,    muduo::Timestamp);
     void on_basicQuery    (const muduo::net::TcpConnectionPtr&, const basicQueryRequestPtr&,     muduo::Timestamp);
+    void on_heartbeat     (const muduo::net::TcpConnectionPtr&, const heartbeatRequestPtr&,      muduo::Timestamp);
 
 private:
     std::unique_ptr<muduo::net::EventLoop>   __loop;
